@@ -1,0 +1,42 @@
+body {
+    md-backdrop {
+        &.md-opaque {
+            height: 100% !important;
+        }
+    }
+
+    &.dialog-confirm {
+        > .md-dialog-container {
+            @media (max-width: $screenSmMin) {
+                display: table;
+                width: 100%;
+            }
+
+            > md-dialog {
+                padding: 15px 20px;
+
+                > .md-dialog-content {
+                    padding: 0;
+
+                    @media (max-width: $screenSmMin) {
+                        display: table-row;
+                    }
+                }
+
+                > md-dialog-actions {
+                    clear: both;
+                    padding: 0;
+                    padding-top: 25px;
+
+                    @media (max-width: $screenSmMin) {
+                        bottom: 5px;
+                        display: table-row;
+                        position: absolute;
+                        right: 15px;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}

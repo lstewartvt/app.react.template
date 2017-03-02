@@ -1,0 +1,16 @@
+#org {
+  .mui-btn--primary {
+    background-color: rgba($cta, 0.75);
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $cta;
+    }
+
+    &[disabled] {
+      background-color: rgba($mediumGray, 0.75);
+      color: $gray;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+﻿#app {
+  #panel-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/samples/background-1.jpg);
+    text-align: center;
+
+    > .parallax-content {
+      > .title {
+        color: $siteBg;
+        font-size: 60px;
+        line-height: 60px;
+
+        @media (max-width: $screenSmMax) {
+          font-size: 35px;
+          line-height: 35px;
+        }
+
+        + .sub-title {
+          color: $siteBg;
+          font-weight: 400;
+          font-style: italic;
+        }
+      }
+
+      > .content {
+        margin-top: 50px;
+
+        @media (max-width: $screenSmMax) {
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+}

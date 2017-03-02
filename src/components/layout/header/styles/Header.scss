@@ -1,0 +1,26 @@
+#header {
+  background-color: $dark;
+  height: 50px;
+  text-transform: uppercase;
+  z-index: 1;
+
+  @include boxShadow(0 0 1px, $lightGray, 1);
+
+  @media (max-width: $screenSmMin) {
+    min-height: initial;
+  }
+
+  > #nav-bar {
+    background-color: inherit;
+    padding: 0;
+    position: relative;
+
+    @media (max-width: $screenSmMax) {
+      width: 100%;
+    }
+
+    @media (max-width: $screenSmMin) {
+      height: 100%;
+    }
+  }
+}

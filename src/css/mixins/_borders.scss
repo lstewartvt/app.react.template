@@ -1,0 +1,91 @@
+﻿@mixin borderRadius($size) {
+    -ms-border-radius: $size;
+    -ms-border-radius: $size;
+    border-radius: $size;
+}
+
+@mixin noBorderRadius {
+    -ms-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+}
+
+@mixin border1($color) {
+    border: 1px solid $color;
+}
+
+@mixin border2($color) {
+    border: 2px solid $color;
+}
+
+@mixin border3($color) {
+    border: 3px solid $color;
+}
+
+@mixin border5($color) {
+    border: 5px solid $color;
+}
+
+@mixin borderBottom1($color) {
+    border-bottom: 1px solid $color;
+}
+
+@mixin borderBottom2($color) {
+    border-bottom: 2px solid $color;
+}
+
+@mixin borderBottom3($color) {
+    border-bottom: 3px solid $color;
+}
+
+@mixin borderBottom5($color) {
+    border-bottom: 5px solid $color;
+}
+
+@mixin borderLeft1($color) {
+    border-left: 1px solid $color;
+}
+
+@mixin borderLeft2($color) {
+    border-left: 2px solid $color;
+}
+
+@mixin borderLeft3($color) {
+    border-left: 3px solid $color;
+}
+
+@mixin borderLeft5($color) {
+    border-left: 5px solid $color;
+}
+
+@mixin borderRight1($color) {
+    border-right: 1px solid $color;
+}
+
+@mixin borderRight2($color) {
+    border-right: 2px solid $color;
+}
+
+@mixin borderRight3($color) {
+    border-right: 3px solid $color;
+}
+
+@mixin borderRight5($color) {
+    border-right: 5px solid $color;
+}
+
+@mixin borderTop1($color) {
+    border-top: 1px solid $color;
+}
+
+@mixin borderTop2($color) {
+    border-top: 2px solid $color;
+}
+
+@mixin borderTop3($color) {
+    border-top: 3px solid $color;
+}
+
+@mixin borderTop5($color) {
+    border-top: 5px solid $color;
+}

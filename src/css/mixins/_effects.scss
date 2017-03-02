@@ -1,0 +1,49 @@
+﻿@mixin boxShadow($position, $color, $opacity) {
+  -moz-box-shadow: $position rgba($color, $opacity);
+  -webkit-box-shadow: $position rgba($color, $opacity);
+  box-shadow: $position rgba($color, $opacity);
+}
+
+@mixin noBoxShadow {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+@mixin materialLabel {
+  -webkit-transform: translate3d(0, 6px, 0) scale(0.75);
+  transform: translate3d(0, 6px, 0) scale(0.75);
+  -webkit-transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@mixin shadow($color) {
+  -moz-box-shadow: 0 1px 3px 0 rgba($color, 0.31), 0 1px 1px 0 rgba($color, 0.13), 0 3px 1px -1px rgba($color, 0.13);
+  -webkit-box-shadow: 0 1px 3px 0 rgba($color, 0.31), 0 1px 1px 0 rgba($color, 0.13), 0 3px 1px -1px rgba($color, 0.13);
+  box-shadow: 0 1px 3px 0 rgba($color, 0.31), 0 1px 1px 0 rgba($color, 0.13), 0 3px 1px -1px rgba($color, 0.13);
+
+  @include border1($color);
+}
+
+@mixin shadowNoBorder($color) {
+  -moz-box-shadow: 0 1px 3px 0 rgba($color, 0.31), 0 1px 1px 0 rgba($color, 0.13), 0 3px 1px -1px rgba($color, 0.13);
+  -webkit-box-shadow: 0 1px 3px 0 rgba($color, 0.31), 0 1px 1px 0 rgba($color, 0.13), 0 3px 1px -1px rgba($color, 0.13);
+  box-shadow: 0 1px 3px 0 rgba($color, 0.31), 0 1px 1px 0 rgba($color, 0.13), 0 3px 1px -1px rgba($color, 0.13);
+}
+
+@mixin transparent($opacity) {
+  @if $opacity {
+    filter: alpha(opacity = $opacity * 100); /* internet explorer */
+    -khtml-opacity: $opacity; /* khtml, old safari */
+    -moz-opacity: $opacity; /* mozilla, netscape */
+    opacity: $opacity; /* fx, safari, opera */
+  }
+  @else {
+    filter: alpha(opacity = 50); /* internet explorer */
+    -khtml-opacity: $opacity; /* khtml, old safari */
+    -moz-opacity: $opacity; /* mozilla, netscape */
+    opacity: 0.5; /* fx, safari, opera */
+  }
+}

@@ -1,0 +1,65 @@
+﻿@mixin animationDuration($time) {
+    -webkit-animation-duration: $time;
+    -moz-animation-duration: $time;
+    -o-animation-duration: $time;
+    animation-duration: $time;
+    -webkit-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+@mixin transitionDuration($time) {
+    -webkit-transition-duration: $time;
+    -moz-transition-duration: $time;
+    -ms-transition-duration: $time;
+    -o-transition-duration: $time;
+    transition-duration: $time;
+}
+
+@mixin heightWidthTransition {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    -ms-transition-property: height, width;
+    -o-transition-property: height, width;
+    transition-property: height, width;
+}
+
+@mixin opacityTransition {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    -ms-transition-property: -ms-transform, opacity;
+    -o-transition-property: -o-transform, opacity;
+    transition-property: transform, opacity;
+}
+
+@mixin rotate($deg) {
+    -o-transform: rotate($deg + deg);
+    -webkit-transform: rotate($deg + deg);
+    -moz-transform: rotate($deg + deg);
+    transform: rotate($deg + deg);
+}
+
+/* Isotope Transitions */
+.isotope,
+.isotope .isotope-item {
+    /* change duration value to whatever you like */
+    @include transitionDuration(0.3s);
+}
+
+.isotope {
+    @include heightWidthTransition;
+}
+
+.isotope .isotope-item {
+    @include opacityTransition;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+    @include transitionDuration(0);
+}

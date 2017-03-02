@@ -1,0 +1,142 @@
+.material-icons {
+    height: auto;
+    margin: 0;
+    min-height: auto;
+    min-width: auto;
+    width: auto;
+
+    &.inherit {
+        font-size: inherit;
+    }
+
+    /* Rules for sizing the icon. */
+    &.md-18 {
+        font-size: 18px;
+    }
+
+    &.md-24 {
+        font-size: 24px;
+    }
+
+    &.md-36 {
+        font-size: 36px;
+    }
+
+    &.md-48 {
+        font-size: 48px;
+    }
+
+    &.md-bold {
+        font-weight: bold;
+    }
+
+    /* Rules for using icons as black on a light background. */
+    &.md-dark {
+        color: rgba(0, 0, 0, 0.54);
+    }
+
+    &.md-dark.md-inactive {
+        color: rgba(0, 0, 0, 0.26);
+    }
+
+    /* Rules for using icons as white on a dark background. */
+    &.md-light {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    &.md-light.md-inactive {
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    &.camera {
+        color: $instagram;
+    }
+
+    &.favorite {
+        color: $favoriteHeart;
+    }
+
+    &.login {
+        color: $includedGreen;
+    }
+
+    &.logout {
+        color: $excludedRed;
+    }
+
+    &.user {
+        color: $colorAccent;
+    }
+
+    &.user-add {
+        color: $colorPrimary;
+    }
+
+    &.logout {
+        color: $excludedRed;
+    }
+
+    &.login {
+        color: $includedGreen;
+    }
+}
+
+.md-button {
+    &.md-accent,
+    &.md-raised {
+        &:not([disabled]) {
+            md-icon {
+                color: $darkGray;
+            }
+        }
+    }
+}
+
+md-icon {
+    &.admin,
+    &.edit,
+    &.settings {
+        color: $darkGray !important;
+    }
+
+    &.bulb {
+        color: $bulbYellow !important;
+        font-weight: bold;
+    }
+
+    &.camera {
+        color: $instagram !important;
+    }
+
+    &.accent {
+        color: $colorAccent !important;
+    }
+
+    &.excluded {
+        color: $excludedRed !important;
+    }
+
+    &.included {
+        color: $includedGreen !important;
+    }
+
+    &.primary {
+        color: $colorPrimary !important;
+    }
+
+    &.secondary {
+        color: $colorSecondary !important;
+    }
+
+    &.currency {
+        color: $mdGreen !important;
+    }
+
+    &.favorite {
+        color: $favoriteHeart !important;
+    }
+
+    &.mail {
+        color: $ratingStar !important;
+    }
+}

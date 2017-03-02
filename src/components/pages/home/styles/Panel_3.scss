@@ -1,0 +1,11 @@
+﻿#app {
+  #panel-3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(/images/samples/background-3.jpg);
+
+    > .parallax-content {
+      > .title {
+        color: $siteBg;
+      }
+    }
+  }
+}

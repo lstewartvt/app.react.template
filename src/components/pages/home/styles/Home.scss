@@ -1,0 +1,141 @@
+﻿#org {
+  .parallax-block {
+    padding: 75px 0;
+    position: relative;
+
+    &.long {
+      padding: 150px 0;
+
+      @media (max-width: $screenSmMax) {
+        padding: 50px 10px;
+      }
+    }
+
+    &.medium {
+      padding: 100px 0;
+
+      @media (max-width: $screenSmMax) {
+        padding: 50px 10px;
+      }
+    }
+
+    &.thin {
+      padding: 35px 0;
+    }
+
+    @media (max-width: $screenSmMax) {
+      padding: 50px 10px;
+    }
+
+    > .parallax-content {
+      position: relative;
+      width: 55%;
+
+      @media (max-width: $screenSmMax) {
+        height: auto;
+        position: relative;
+        width: 95%;
+      }
+
+      &.overlay {
+        background-color: rgba($opaqueGray, 0.75);
+        padding: 25px;
+
+        > .title {
+          color: $siteBg;
+        }
+      }
+
+      > .title {
+        text-align: center;
+        text-transform: uppercase;
+
+        @media (max-width: $screenSmMax) {
+          font-size: 35px;
+        }
+
+        &.caps {
+          text-transform: uppercase;
+        }
+
+        &.big {
+          font-size: 50px;
+          line-height: 60px;
+
+          @media (max-width: $screenSmMax) {
+            font-size: 31px;
+            line-height: 40px;
+          }
+        }
+
+        + .sub-title {
+          margin-top: 20px;
+          text-align: center;
+        }
+
+        + hr {
+          border-color: $separator;
+          border-width: 2px;
+          margin: 35px auto;
+          text-align: center;
+          width: 50px;
+
+          + .content {
+            margin-top: 0;
+          }
+        }
+      }
+
+      > .content {
+        margin-top: 15px;
+
+        > .overlay {
+          background-color: rgba($opaqueGray, 0.75);
+          padding: 35px;
+        }
+      }
+    }
+  }
+}
+
+#org {
+  .project-bullets {
+    padding: 15px 0;
+
+    > .bullet {
+      margin: 0;
+      text-align: center;
+
+      @media (max-width: $screenSmMax) {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+
+      .bullet-icon {
+        color: $siteBg;
+        font-size: 75px;
+        margin: 0 auto;
+        margin-bottom: 5px;
+      }
+
+      .bullet-title {
+        font-weight: bold;
+        margin: 0;
+        padding: 10px 5px;
+        text-transform: uppercase;
+      }
+
+      .bullet-info {
+        background-color: rgba($opaqueGray, 0.5);
+        color: $white;
+        margin-right: 15px;
+        padding: 15px;
+        text-align: left;
+
+        > p {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

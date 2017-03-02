@@ -1,0 +1,15 @@
+#footer {
+  background-color: $dark;
+  bottom: 0;
+  color: $siteBg;
+  height: 50px;
+  line-height: 50px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+
+  > p {
+    font-weight: 400;
+    margin: 0;
+  }
+}

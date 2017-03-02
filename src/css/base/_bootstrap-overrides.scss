@@ -1,0 +1,22 @@
+body {
+    &.modal-dark {
+        .md-dialog-container {
+            *[class^="col-"] {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+
+    *[class^="col-"] {
+        @media (max-width: $screenSmMin) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .no-gutter > [class*="col-"] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

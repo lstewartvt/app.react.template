@@ -1,0 +1,30 @@
+#header-logo {
+  margin: 0;
+
+  > .navbar-brand {
+    color: $siteBg;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: $screenSmMax) {
+      padding-left: 10px;
+    }
+
+    &:hover,
+    &.active {
+      color: $cta;
+    }
+
+    > span {
+      display: block;
+      text-align: center;
+
+      @media (max-width: $screenSmMin) {
+        display: inline-block;
+      }
+    }
+  }
+}

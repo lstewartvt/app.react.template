@@ -1,0 +1,262 @@
+﻿@import "../base/_colors";
+
+@import "../base/_screens";
+
+@import "../mixins/_effects";
+
+@import "../mixins/_borders";
+
+@import "../mixins/_transforms";
+
+@import "../base/_animate";
+
+@import "../base/_modals";
+
+@import "../base/_tables";
+
+.color-primary {
+  color: $colorPrimary;
+}
+
+.color-secondary {
+  color: $colorSecondary;
+}
+
+@mixin boxSizing($property) {
+  -moz-box-sizing: $property;
+  -webkit-box-sizing: $property;
+  box-sizing: $property;
+}
+
+@mixin fullScreenBg($background) {
+  background: $background no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin gradient($start, $end) {
+  background: $end;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($start), to($end));
+  background-image: -webkit-linear-gradient(top, $start, $end);
+  background-image: -moz-linear-gradient(top, $start, $end);
+  background-image: -ms-linear-gradient(top, $start, $end);
+  background-image: -o-linear-gradient(top, $start, $end);
+  background-image: linear-gradient(top, $start, $end);
+}
+
+@mixin tableStripes($stripeColor) {
+  tr:nth-child(odd) {
+    background-color: $stripeColor;
+  }
+}
+
+// Disabled page style START
+.page-disabled {
+  background-color: $darkGray;
+  background-color: rgba($darkGray, 0.75);
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 131;
+
+  > .fa-spin {
+    bottom: 50%;
+    color: $colorSecondary;
+    font-size: 131px;
+    left: 50%;
+    margin-bottom: -13px;
+    margin-left: 0;
+    position: fixed;
+    width: 0;
+  }
+}
+
+#search-close {
+  color: #000000;
+  cursor: pointer;
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 23px;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+
+  @media (max-width: $screenSmMin) {
+    font-size: 13px;
+    line-height: 13px;
+  }
+
+  > p {
+    margin: 0;
+  }
+}
+
+// Disabled page style END
+
+// Post-It Note style START
+.post-it {
+  background: $stickyNoteYellow;
+  -moz-box-shadow: 5px 5px 7px rgba($gray, 1);
+  -webkit-box-shadow: 5px 5px 7px rgba($gray, 0.7);
+  box-shadow: 5px 5px 7px rgba($gray, 0.7);
+  -moz-transition: -moz-transform .15s linear;
+  -o-transition: -o-transform .15s linear;
+  -webkit-transition: -webkit-transform .15s linear;
+  transition: -webkit-transform .15s linear;
+}
+
+@mixin pin($pinColor) {
+  .pin {
+    position: absolute;
+    left: 50%;
+    z-index: 999;
+  }
+
+  .pin:before {
+    left: 0;
+    top: -23px;
+    color: $black;
+    font-size: 23px;
+    content: "\f276";
+    position: absolute;
+    font-family: FontAwesome;
+    -o-transform: rotate(13deg);
+    -webkit-transform: rotate(13deg);
+    -moz-transform: rotate(13deg);
+    -ms-transform: rotate(13deg);
+    transform: rotate(13deg);
+  }
+}
+
+// Post-It Note style END
+
+// Tags START
+.tags-container {
+  display: table;
+  padding: 0;
+
+  > .tag {
+    background-color: $lightGray;
+    border: 1px solid;
+    color: $black;
+    display: inline-table;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 1px 0;
+    padding: 1px 3px;
+
+    @include borderRadius(3);
+
+    &:not(:last-of-type) {
+      margin-right: 3px;
+    }
+  }
+}
+
+// Tags END
+
+// Favorites START
+i.fa-heart,
+i.fa-heart-o {
+  border-color: $favoriteHeart;
+  color: $favoriteHeart;
+  cursor: pointer;
+}
+
+i.fa-star,
+i.fa-star-o {
+  color: $favoriteStar;
+  cursor: pointer;
+}
+
+// Favorites END
+
+// Maps START
+i.fa-map-marker,
+i.fa-map-marker-o {
+  cursor: pointer;
+}
+
+// Maps END
+
+// Ribbons START
+.ribbon-text {
+  background-color: $colorPrimary;
+  position: relative;
+
+  > .ribbon {
+    position: absolute;
+    bottom: calc(-1 * (0px + 30px));
+    height: 0;
+    width: 0;
+    border: calc(0px + 15px) solid transparent;
+
+    &.ribbon-left {
+      border-top-color: rgba($gray, 1);
+      border-right-width: 0;
+      left: 0;
+    }
+
+    &.ribbon-right {
+      border-top-color: rgba($gray, 1);
+      border-left-width: 0;
+      right: 0;
+    }
+  }
+}
+
+// Ribbons END
+
+// REVIEW
+.vert-scroll {
+  height: 101%;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: .5em 10px;
+
+  // quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: .1em;
+  margin-right: .25em;
+  vertical-align: -.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+img.polaroid {
+  background: $black;
+
+  /*Change this to a background image or remove*/
+  border: solid $white;
+  border-width: 6px 6px 20px 6px;
+  box-shadow: 1px 1px 5px #333;
+
+  /* Standard blur at 5px. Increase for more depth */
+  -webkit-box-shadow: 1px 1px 5px #333;
+  -moz-box-shadow: 1px 1px 5px #333;
+  height: 200px;
+
+  /*Set to height of your image or desired div*/
+  width: 200px;
+
+  /*Set to width of your image or desired div*/
+}
+
+// REVIEW

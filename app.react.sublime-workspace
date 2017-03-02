@@ -1,0 +1,1738 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ap",
+				"apply-prod-env"
+			],
+			[
+				"a",
+				"admin_email"
+			],
+			[
+				"tra",
+				"transform-server"
+			],
+			[
+				"paht",
+				"pathmodifyConfig"
+			],
+			[
+				"path",
+				"pathmodify"
+			],
+			[
+				"prop",
+				"property"
+			],
+			[
+				"proper",
+				"properties"
+			],
+			[
+				"me",
+				"message_config"
+			],
+			[
+				"handl",
+				"handleSendError"
+			],
+			[
+				"node",
+				"nodemon"
+			],
+			[
+				"transform",
+				"transform-jsx"
+			],
+			[
+				"dest",
+				"DEST_JS_RELEASE"
+			],
+			[
+				"wat",
+				"watchifyConfig"
+			],
+			[
+				"watch",
+				"watch-jsx"
+			],
+			[
+				"com",
+				"components"
+			],
+			[
+				"pat",
+				"pathmodify"
+			],
+			[
+				"app",
+				"apply-dev-env"
+			],
+			[
+				"bab",
+				"babelifyConfig"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"get",
+				"getGreeting"
+			],
+			[
+				"over",
+				"overflow-y: "
+			],
+			[
+				"in",
+				"inherit"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"Reac",
+				"ReactRouter"
+			],
+			[
+				"cla",
+				"className"
+			],
+			[
+				"Rea",
+				"ReactRouter"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"nav",
+				"navbar-brand"
+			],
+			[
+				"rele",
+				"DEST_JS_RELEASE"
+			],
+			[
+				"js",
+				"JSX"
+			],
+			[
+				"J",
+				"JS"
+			],
+			[
+				"en",
+				"JSX_ENTRY_POINT"
+			],
+			[
+				"D",
+				"DEST_CSS_RELEASE"
+			],
+			[
+				"css",
+				"cssnano"
+			],
+			[
+				"mar",
+				"margin: "
+			],
+			[
+				"ba",
+				"background-color: "
+			],
+			[
+				"ma",
+				"margin: "
+			],
+			[
+				"te",
+				"text-align: "
+			],
+			[
+				"f",
+				"font-size"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"bor",
+				"border-radius: "
+			],
+			[
+				"b",
+				"background-color"
+			],
+			[
+				"p",
+				"padding: "
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"cac",
+				"cacheInvalidated"
+			],
+			[
+				"min",
+				"minutesExpired"
+			],
+			[
+				"ca",
+				"cacheTime"
+			],
+			[
+				"ayce",
+				"ayceHandle"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"ge",
+				"geolocation"
+			],
+			[
+				"coo",
+				"coordinates"
+			],
+			[
+				"c",
+				"coordinates"
+			],
+			[
+				"cach",
+				"cacheExpired"
+			],
+			[
+				"cahce",
+				"cacheFactory"
+			],
+			[
+				"new",
+				"newTime"
+			],
+			[
+				"da",
+				"datePast"
+			],
+			[
+				"date",
+				"dateNow"
+			],
+			[
+				"face",
+				"facebookClient"
+			],
+			[
+				"diet",
+				"dietEnabled"
+			],
+			[
+				"Plac",
+				"PlaceIndexRequested"
+			],
+			[
+				"hi",
+				"hideSpinner"
+			],
+			[
+				"d",
+				"defaultQuery"
+			],
+			[
+				"query",
+				"queryFeedback"
+			],
+			[
+				"cache",
+				"cacheTime"
+			],
+			[
+				"e",
+				"equals"
+			],
+			[
+				"part",
+				"partnersOnly"
+			],
+			[
+				"ay",
+				"ayceCookies"
+			],
+			[
+				"is",
+				"isAuthenticated"
+			],
+			[
+				"t",
+				"text-align: "
+			],
+			[
+				"place",
+				"place_email"
+			],
+			[
+				"mer",
+				"merchant_form"
+			],
+			[
+				"pla",
+				"placeholder"
+			],
+			[
+				"li",
+				"line-height: "
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"max",
+				"max-width: "
+			],
+			[
+				"fo",
+				"font-weight"
+			],
+			[
+				"tabl",
+				"table-cell"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"m",
+				"margin: "
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"wor",
+				"word-wrap: "
+			],
+			[
+				"l",
+				"line-height"
+			],
+			[
+				"bord",
+				"border-left: "
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"r",
+				"requests"
+			],
+			[
+				"spe",
+				"specialRequests"
+			],
+			[
+				"sp",
+				"specialRequests"
+			],
+			[
+				"re",
+				"requests"
+			],
+			[
+				"ingre",
+				"ingredientIds"
+			],
+			[
+				"s",
+				"selected"
+			],
+			[
+				"removed",
+				"removedLength"
+			],
+			[
+				"ad",
+				"addedDiets"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"image",
+				"image"
+			],
+			[
+				"route",
+				"routeParams"
+			],
+			[
+				"pa",
+				"padding: "
+			],
+			[
+				"ex",
+				"experience"
+			],
+			[
+				"cont",
+				"content: "
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"mag",
+				"margin"
+			],
+			[
+				"rout",
+				"routeParams"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"lef",
+				"left: "
+			],
+			[
+				"defau",
+				"defaultFilters"
+			],
+			[
+				"ayc",
+				"ayceLib"
+			],
+			[
+				"defa",
+				"defaultFilter"
+			],
+			[
+				"pro",
+				"profile"
+			],
+			[
+				"text",
+				"text-align: "
+			],
+			[
+				"ng",
+				"ng-class"
+			],
+			[
+				"box",
+				"box-shadow: "
+			],
+			[
+				"cro",
+				"crop_rotate"
+			],
+			[
+				"border-right-r",
+				"border-bottom-right-radius: "
+			],
+			[
+				"form",
+				"formatted_address"
+			],
+			[
+				"upload",
+				"uploadEnabled"
+			],
+			[
+				"ver",
+				"vertical-align: "
+			],
+			[
+				"fa-",
+				"fa-check-circle-o"
+			],
+			[
+				"ste",
+				"stepKey"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"tour",
+				"tourStep"
+			],
+			[
+				"n",
+				"normal"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"font-",
+				"font-style: "
+			],
+			[
+				"up",
+				"upload"
+			],
+			[
+				"bot",
+				"bottom: "
+			],
+			[
+				"su",
+				"suggestedIds"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: sa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: s",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"cd ~/Library/Application\\ Support/Sublime\\ Text\\ 3/Packages/",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Web Apps/Development/App.React"
+	],
+	"file_history":
+	[
+		"/D/Web Apps/Development/App.React/.gitignore",
+		"/D/Web Apps/Development/App.React/security/react-app.txt",
+		"/D/Web Apps/Development/Basic.React/package.json",
+		"/D/Web Apps/Development/Basic.React/src/components/Routes.js",
+		"/D/Web Apps/Development/Basic.React/server/helpers/mail.helper.js",
+		"/D/Web Apps/Development/Basic.React/src/components/entry.js",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/projects/Projects.js",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/notFound/NotFound.js",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/team/Team.js",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/donate/Donate.js",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/nav/NavMenu.js",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/nav/NavSlide.js",
+		"/D/Web Apps/Development/Basic.React/src/components/helpers/TimeGreet.js",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/footer/Footer.js",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/header/Header.js",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/header/HeaderLogo.js",
+		"/D/Web Apps/Development/Basic.Angular/package.json",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/about/About.js",
+		"/D/Web Apps/Development/Basic.React/README.md",
+		"/D/Web Apps/Development/Basic.React/start-project.ps1",
+		"/D/Web Apps/Development/Basic.React/server/index.js",
+		"/D/Web Apps/Development/Basic.React/src/index.jade",
+		"/D/Web Apps/Development/Basic.React/src/_layout.jade",
+		"/D/Web Apps/Development/Basic.React/.environment.config",
+		"/D/Web Apps/Development/Basic.React/includes.js",
+		"/D/Web Apps/Development/Basic.React/build.config.js",
+		"/D/Web Apps/Development/Basic.React/sample.environment.config",
+		"/D/Web Apps/Development/Basic.React/set-environment-variables.heroku.ps1",
+		"/D/Web Apps/Development/Basic.React/heroku/node-js-getting-started/index.js",
+		"/D/Web Apps/Development/Basic.React/Procfile",
+		"/D/Web Apps/Development/Basic.React/.nvmrc",
+		"/D/Web Apps/Development/Basic.React/.git/config",
+		"/D/Web Apps/Development/Basic.React/webpack.config.js",
+		"/D/Web Apps/Development/Basic.React/set-environment-variables.ps1",
+		"/D/Web Apps/Development/Basic.React/server/properties.js",
+		"/D/Web Apps/Development/Basic.React/server/templates/mail/contact.jade",
+		"/D/Web Apps/Development/Basic.React/src/ng-views/base/_layout.jade",
+		"/D/Web Apps/Development/Basic.React/src/components/app.data.js",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/nav/menu.data.js",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/home/styles/Panel_1.scss",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/header/styles/Header.scss",
+		"/D/Web Apps/Development/Basic.React/server/server.js",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/contact/index.js",
+		"/D/Web Apps/Development/Basic.React/.gitignore",
+		"/D/Web Apps/Development/Basic.React/environment.config",
+		"/D/Web Apps/Development/Basic.React/environment.sample.config",
+		"/D/Web Apps/Development/Base/App.Source/Web.config",
+		"/D/Web Apps/Development/Basic.React/src/ng-modules/org-modules.scss",
+		"/D/Web Apps/Development/Basic.React/src/css/base.org.scss",
+		"/D/Web Apps/Development/Basic.React/gulpfile.webpack.js",
+		"/D/Web Apps/Development/Basic.React/dist/js/app.min.js",
+		"/D/Web Apps/Development/Basic.React/dist/css/app.min.css",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/home/panels/Panel_2.js",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/home/styles/Home.scss",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/home/Home.js",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/Layout.js",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/error404/Error404.js",
+		"/D/Web Apps/Development/Basic.React/dist/js/map/app.min.js.map",
+		"/D/Web Apps/Development/Basic.React/src/css/base/_utilities.scss",
+		"/D/Web Apps/Development/Basic.React/src/css/mixins/_effects.scss",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/header/Header.jsx",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/header/HeaderLogo.jsx",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/header/styles/HeaderLogo.scss",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/home/Home.jsx",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/Layout.jsx",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/styles/Layout.scss",
+		"/D/Web Apps/Development/Basic.React/node_modules/webpack/bin/webpack.js",
+		"/D/Web Apps/Development/Basic.React/src/components/Routes.jsx",
+		"/D/Web Apps/Development/Basic.React/node_modules/browser-sync-ui/public/js/app.min.js",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/nav/NavSlide.jsx",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/nav/NavMenu.jsx",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/footer/Footer.jsx",
+		"/D/Web Apps/Development/Basic.React/src/components/entry.jsx",
+		"/D/Web Apps/Development/Basic.React/src/js/app/controllers/org.controller.js",
+		"/D/Web Apps/Development/Basic.React/src/css/skins/_skin-default.scss",
+		"/D/Web Apps/Development/Basic.React/node_modules/material-ui/styles/MuiThemeProvider.js",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/nav/styles/NavSlide.scss",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/nav/styles/NavMenu.scss",
+		"/D/Web Apps/Development/Basic.React/src/css/base/_lib.scss",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/nav/slideToggle.js",
+		"/D/Web Apps/Development/Basic.React/src/ng-filters/time-greet.filter.js",
+		"/D/Web Apps/Development/Basic.React/src/components/helpers/timeGreet/TimeGreet.scss",
+		"/D/Web Apps/Development/Basic.React/src/components/requires.js",
+		"/D/Web Apps/Development/Basic.React/src/css/base/material-design/_md-nav.scss",
+		"/D/Web Apps/Development/Basic.React/src/css/base/material-design/_md-inputs.scss",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/footer/styles/Footer.scss",
+		"/D/Web Apps/Development/Basic.React/src/js/release/components.js",
+		"/D/Web Apps/Development/Basic.React/src/helpers/TimeGreet.js",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/home/panels/Panel_3.js",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/home/panels/Panel_1.js",
+		"/D/Web Apps/Development/Basic.React/src/css/base/_colors.scss",
+		"/D/Web Apps/Development/Basic.React/src/css/base/_material-overrides.scss",
+		"/D/Web Apps/Development/Basic.React/src/css/mixins/_org.scss",
+		"/D/Web Apps/Development/Basic.React/src/ng-directives/org/org-nav-slide.directive.js",
+		"/D/Web Apps/Development/Basic.React/src/ng-views/org/home/components/styles/_panel-1.scss",
+		"/D/Web Apps/Development/Basic.React/src/css/base/_nav.scss",
+		"/D/Web Apps/Development/Basic.React/src/css/base/_vars.scss",
+		"/D/Web Apps/Development/Basic.React/src/css/base/_screens.scss",
+		"/D/Web Apps/Development/Basic.React/src/components/app.js",
+		"/D/Web Apps/Development/Basic.React/src/js/app/configs/route.config.js",
+		"/D/Web Apps/Development/Basic.React/src/components/layout/nav/menu.js",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/home/panels/Panel1.js",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/home/panels/Panel2.js",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/home/panels/Panel3.js",
+		"/D/Web Apps/Development/Basic.React/src/components/pages/error404/Error404.scss",
+		"/D/Web Apps/Development/Basic.React/src/ng-views/base/components/menus/_nav-slide.jade",
+		"/D/Web Apps/Development/Basic.React/src/ng-views/base/components/_nav-main.jade",
+		"/D/Web Apps/Development/Basic.React/src/ng-views/org/home/components/styles/_panel-3.scss",
+		"/D/Web Apps/Development/IceSolar/gulpfile.js",
+		"/D/Web Apps/Development/Basic.React/src/js/release/app.js",
+		"/D/Web Apps/Development/Basic.React/src/ng-views/org/home/components/_panel-1.jade",
+		"/D/Web Apps/Development/Basic.React/src/ng-modules/utilities/util-library.factory.js",
+		"/D/Web Apps/Development/IceSolar/.gitignore",
+		"/D/Web Apps/Development/Basic.React/src/ng-modules/utilities/configs/theme.config.js",
+		"/D/Web Apps/Development/Basic.React/src/ng-views/org/home/components/styles/home.scss",
+		"/D/Web Apps/Development/Basic.React/src/css/release/app.scss",
+		"/D/Web Apps/Development/Basic.React/dist/about-us/index.html",
+		"/D/Web Apps/Development/Basic.Angular/start-project.ps1",
+		"/D/Web Apps/Development/Basic.React/Basic.React.sln",
+		"/D/Web Apps/Development/Basic.Angular/ApplicationName.sln",
+		"/D/Web Apps/Development/IceSolar/Ice.sln",
+		"/D/Web Apps/Development/Basic.Angular/delete.ps1",
+		"/D/Web Apps/Development/Elevate/delete.ps1",
+		"/D/Web Apps/Scripts/Powershell/delete.ps1",
+		"/D/Web Apps/Development/Elevate/src/App_Data/PublishProfiles/ElevateWeb.pubxml",
+		"/D/Web Apps/Development/Basic.Angular/src/App_Data/PublishProfiles/ApplicationNameWeb.pubxml",
+		"/D/Web Apps/Development/Basic.Angular/HOURS.txt"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 114.0,
+		"where_history":
+		[
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.scss",
+			"*.jade",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.scss",
+			"*.jade",
+			"*.js",
+			"*.scss",
+			"*.jade",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.jade",
+			"*.scss",
+			"*.jade",
+			"*.scss",
+			"*.js",
+			"*.*",
+			"*.scss",
+			"*.jade",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.scss",
+			"*.scs",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.scss",
+			"*.jade",
+			"*.scss",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.scss",
+			"*.jade",
+			"*.js",
+			"*.scss",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.scss",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.scss",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.jde",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.scss",
+			"*.jade",
+			"*.scss",
+			"*.js",
+			"*.scss",
+			"*.jade",
+			"*.scss",
+			"*.js",
+			"*.jade",
+			"*.scss",
+			"*.js",
+			"*.scss",
+			"*.jade",
+			"*.scss",
+			"*.jade",
+			"*.scss",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.jade",
+			"*.scss",
+			"*.js",
+			"*.scss",
+			"*.jade",
+			"*.js",
+			"*.jade",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.jade",
+			"*.scss",
+			"*.jade"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"require('../home",
+			"require('..",
+			"60px",
+			"../../ng",
+			"../skins/_skin",
+			"src/css/release",
+			"concat",
+			".JS",
+			"DEST_CSS_RELEASE",
+			"util",
+			"streamify",
+			"source",
+			"pathmodify",
+			"merge",
+			"htmlreplace",
+			"cache",
+			"concat",
+			"buffer",
+			"browserify",
+			"babelify",
+			"\"",
+			"init",
+			"title",
+			"notif",
+			".COMPONENTS",
+			"COMPONENTS",
+			"absolute-ce",
+			"babel",
+			"modules",
+			"JSX",
+			"env",
+			"path.",
+			"’",
+			"‘",
+			"\"",
+			"browseri",
+			"requires(",
+			"ReactIntl",
+			"greet",
+			"\"",
+			"$sce.trustAsHtml(",
+			"#org",
+			"hideSidedrawer",
+			"showSidedrawer",
+			"bodyEl",
+			"sidedrawerEl",
+			"mdGreen",
+			"a {",
+			"a",
+			"_org",
+			"$restricted",
+			"animated",
+			"animated-",
+			"hidden-xs",
+			"_vars",
+			"$restrictedRed",
+			"_nav",
+			"nav-slide",
+			"Panel3",
+			"Panel2",
+			"Panel1",
+			"#error",
+			"#org",
+			"#home",
+			"../../Layout",
+			"OrgContainer",
+			"browserHistory",
+			".title",
+			" className=\"hidden-xs\"",
+			"React",
+			"\"",
+			"class=",
+			"class",
+			"utility",
+			"ng-",
+			"\"",
+			"className",
+			"nav",
+			" class",
+			"react",
+			"\"",
+			"streamify",
+			"\"",
+			"Parent",
+			"#org",
+			"'src/css/release/'",
+			"'src/js/release/'",
+			"'dist/js/'",
+			"'dist/css/'",
+			"js",
+			"function()",
+			"App.Source",
+			"iceApp",
+			"orgApp",
+			"');');",
+			"ng-views/org/",
+			".html",
+			"Base-ic",
+			"../base",
+			"checkbox",
+			"form-control",
+			"ng-vie",
+			"3",
+			"orgLocation",
+			"\"",
+			"orgUtils.fac",
+			"text-",
+			"max-width: $screenXsMax",
+			"max-width: $screen",
+			"ICE Solar",
+			"\"",
+			"h1",
+			"menu-item",
+			"navbar-brand",
+			"ICE Solar",
+			"vision-mission",
+			"navbar-right",
+			"nav-slide",
+			"absolute-center",
+			"35px",
+			"base.elevate",
+			"$screenXsMax:",
+			".container",
+			"body-content",
+			"elevate",
+			"navbar",
+			"hr",
+			"$colorPrimary:"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"includes('components/pages/home",
+			"includes('components/pages",
+			"src/release",
+			"DEST_RELEASE",
+			"'",
+			".COMPONENTS_FILE",
+			"build.path.",
+			"'",
+			"require(",
+			"'",
+			"",
+			"hideNavSlide",
+			"showNavSlide",
+			"body",
+			"navSlide",
+			"mui--hidden-xs",
+			"Panel_3",
+			"Panel_2",
+			"Panel_1",
+			"../../layout/Layout",
+			"Layout",
+			"hashHistory",
+			"",
+			"Angular",
+			"'",
+			"className=",
+			"className",
+			"data-ng-",
+			"'",
+			"class",
+			" className",
+			"'",
+			"path.DEST_CSS_RELEASE",
+			"path.DEST_JS_RELEASE",
+			"path.DEST_JS",
+			"path.DEST_CSS",
+			"() =>",
+			"src",
+			"",
+			".view.html",
+			"Basic.React",
+			"src/css/base",
+			"base",
+			"'",
+			"max-width: $screenSmMin",
+			"'",
+			"ICE Commercial Power",
+			"ice",
+			"App.Source",
+			"Method=\"GET\" Version=\"1.1\" Url=\"https://www.foodayce.com/api/query-places\"",
+			"Method=\"GET\" Version=\"1.1\" Url=\"https://www.foodayce.com/ayce/initialize/web\"",
+			".entry",
+			"utilCookies",
+			"'",
+			"data.results",
+			"tm &nbsp;beta",
+			"beta",
+			"form_reset",
+			"form_feedback",
+			"form_experience",
+			"form_ingredient",
+			"form_merchant",
+			"form_register",
+			"ayceHandle.error);",
+			"return $http",
+			"return ayce.tour.run(ayce",
+			"!$this.search.phrase",
+			"$this.search.phrase = undefined;",
+			"!$this.search.query",
+			"query, angular.copy($location.search())",
+			"queryMerchants",
+			"$this.",
+			"queryFeedback",
+			".query",
+			"$this.",
+			"$scope.$this = $this = {",
+			"$this.",
+			"$this.load($event)",
+			"$this.query",
+			"ayceHandle.successCache",
+			"successCache(response, undefined, true)",
+			"response",
+			"queryMenus",
+			".query",
+			"defaultQuery",
+			"return ayceHandle.successCache(response, undefined, true)",
+			"list.query",
+			"defaultQuery",
+			"angular.copy($location.search())",
+			"defaultQuery",
+			"response.data.rows",
+			".query",
+			"excluded",
+			"return ayceHandle.success(response, true);",
+			"queryPlaces",
+			"query",
+			"coords",
+			"partners",
+			"ParseDependentRequests=\"False\"",
+			"FollowRedirects=\"True\"",
+			"ParseDependentRequests=\"False\"",
+			"upload-dish",
+			"utilLog.",
+			"utilLog,",
+			"ayceImport.",
+			"import.",
+			"attachments",
+			"$scope.",
+			"feedback.",
+			": function",
+			": function()",
+			"",
+			".table-cell.table-cell-1-3.table-cell-mobile",
+			"appUtils",
+			"list.",
+			"ayce.tags",
+			"ayce",
+			"startsWith:{name:myDiet.query}",
+			"startsWith:{name:modal.data.query}",
+			"myDiet.query",
+			"myDiet.result.other",
+			"ParseDependentRequests=\"False\"",
+			"i.icon.fa",
+			"tickets",
+			"api/profile/diet",
+			"error)",
+			"return $http",
+			"googleApi"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.gulp_output":
+	{
+		"height": 148.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 148.0
+	},
+	"pinned_build_system": "",
+	"project": "app.react.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"start",
+				"start-project.ps1"
+			],
+			[
+				"git",
+				".gitignore"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"entr",
+				"src\\components\\entry.js"
+			],
+			[
+				"confi",
+				"build.config.js"
+			],
+			[
+				"header",
+				"src\\components\\layout\\header\\HeaderLogo.js"
+			],
+			[
+				"rea",
+				"README.md"
+			],
+			[
+				"star",
+				"start-project.ps1"
+			],
+			[
+				"prop",
+				"server\\properties.js"
+			],
+			[
+				"pro",
+				"Procfile"
+			],
+			[
+				"",
+				"src\\ng-views\\base\\_layout.jade"
+			],
+			[
+				"ent",
+				"src\\components\\entry.js"
+			],
+			[
+				"app",
+				"src\\components\\app.data.js"
+			],
+			[
+				"men",
+				"src\\components\\layout\\nav\\menu.data.js"
+			],
+			[
+				"/nav",
+				"src\\components\\layout\\nav\\NavMenu.js"
+			],
+			[
+				"rout",
+				"src\\components\\Routes.js"
+			],
+			[
+				"pac",
+				"package.json"
+			],
+			[
+				"home",
+				"src\\components\\pages\\home\\styles\\Home.scss"
+			],
+			[
+				"base",
+				"src\\css\\base.org.scss"
+			],
+			[
+				"lay",
+				"src\\ng-views\\base\\_layout.jade"
+			],
+			[
+				"ut",
+				"src\\css\\base\\_utilities.scss"
+			],
+			[
+				"efe",
+				"src\\css\\mixins\\_effects.scss"
+			],
+			[
+				"gul",
+				"gulpfile.js"
+			],
+			[
+				"layouts",
+				"src\\components\\layout\\styles\\Layout.scss"
+			],
+			[
+				"layout",
+				"src\\ng-views\\base\\_layout.jade"
+			],
+			[
+				"head",
+				"src\\components\\layout\\header\\styles\\Header.scss"
+			],
+			[
+				"g",
+				"gulpfile.js"
+			],
+			[
+				"gu",
+				"gulpfile.js"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"layouj",
+				"src\\components\\layout\\Layout.js"
+			],
+			[
+				"layou",
+				"src\\ng-views\\base\\_layout.jade"
+			],
+			[
+				"foote",
+				"src\\components\\layout\\footer\\Footer.js"
+			],
+			[
+				"time",
+				"src\\ng-filters\\time-greet.filter.js"
+			],
+			[
+				"skin",
+				"src\\css\\skins\\_skin-default.scss"
+			],
+			[
+				"layouscs",
+				"src\\components\\layout\\styles\\Layout.scss"
+			],
+			[
+				"navslid",
+				"src\\components\\layout\\nav\\NavSlide.js"
+			],
+			[
+				"foo",
+				"src\\components\\layout\\footer\\Footer.js"
+			],
+			[
+				"navme",
+				"src\\components\\layout\\nav\\styles\\NavMenu.scss"
+			],
+			[
+				"nav",
+				"src\\components\\layout\\nav\\styles\\NavMenu.scss"
+			],
+			[
+				"logo",
+				"src\\components\\layout\\header\\HeaderLogo.js"
+			],
+			[
+				"md",
+				"src\\css\\base\\material-design\\_md-inputs.scss"
+			],
+			[
+				"hea",
+				"src\\components\\layout\\header\\Header.js"
+			],
+			[
+				"navsl",
+				"src\\components\\layout\\nav\\NavSlide.js"
+			],
+			[
+				"bas",
+				"src\\css\\base.org.scss"
+			],
+			[
+				"foot",
+				"src\\components\\layout\\footer\\Footer.js"
+			],
+			[
+				"orgna",
+				"src\\ng-directives\\org\\org-nav-slide.directive.js"
+			],
+			[
+				"navsli",
+				"src\\components\\layout\\nav\\NavSlide.js"
+			],
+			[
+				"lib",
+				"src\\css\\base\\_lib.scss"
+			],
+			[
+				"mdi",
+				"src\\css\\base\\material-design\\_md-inputs.scss"
+			],
+			[
+				"pan",
+				"src\\ng-views\\org\\home\\components\\styles\\_panel-1.scss"
+			],
+			[
+				"navmen",
+				"src\\components\\layout\\nav\\NavMenu.js"
+			],
+			[
+				"orgcon",
+				"src\\js\\app\\controllers\\org.controller.js"
+			],
+			[
+				"panel",
+				"src\\components\\pages\\home\\panels\\Panel1.js"
+			],
+			[
+				"route",
+				"src\\components\\Routes.js"
+			],
+			[
+				"team",
+				"src\\components\\pages\\team\\Team.js"
+			],
+			[
+				"navs",
+				"src\\css\\base\\_nav.scss"
+			],
+			[
+				"log",
+				"src\\components\\layout\\header\\HeaderLogo.js"
+			],
+			[
+				"panel3",
+				"src\\components\\pages\\home\\panels\\Panel3.js"
+			],
+			[
+				"na",
+				"src\\css\\base\\_nav.scss"
+			],
+			[
+				"rou",
+				"src\\components\\Routes.js"
+			],
+			[
+				"panescs",
+				"src\\ng-views\\org\\home\\components\\styles\\_panel-3.scss"
+			],
+			[
+				"la",
+				"src\\ng-views\\base\\_layout.jade"
+			],
+			[
+				"ind",
+				"src\\index.jade"
+			],
+			[
+				"inde",
+				"src\\index.jade"
+			],
+			[
+				"panel1",
+				"src\\components\\pages\\home\\components\\Panel1.js"
+			],
+			[
+				"ign",
+				".gitignore"
+			],
+			[
+				"pan1s",
+				"src\\ng-views\\org\\home\\components\\styles\\_panel-1.scss"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"sln",
+				"Basic.React.sln"
+			],
+			[
+				"teamcon",
+				"src\\ng-views\\org\\team\\team.controller.js"
+			],
+			[
+				"proj",
+				"src\\ng-views\\org\\projects\\project-name\\project-name.controller.js"
+			],
+			[
+				"abou",
+				"src\\ng-views\\org\\about-us\\about-us.controller.js"
+			],
+			[
+				"orgocon",
+				"src\\ng-views\\org\\donate\\donate.controller.js"
+			],
+			[
+				"goog",
+				"src\\ng-services\\google-api.service.js"
+			],
+			[
+				"publ",
+				"src\\App_Data\\PublishProfiles\\BasicReactWeb.pubxml"
+			],
+			[
+				"them",
+				"src\\ng-modules\\utilities\\configs\\theme.config.js"
+			],
+			[
+				"navm",
+				"src\\ng-views\\base\\components\\_nav-main.jade"
+			],
+			[
+				"anai",
+				"src\\css\\base\\_animations.scss"
+			],
+			[
+				"layo",
+				"src\\ng-views\\base\\_layout.jade"
+			],
+			[
+				"utili",
+				"src\\css\\base\\_utilities.scss"
+			],
+			[
+				"homejad",
+				"src\\ng-views\\org\\home\\components\\_panel-1.jade"
+			],
+			[
+				"publi",
+				"src\\App_Data\\PublishProfiles\\BasicReactWeb.pubxml"
+			],
+			[
+				"field",
+				"src\\ng-modules\\utilities\\util-forms\\field-autofill.directive.js"
+			],
+			[
+				"projena",
+				"src\\ng-views\\org\\projects\\project-name\\project-name.controller.js"
+			],
+			[
+				"orgc",
+				"src\\js\\app\\controllers\\org.controller.js"
+			],
+			[
+				"homeon",
+				"src\\ng-views\\org\\home\\home.controller.js"
+			],
+			[
+				"pa",
+				"package.json"
+			],
+			[
+				"orgmo",
+				"src\\js\\app\\org.module.js"
+			],
+			[
+				"orgmod",
+				"src\\ng-modules\\org-modules.scss"
+			],
+			[
+				"baseor",
+				"src\\css\\base.org.scss"
+			],
+			[
+				"hom",
+				"App.Source\\ng-views\\org\\home\\components\\_0-body-home.jade"
+			],
+			[
+				"cont",
+				"App.Source\\ng-views\\org\\contact\\components\\styles\\contact.scss"
+			],
+			[
+				"skki",
+				"App.Source\\css\\skins\\_skin-default.scss"
+			],
+			[
+				"conta",
+				"App.Source\\ng-views\\org\\contact\\components\\_body-contact.jade"
+			],
+			[
+				"sk",
+				"App.Source\\css\\skins\\_skin-default.scss"
+			],
+			[
+				"aboutja",
+				"App.Source\\ng-views\\org\\about\\components\\_body-about.jade"
+			],
+			[
+				"ski",
+				"App.Source\\css\\skins\\_skin-default.scss"
+			],
+			[
+				"gru",
+				"App.Source\\gruntfile.js"
+			],
+			[
+				"about",
+				"App.Source\\ng-views\\org\\about\\components\\_body-about.jade"
+			],
+			[
+				"ba",
+				"App.Source\\css\\base.org.scss"
+			],
+			[
+				"home3",
+				"App.Source\\ng-views\\org\\home\\components\\styles\\_panel-3.scss"
+			],
+			[
+				"panja",
+				"App.Source\\ng-views\\org\\home\\components\\_panel-1.jade"
+			],
+			[
+				"util",
+				"App.Source\\css\\base\\_utilities.scss"
+			],
+			[
+				"bodhom",
+				"App.Source\\ng-views\\org\\home\\components\\_0-body-home.jade"
+			],
+			[
+				"module",
+				"App.Source\\js\\app\\org.module.js"
+			],
+			[
+				"google",
+				"App.Source\\ng-services\\google-api.service.js"
+			],
+			[
+				"modulejs",
+				"App.Source\\js\\app\\org.module.js"
+			],
+			[
+				"orgco",
+				"App.Source\\js\\app\\controllers\\org.controller.js"
+			],
+			[
+				"navsc",
+				"App.Source\\css\\base\\_nav.scss"
+			],
+			[
+				"navma",
+				"App.Source\\ng-views\\base\\components\\_nav-main.jade"
+			],
+			[
+				"homecon",
+				"App.Source\\ng-views\\org\\home\\home.controller.js"
+			],
+			[
+				"utilisc",
+				"App.Source\\css\\base\\_utilities.scss"
+			],
+			[
+				"navslidej",
+				"App.Source\\ng-views\\base\\components\\menus\\_nav-slide.jade"
+			],
+			[
+				"navslide",
+				"App.Source\\ng-directives\\org\\org-nav-slide.directive.js"
+			],
+			[
+				"resu",
+				"App.Source\\ng-views\\org\\resume\\resume.jade"
+			],
+			[
+				"contac",
+				"App.Source\\ng-views\\org\\contact\\contact.controller.js"
+			],
+			[
+				"resumecon",
+				"App.Source\\ng-views\\org\\resume\\resume.controller.js"
+			],
+			[
+				"routecon",
+				"App.Source\\js\\app\\configs\\route.config.js"
+			],
+			[
+				"markes",
+				"App.Source\\ng-views\\ice\\home\\components\\styles\\_market.scss"
+			],
+			[
+				"grun",
+				"App.Source\\gruntfile.js"
+			],
+			[
+				"layot",
+				"App.Source\\ng-views\\base\\_layout.jade"
+			],
+			[
+				"routeg",
+				"App.Source\\js\\app\\configs\\route.config.js"
+			],
+			[
+				"nvaslide",
+				"App.Source\\ng-views\\base\\components\\menus\\_nav-slide.jade"
+			],
+			[
+				"basescs",
+				"App.Source\\css\\base.elevate.scss"
+			],
+			[
+				"infopla",
+				"FoodAyce\\Source\\ng-views\\ayce\\places\\components\\_info-place.jade"
+			],
+			[
+				"aycelibr",
+				"FoodAyce\\Source\\ng-modules\\utilities\\util-library.factory.js"
+			],
+			[
+				"adminjade",
+				"FoodAyce\\Source\\ng-views\\admin\\home\\components\\_body-admin.jade"
+			],
+			[
+				"import",
+				"FoodAyce\\Source\\ng-views\\admin\\import\\import.controller.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 310.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
