@@ -15,25 +15,29 @@ var handleSendSuccess = (response) => {
 module.exports = {
   init: function() {
 
-    mailer.extend(this, {
-      from: props.global.admin_email,
+    var app = this;
+
+    mailer.extend(app, {
+      from: props.admin.email,
       host: 'smtp.gmail.com', // hostname
       secureConnection: true, // use SSL
       port: 465, // port for secure SMTP
       transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts
       auth: {
-        user: props.global.google_user,
-        pass: props.global.google_password
+        user: props.google.user,
+        pass: props.google.password
       }
     });
 
     // set mail templates
-    this.set('views', __dirname + '/../templates/mail');
-    this.set('view engine', 'jade');
+    app.set('views', __dirname + '/../templates/mail');
+    app.set('view engine', 'jade');
   },
   send: function(message) {
 
-    this.mailer.send(message.template, message.config, function(error) {
+    var app = this;
+
+    app.mailer.send(message.template, message.config, function(error) {
       if (error) {
         (message.handleError || handleSendError)(error, message.response);
         return;

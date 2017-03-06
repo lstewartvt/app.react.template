@@ -1,5 +1,5 @@
-var NotFound = React.createClass({
-  render: function() {
+export default class NotFound extends React.Component {
+  render() {
     return (
       <div id="error" className="text-center">
         <h1 className="mui--hidden-xs">Missing Page</h1>
@@ -8,6 +8,5 @@ var NotFound = React.createClass({
         <h3>This page is still under investigation<br/>Please try one of our menu links in the top right corner</h3>
       </div>
     );
-}});
-
-module.exports = NotFound;
+  };
+};

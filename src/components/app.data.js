@@ -5,7 +5,9 @@ module.exports = {
     contact: '/contact',
     donate: '/donate',
     home: '/',
+    login: '/login',
     projects: '/projects',
+    register: '/register',
     team: '/team'
   }
 };

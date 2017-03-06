@@ -1,39 +1,39 @@
-var menu = require('./menu.data');
-var slideToggle = require('./slideToggle');
-var TimeGreet = require('app_modules/helpers/TimeGreet');
+import Drawer from 'react-toolbox/lib/drawer';
+import TimeGreet from 'app_modules/helpers/TimeGreet';
 
-var NavSlide = React.createClass({
-  componentDidMount: function() {
-    slideToggle();
-  },
-  render: function() {
+import menu from './menu.data';
+
+export default class NavSlide extends React.Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+      active: false
+    };
+  }
+
+  handleToggle() {
+    this.setState({
+      active: !this.state.active
+    });
+  }
+
+  componentDidMount() {
+    alert('slide');
+  }
+
+  render() {
     return (
-      <aside
-        id="nav-slide"
-        className="mui--no-user-select">
+      <Drawer
+        active={this.state.active}
+        onOverlayClick={this.handleToggle}>
         <section className="greeting">
           <h1>
             <TimeGreet subject="Lemaire" />
           </h1>
         </section>
-        <section className="layout-padding">
-          {
-            menu.map((link, index) => {
-              return (
-                <md-button
-                  key={`nav-link-${index}`}
-                  className="menu-item md-primary"
-                  data-ng-class="{active:org.nav.page.home}"
-                  data-ng-click="org.view('home')">
-                  <span>{link.title}</span>
-                </md-button>
-              );
-            })
-          }
-        </section>
-      </aside>
+      </Drawer>
     );
   }
-});
-
-module.exports = NavSlide;
+};

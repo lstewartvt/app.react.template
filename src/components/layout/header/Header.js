@@ -1,13 +1,32 @@
-var HeaderLogo = require('./HeaderLogo');
-var NavMenu = require('app_modules/layout/nav/NavMenu');
+import { AppBar } from 'react-toolbox/lib/app_bar';
+import HeaderLogo from './HeaderLogo';
+import NavMenu from 'layout/nav/NavMenu';
 
-const Header = () => (
-  <header id="header" className="navbar navbar-fixed-top">
-    <div id="nav-bar" className="container mui-appbar mui--appbar-line-height">
-      <HeaderLogo />
-      <NavMenu />
-    </div>
-  </header>
-);
+import styles from './styles/Header.css';
 
-module.exports = Header;
+export default class Header extends React.Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+      active: false
+    };
+  };
+
+  render() {
+    return (
+      <AppBar
+        id="header"
+        className="header"
+        leftIcon="menu"
+        rightIcon="menu"
+        title={<HeaderLogo />}>
+        {/*<div id="nav-bar" className="container mui-appbar mui--appbar-line-height">
+          <HeaderLogo />
+        </div>*/}
+        <NavMenu />
+      </AppBar>
+    );
+  };
+};

@@ -1,13 +1,11 @@
-var Panel_2 = require('app_modules/pages/home/panels/Panel_2');
+import Panel_2 from 'pages/home/panels/Panel_2';
 
-var Projects = React.createClass({
-  render: function() {
+export default class Projects extends React.Component {
+  render() {
     return (
       <div id="projects">
         <Panel_2 />
       </div>
     );
-  }
-});
-
-module.exports = Projects;
+  };
+};

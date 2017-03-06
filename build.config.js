@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   path: {
     APP: [
@@ -8,14 +10,14 @@ module.exports = {
       'src/components/**/styles/**/*.scss'
     ],
     JADE: [
-      'src/index.jade'
+      'src/layout.jade'
     ],
     JSX: [
       'src/components/**/*.js'
     ],
-    JSX_ENTRY_POINT: 'src/components/entry.js',
+    JSX_ENTRY_POINT: path.resolve(__dirname, 'src/components', 'entry.js'),
     JSX_ENTRY_POINTS: [
-      'src/components/entry.js'
+      path.resolve(__dirname, 'src/components', 'entry.js')
     ],
     MINIFIED_CSS: 'app.min.css',
     MINIFIED_JS: 'app.min.js',
@@ -24,11 +26,14 @@ module.exports = {
       './src/components'
     ],
     COMPONENTS_FILE: 'components.js',
-    DEST_CSS: 'dist/css/',
-    DEST_JS: 'dist/js/',
+    DEST_CSS: '/css/',
+    DEST_JS: '/js/',
     DEST_RELEASE: 'src/release/',
     DEST_SERVER: 'server/',
-    DEST: 'dist',
+    DEST: path.resolve(__dirname, 'dist'),
     SEVER_ENTRY_POINT: 'server/server.js'
+  },
+  server: {
+    port: 27773
   }
-}
+};

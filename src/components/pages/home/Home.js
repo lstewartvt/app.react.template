@@ -1,9 +1,10 @@
-var Panel_1 = require('./panels/Panel_1');
-var Panel_2 = require('./panels/Panel_2');
-var Panel_3 = require('./panels/Panel_3');
+import Panel_1 from './panels/Panel_1';
+import Panel_2 from './panels/Panel_2';
+import Panel_3 from './panels/Panel_3';
 
-var Home = React.createClass({
-  render: function() {
+export default class Home extends React.Component {
+  
+  render() {
     return (
       <div id="home">
         <Panel_1 />
@@ -11,7 +12,5 @@ var Home = React.createClass({
         <Panel_3 />
       </div>
     );
-  }
-});
-
-module.exports = Home;
+  };
+};

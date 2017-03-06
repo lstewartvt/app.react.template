@@ -1,9 +1,9 @@
-var Panel_1 = require('app_modules/pages/home/panels/Panel_1');
-var Panel_2 = require('app_modules/pages/home/panels/Panel_2');
-var Panel_3 = require('app_modules/pages/home/panels/Panel_3');
+import Panel_1 from 'pages/home/panels/Panel_1';
+import Panel_2 from 'pages/home/panels/Panel_2';
+import Panel_3 from 'pages/home/panels/Panel_3';
 
-var Donate = React.createClass({
-  render: function() {
+export default class Donate extends React.Component {
+  render() {
     return (
       <div id="donate">
         <Panel_1 />
@@ -11,7 +11,5 @@ var Donate = React.createClass({
         <Panel_3 />
       </div>
     );
-  }
-});
-
-module.exports = Donate;
+  };
+};

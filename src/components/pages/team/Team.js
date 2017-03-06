@@ -1,13 +1,11 @@
-var Panel_3 = require('app_modules/pages/home/panels/Panel_3');
+import Panel_3 from 'pages/home/panels/Panel_3';
 
-var Team = React.createClass({
-  render: function() {
+export default class Team extends React.Component {
+  render() {
     return (
       <div id="team">
         <Panel_3 />
       </div>
     );
-  }
-});
-
-module.exports = Team;
+  };
+};

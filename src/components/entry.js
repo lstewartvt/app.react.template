@@ -1,12 +1,10 @@
-var injectTapEventPlugin = require('react-tap-event-plugin');
+import 'global/';
+import 'global/imports';
 
-// Needed for onTouchTap
-// http://stackoverflow.com/a/34015469/988941
-injectTapEventPlugin();
-
-var Routes = require('./Routes');
+import Routes from 'Routes';
 
 window.onload = () => {
+  
   ReactDOM.render(
     <Routes />,
     document.getElementById('app')

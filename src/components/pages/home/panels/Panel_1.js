@@ -1,7 +1,8 @@
-var app_data = require('../../../app.data');
+import app_data from '../../../app.data';
 
-var Panel_1 = React.createClass({
-  render: function() {
+export default class Panel_1 extends React.Component {
+
+  render() {
     return (
       <div id="panel-1" className="parallax-block">
         <section className="parallax-content">
@@ -17,7 +18,5 @@ var Panel_1 = React.createClass({
         </section>
       </div>
     );
-  }
-});
-
-module.exports = Panel_1;
+  };
+};

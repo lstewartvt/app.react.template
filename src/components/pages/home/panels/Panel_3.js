@@ -1,5 +1,6 @@
-var Panel_3 = React.createClass({
-  render: function() {
+export default class Panel_3 extends React.Component {
+  
+  render() {
     return (
       <div id="panel-3" className="parallax-block long">
         <section className="parallax-content">
@@ -8,7 +9,5 @@ var Panel_3 = React.createClass({
         </section>
       </div>
     );
-  }
-});
-
-module.exports = Panel_3;
+  };
+};

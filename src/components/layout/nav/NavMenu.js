@@ -1,32 +1,33 @@
-var app_data = require('app_modules/app.data');
-var menu = require('./menu.data');
+import Link from 'react-toolbox/lib/link';
+import Navigation from 'react-toolbox/lib/navigation';
 
-const NavMenu = (props) => (
-  <ul className="nav navbar-nav navbar-right">
-    {
-      menu.map((link, index) => (
-        <li
+import app_data from 'app.data';
+import menu from './menu.data';
+
+export default class NavMenu extends React.Component {
+
+  render() {
+    return (
+      <Navigation
+        className="mui--hidden-xs"
+        type="horizontal">
+        {
+          menu.map((link, index) => (
+            <ReactRouter.IndexLink
+              key={`nav-link-${index}`}
+              activeClassName="active"
+              to={app_data.nav[link.id]}>
+              {link.title}
+            </ReactRouter.IndexLink>
+          ))
+        }
+        <ReactRouter.IndexLink
           className="mui--hidden-xs"
-          key={`nav-link-${index}`}>
-          <ReactRouter.IndexLink
-            activeClassName="active"
-            to={app_data.nav[link.id]}>
-            {link.title}
-          </ReactRouter.IndexLink>
-        </li>
-      ))
-    }
-    <li className="mui--hidden-xs">
-      <ReactRouter.IndexLink
-        to="404"
-        activeClassName="active">
-        Error 404
-      </ReactRouter.IndexLink>
-    </li>
-    <li className="nav-slide-toggle hide-nav-slide sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block">
-      <i className="icon fa"></i>
-    </li>
-  </ul>
-);
-
-module.exports = NavMenu;
+          to="404"
+          activeClassName="active">
+          Error 404
+        </ReactRouter.IndexLink>
+      </Navigation>
+    );
+  }
+};

@@ -3,15 +3,21 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const cssnext = require('postcss-cssnext');
 const environments = require('gulp-environments');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const NpmInstallPlugin = require('npm-install-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 const webpackCombineLoaders = require('webpack-combine-loaders');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = {
-  cache: false,
-  devtool: 'cheap-module-source-map',
-  entry: build.path.JSX_ENTRY_POINT,
+  cache: true,
+  entry: {
+    main: [
+      'webpack-hot-middleware/client',
+      'webpack/hot/only-dev-server',
+      build.path.JSX_ENTRY_POINT
+    ]
+  },
   output: {
     // We need to give Webpack a path. It does not actually need it,
     // because files are kept in memory in webpack-dev-server, but an
@@ -22,9 +28,15 @@ module.exports = {
     filename: path.join(build.path.DEST_JS, build.path.MINIFIED_JS),
 
     // Everything related to Webpack should go through a build path,
-    // localhost:27773/. That makes proxying easier to handle
+    // localhost:27773/build. That makes proxying easier to handle
     publicPath: '/dist'
   },
+  devServer: {
+    contentBase: './dist',
+    hot: true,
+    open: true
+  },
+  devtool: 'source-map',
   module: {
     rules: [{
       test: /\.jsx?$/,
@@ -47,7 +59,7 @@ module.exports = {
             options: {
               modules: true,
               localIdentName: '[name]__[local]___[hash:base64:5]',
-              minimize: true,
+              minimize: false,
             }
           }, {
             loader: 'postcss-loader',
@@ -71,19 +83,6 @@ module.exports = {
         //   },
         //   { loader: `sass-loader?sourceMap?indentedSyntax=sass&includePaths[]=${path.join(__dirname, 'src/css')}` },
         // ]
-    }, {
-      test: /\.scss$/,
-      loader: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: webpackCombineLoaders([{
-          loader: 'sass-loader',
-          options: {
-            includePaths: [path.join(__dirname, 'src/css')],
-            indentedSyntax: 'scss',
-            sourceMap: false
-          }
-        }])
-      })
     }]
   },
   plugins: [
@@ -94,30 +93,26 @@ module.exports = {
       // Copy directory contents to {output}/images/
       { from: 'src/images', to: 'images' }
     ]),
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
-    }),
     new ExtractTextPlugin(path.join(build.path.DEST_CSS, build.path.MINIFIED_CSS)),
+    // new NpmInstallPlugin({
+    //   dev: function(module, path) {
+    //     return [
+    //       "babel-preset-react-hmre",
+    //       "webpack-dev-middleware",
+    //       "webpack-hot-middleware",
+    //     ].indexOf(module) !== -1;
+    //   },
+    // }),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.LoaderOptionsPlugin({
-      debug: false,
-      minimize: true,
       options: {
         postcss: [
           cssnext()
         ]
-      }
+      },
     }),
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-      },
-      output: {
-        comments: false,
-      },
-    }),
     new WriteFilePlugin()
   ],
   resolve: {
