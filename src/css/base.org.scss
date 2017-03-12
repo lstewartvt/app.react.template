@@ -1,17 +1,17 @@
 ﻿$colorDefault: #708e25;
 
-@import "../css/skins/_skin-default";
+@import "src/components/styles/resources";
 
 @import "../css/base/_lib";
 
 //-@import "_reset";
-@import "../css/base/_animate";
-@import "../css/base/_bootstrap-overrides";
-@import "../css/base/_filter-search";
-@import "../css/base/_material-overrides";
-@import "../css/base/_md-dialogs";
-@import "../css/base/_utilities";
-@import "../css/base/_utility-menu";
+@import "src/css/base/_animate";
+@import "src/css/base/_bootstrap-overrides";
+@import "src/css/base/_filter-search";
+@import "src/css/base/_material-overrides";
+@import "src/css/base/_md-dialogs";
+@import "src/css/base/_utilities";
+@import "src/css/base/_utility-menu";
 
 ::-webkit-scrollbar {
   overflow-y: overlay;
@@ -38,8 +38,9 @@ html {
     background-color: $siteBg;
     color: $text;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
     overflow-y: overlay;
-    padding: 50px 0;
+    padding: 64px 0;
 
     &.busy {
       > .page-disabled {

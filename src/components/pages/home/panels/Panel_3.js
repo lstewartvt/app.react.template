@@ -1,3 +1,5 @@
+import '../styles/Panel_3.scss';
+
 export default class Panel_3 extends React.Component {
   
   render() {

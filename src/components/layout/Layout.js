@@ -1,6 +1,6 @@
 import Header from './header/Header';
-// var Footer = require('./footer/Footer');
-// var NavSlide = require('./nav/NavSlide');
+import Footer from './footer/Footer';
+import NavSlide from './nav/NavSlide';
 
 export default class Layout extends React.Component {
 
@@ -12,11 +12,11 @@ export default class Layout extends React.Component {
     return  (
       <div id="org">
         <Header />
-        {/*<NavSlide />
+        <NavSlide />
         <div id="content-wrapper" className="animated body-content container fadeIn">
-          {props.children}
+          {this.props.children}
         </div>
-        <Footer />*/}
+        <Footer />
       </div>
     );
   };

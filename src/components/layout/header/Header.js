@@ -2,7 +2,7 @@ import { AppBar } from 'react-toolbox/lib/app_bar';
 import HeaderLogo from './HeaderLogo';
 import NavMenu from 'layout/nav/NavMenu';
 
-import styles from './styles/Header.css';
+import './styles/Header.scss';
 
 export default class Header extends React.Component {
 
@@ -19,6 +19,7 @@ export default class Header extends React.Component {
       <AppBar
         id="header"
         className="header"
+        fixed
         leftIcon="menu"
         rightIcon="menu"
         title={<HeaderLogo />}>

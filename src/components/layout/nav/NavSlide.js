@@ -1,5 +1,5 @@
 import Drawer from 'react-toolbox/lib/drawer';
-import TimeGreet from 'app_modules/helpers/TimeGreet';
+import TimeGreet from 'helpers/TimeGreet';
 
 import menu from './menu.data';
 
@@ -11,17 +11,13 @@ export default class NavSlide extends React.Component {
     this.state = {
       active: false
     };
-  }
+  };
 
   handleToggle() {
     this.setState({
       active: !this.state.active
     });
-  }
-
-  componentDidMount() {
-    alert('slide');
-  }
+  };
 
   render() {
     return (
@@ -35,5 +31,5 @@ export default class NavSlide extends React.Component {
         </section>
       </Drawer>
     );
-  }
+  };
 };

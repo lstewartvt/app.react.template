@@ -11,26 +11,30 @@ import Layout from 'layout/Layout';
 // import Projects from './pages/projects/Projects';
 // import Team from './pages/team/Team';
 
+const routes = (
+    <Route component={Layout}>
+        <Route path="/" component={Home} />
+        {/*<Route path="about" component={About} />
+        <Route path="contact" component={Contact} />
+        <Route path="donate" component={Donate} />
+        <Route path="projects" component={Projects} />
+        <Route path="team(/:memberId)">
+            <IndexRoute component={Team} />
+            <Route path="profile" component={About} />
+        </Route>*/}
+        <Route path="*" component={NotFound} />
+    </Route>
+);
+
 export default class Routes extends React.Component {
 
-    render() {
-        return (
-            <ReactIntl.IntlProvider locale="en">
-                <Router history={ReactRouter.browserHistory}>
-                    <Route path="/" component={Layout}>
-                        <IndexRoute component={Home} />
-                        {/*<Route path="about" component={About} />
-                        <Route path="contact" component={Contact} />
-                        <Route path="donate" component={Donate} />
-                        <Route path="projects" component={Projects} />
-                        <Route path="team(/:memberId)">
-                            <IndexRoute component={Team} />
-                            <Route path="profile" component={About} />
-                        </Route>*/}
-                        <Route path="*" component={NotFound} />
-                    </Route>
-                </Router>
-            </ReactIntl.IntlProvider>
-        );
-    };
+  render() {
+    return (
+      <ReactIntl.IntlProvider locale="en">
+        <Router history={ReactRouter.browserHistory}>
+          {routes}
+        </Router>
+      </ReactIntl.IntlProvider>
+    );
+  };
 };

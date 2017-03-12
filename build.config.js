@@ -6,8 +6,7 @@ module.exports = {
       'src/release/components.js'
     ],
     CSS: [
-      'src/css/**/*.org.scss',
-      'src/components/**/styles/**/*.scss'
+      'src/css/**/*.org.scss'
     ],
     JADE: [
       'src/layout.jade'
@@ -20,6 +19,7 @@ module.exports = {
       path.resolve(__dirname, 'src/components', 'entry.js')
     ],
     MINIFIED_CSS: 'app.min.css',
+    MINIFIED_CSS_GULP: 'app.min.gulp.css',
     MINIFIED_JS: 'app.min.js',
     MODULES: [
       './node_modules',
@@ -31,6 +31,7 @@ module.exports = {
     DEST_RELEASE: 'src/release/',
     DEST_SERVER: 'server/',
     DEST: path.resolve(__dirname, 'dist'),
+    DEST_GULP: path.resolve(__dirname, 'dist-gulp'),
     SEVER_ENTRY_POINT: 'server/server.js'
   },
   server: {

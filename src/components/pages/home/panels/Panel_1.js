@@ -1,4 +1,6 @@
-import app_data from '../../../app.data';
+const app_data = require('app.data');
+
+import '../styles/Panel_1.scss';
 
 export default class Panel_1 extends React.Component {
 

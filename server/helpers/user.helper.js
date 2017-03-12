@@ -13,7 +13,7 @@ var userHelper = module.exports = {
   },
   get_token: (claims) => {
 
-    var jwt = nJwt.create(claims, config.auth.secret);
+    var jwt = nJwt.create(claims, process.env.auth_secret);
     jwt.setExpiration(new Date().getTime() + (config.auth.expire * 60 * 1000));
 
     var token = jwt.compact();
@@ -33,7 +33,7 @@ var userHelper = module.exports = {
       this.errors = this.errors || [];
 
       try {
-        return nJwt.verify(token, config.auth.secret);
+        return nJwt.verify(token, process.env.auth_secret);
       } catch (error) {
 
         this.errors.push(error);

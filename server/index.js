@@ -8,8 +8,10 @@ console.log(`Starting server in ${environments.current().$name} mode...`);
 // We only want to run the workflow in development environment
 if (environments.development()) {
 
-  console.log('Turning on WebPack Middleware...');
+  console.log('Setting DEV environment variables...');
+  const vars = require('dotenv').config();
 
+  console.log('Turning on WebPack Middleware...');
   const webpack = require('./webpack');
   webpack.use.call(app);
 }

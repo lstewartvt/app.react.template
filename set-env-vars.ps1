@@ -1,4 +1,4 @@
-$path = ".\.environment.config"
+$path = ".\.env"
 
 foreach($set in Get-Content $path) {
     $variable = $set.Split("=")[0]

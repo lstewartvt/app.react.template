@@ -18,14 +18,14 @@ module.exports = {
     var app = this;
 
     mailer.extend(app, {
-      from: props.admin.email,
+      from: process.env.admin_email,
       host: 'smtp.gmail.com', // hostname
       secureConnection: true, // use SSL
       port: 465, // port for secure SMTP
       transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts
       auth: {
-        user: props.google.user,
-        pass: props.google.password
+        user: process.env.google_user,
+        pass: process.env.google_password
       }
     });
 

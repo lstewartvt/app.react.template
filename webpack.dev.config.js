@@ -1,8 +1,8 @@
 const build = require('./build.config.js');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const cssnext = require('postcss-cssnext');
 const environments = require('gulp-environments');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
@@ -14,7 +14,7 @@ module.exports = {
   entry: {
     main: [
       'webpack-hot-middleware/client',
-      'webpack/hot/only-dev-server',
+      'webpack/hot/dev-server',
       build.path.JSX_ENTRY_POINT
     ]
   },
@@ -33,67 +33,77 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist',
+    historyApiFallback: true,
     hot: true,
-    open: true
+    noInfo: true,
+    open: true,
+    port: 8080
   },
   devtool: 'source-map',
   module: {
     rules: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            ['es2015', { modules: false }],
-            'react'
-          ]
-        }
-      }],
+      use: [
+        'react-hot-loader',
+        'babel-loader'
+      ]
     }, {
-      test: /\.css$/,
-      loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: webpackCombineLoaders([{
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              localIdentName: '[name]__[local]___[hash:base64:5]',
-              minimize: false,
-            }
-          }, {
-            loader: 'postcss-loader',
-          }])
-        })
-        // use: [
-        //   { loader: 'style-loader' }, {
-        //     loader: 'css-loader',
-        //     options: {
-        //       modules: true,
-        //       localIdentName: '[name]__[local]___[hash:base64:5]',
-        //       minimize: true
-        //     }
-        //   }, {
-        //     loader: 'postcss-loader',
-        //     options: {
-        //       plugins: function() {
-        //         return [autoprefixer({ browsers: ['> 1%', 'last 2 versions'] })]
-        //       },
-        //     }
-        //   },
-        //   { loader: `sass-loader?sourceMap?indentedSyntax=sass&includePaths[]=${path.join(__dirname, 'src/css')}` },
-        // ]
+      test: /\.s?css$/,
+      use: [{
+          loader: 'style-loader'
+        }, {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 1,
+            // localIdentName: '[name]__[local]___[hash:base64:5]',
+            localIdentName: '[local]',
+            modules: true,
+            sourceMap: true
+          }
+        },
+        // {
+        //   loader: 'resolve-url-loader',
+        //   options: {
+        //     sourceMap: true
+        //   }
+        // }, 
+        {
+          loader: 'sass-loader',
+          options: {
+            sourceMap: true
+          }
+        }, {
+          loader: 'sass-resources-loader',
+          options: {
+            // Provide path to the file with resources
+            resources: path.resolve(__dirname, './src/components/styles/resources.scss')
+          }
+        }, {
+          loader: 'postcss-loader',
+          options: {
+            sourceMap: true
+          }
+        }
+      ]
     }]
   },
   plugins: [
+    new CleanWebpackPlugin(['dist'], {
+      root: __dirname,
+      verbose: true,
+      dry: false
+    }),
     new CopyWebpackPlugin([
       // {output}/file.txt
       { from: 'src/index.jade' },
 
       // Copy directory contents to {output}/images/
-      { from: 'src/images', to: 'images' }
+      { from: 'src/images', to: 'images' },
+
+      // Copy directory contents to {output}/
+      { from: 'dist-gulp' }
     ]),
-    new ExtractTextPlugin(path.join(build.path.DEST_CSS, build.path.MINIFIED_CSS)),
     // new NpmInstallPlugin({
     //   dev: function(module, path) {
     //     return [
@@ -104,13 +114,6 @@ module.exports = {
     //   },
     // }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss: [
-          cssnext()
-        ]
-      },
-    }),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new WriteFilePlugin()
@@ -119,14 +122,16 @@ module.exports = {
     extensions: [
       '.css',
       '.js',
+      '.json',
       '.jsx',
       '.scss'
     ],
     modules: [
-      path.resolve('./src/components'),
-      path.resolve('./node_modules')
+      'node_modules',
+      path.resolve(__dirname, './src/components'),
+      path.resolve(__dirname, './node_modules')
     ]
   },
   // this is a default value; just be aware of it
-  target: 'web',
+  target: 'web'
 };

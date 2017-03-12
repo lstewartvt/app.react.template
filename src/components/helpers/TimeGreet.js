@@ -1,6 +1,6 @@
-var app_data = require('app_modules/app.data');
+const app_data = require('app.data');
 
-var hours = app_data.date.getHours();
+const hours = app_data.date.getHours();
 
 var greeting;
 if (hours < 12) {
@@ -11,8 +11,9 @@ if (hours < 12) {
   greeting = 'Good Evening';
 }
 
-var TimeGreet = React.createClass({
-  render: function() {
+export default class TimeGreet extends React.Component {
+
+  render() {
     if (this.props.subject) {
       return (
         <span>
@@ -22,7 +23,5 @@ var TimeGreet = React.createClass({
     } else {
       return <span className="greet">{greeting}</span>;
     }
-  }
-});
-
-module.exports = TimeGreet;
+  };
+};

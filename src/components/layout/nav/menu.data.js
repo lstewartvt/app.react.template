@@ -1,4 +1,4 @@
-var menu = [
+export default [
   { id:'home', title: 'Home' },
   { id:'about', title: 'About' },
   { id:'projects', title: 'Projects' },
@@ -6,5 +6,3 @@ var menu = [
   { id:'donate', title: 'Donate' },
   { id:'contact', title: 'Contact' }
 ];
-
-module.exports = menu;

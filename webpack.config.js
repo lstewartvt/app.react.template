@@ -1,4 +1,5 @@
 const build = require('./build.config.js');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const cssnext = require('postcss-cssnext');
 const environments = require('gulp-environments');
@@ -29,64 +30,45 @@ module.exports = {
     rules: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            ['es2015', { modules: false }],
-            'react'
-          ]
-        }
-      }],
+      use: 'babel-loader',
     }, {
-      test: /\.css$/,
+      test: /\.s?css$/,
       loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: webpackCombineLoaders([{
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              localIdentName: '[name]__[local]___[hash:base64:5]',
-              minimize: true,
-            }
-          }, {
-            loader: 'postcss-loader',
-          }])
-        })
-        // use: [
-        //   { loader: 'style-loader' }, {
-        //     loader: 'css-loader',
-        //     options: {
-        //       modules: true,
-        //       localIdentName: '[name]__[local]___[hash:base64:5]',
-        //       minimize: true
-        //     }
-        //   }, {
-        //     loader: 'postcss-loader',
-        //     options: {
-        //       plugins: function() {
-        //         return [autoprefixer({ browsers: ['> 1%', 'last 2 versions'] })]
-        //       },
-        //     }
-        //   },
-        //   { loader: `sass-loader?sourceMap?indentedSyntax=sass&includePaths[]=${path.join(__dirname, 'src/css')}` },
-        // ]
-    }, {
-      test: /\.scss$/,
-      loader: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: webpackCombineLoaders([{
+        use: [{
+          loader: 'css-loader',
+          options: {
+            importLoaders: 1,
+            // localIdentName: '[name]__[local]___[hash:base64:5]',
+            localIdentName: '[local]',
+            modules: true,
+            sourceMap: true
+          }
+        }, {
           loader: 'sass-loader',
           options: {
-            includePaths: [path.join(__dirname, 'src/css')],
-            indentedSyntax: 'scss',
-            sourceMap: false
+            sourceMap: true
           }
-        }])
+        }, {
+          loader: 'sass-resources-loader',
+          options: {
+            // Provide path to the file with resources
+            resources: path.resolve(__dirname, './src/components/styles/resources.scss')
+          }
+        }, {
+          loader: 'postcss-loader',
+          options: {
+            sourceMap: true
+          }
+        }]
       })
     }]
   },
   plugins: [
+    new CleanWebpackPlugin(['dist'], {
+      root: __dirname,
+      verbose: true,
+      dry: false
+    }),
     new CopyWebpackPlugin([
       // {output}/file.txt
       { from: 'src/index.jade' },
@@ -100,23 +82,16 @@ module.exports = {
       }
     }),
     new ExtractTextPlugin(path.join(build.path.DEST_CSS, build.path.MINIFIED_CSS)),
-    new webpack.LoaderOptionsPlugin({
-      debug: false,
-      minimize: true,
-      options: {
-        postcss: [
-          cssnext()
-        ]
-      }
-    }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
+      comments: false,
       compress: {
         warnings: false,
       },
       output: {
         comments: false,
       },
+      sourceMap: true
     }),
     new WriteFilePlugin()
   ],

@@ -10,11 +10,11 @@ const User = includes('data/models/UserSchema'); // get our mongoose model
 module.exports = {
   init: function() {
     var app = this;
-    app.set('auth_secret', config.auth.secret); // secret variable
+    app.set('auth_secret', process.env.auth_secret); // secret variable
   },
   check: function(request, response, next) {
     var result = user_helper.current.apply(this, arguments);
-    if(result) {
+    if (result) {
       return result.then(function(user) {
         request.is_authenticated = true;
         request.user = user;

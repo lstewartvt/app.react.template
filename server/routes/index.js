@@ -1,4 +1,4 @@
-const app_data = includes('app.data');
+const app_data = includes('../src/components/app.data');
 const helpers = includes('helpers/');
 const path = require('path');
 
@@ -32,10 +32,10 @@ module.exports = (app) => {
   app.set('view engine', 'jade');
   app.get('*', (request, response) => {
 
-    if (!request.is_authenticated) {
+    if (request.is_authenticated) {
       return response.render('index', { description: 'React app template' });
     }
 
-    response.redirect(app_data.nav.login);
+    return response.redirect(app_data.nav.login);
   });
 };
