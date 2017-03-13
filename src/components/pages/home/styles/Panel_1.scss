@@ -1,11 +1,11 @@
 ﻿#app {
   #panel-1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/samples/background-1.jpg);
+    background-color: $lightestGray;
     text-align: center;
 
     > .parallax-content {
-      > .title {
-        color: $siteBg;
+      > .content-title {
+        // color: $siteBg;
         font-size: 60px;
         line-height: 60px;
 
@@ -15,7 +15,7 @@
         }
 
         + .sub-title {
-          color: $siteBg;
+          // color: $siteBg;
           font-weight: 400;
           font-style: italic;
         }

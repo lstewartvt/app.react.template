@@ -11,6 +11,7 @@ const WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = {
   cache: true,
+  context: __dirname,
   entry: {
     main: [
       'webpack-hot-middleware/client',
@@ -51,41 +52,39 @@ module.exports = {
     }, {
       test: /\.s?css$/,
       use: [{
-          loader: 'style-loader'
-        }, {
-          loader: 'css-loader',
-          options: {
-            importLoaders: 1,
-            // localIdentName: '[name]__[local]___[hash:base64:5]',
-            localIdentName: '[local]',
-            modules: true,
-            sourceMap: true
-          }
-        },
-        // {
-        //   loader: 'resolve-url-loader',
-        //   options: {
-        //     sourceMap: true
-        //   }
-        // }, 
-        {
-          loader: 'sass-loader',
-          options: {
-            sourceMap: true
-          }
-        }, {
-          loader: 'sass-resources-loader',
-          options: {
-            // Provide path to the file with resources
-            resources: path.resolve(__dirname, './src/components/styles/resources.scss')
-          }
-        }, {
-          loader: 'postcss-loader',
-          options: {
-            sourceMap: true
-          }
+        loader: 'style-loader'
+      }, {
+        loader: 'css-loader',
+        options: {
+          importLoaders: 1,
+          // localIdentName: '[name]__[local]___[hash:base64:5]',
+          localIdentName: '[local]',
+          modules: true,
+          sourceMap: false
         }
-      ]
+      }, {
+        loader: 'resolve-url-loader',
+        options: {
+          sourceMap: true
+        }
+      }, {
+        loader: 'sass-loader',
+        options: {
+          sourceMap: true
+        }
+      }, {
+        loader: 'sass-resources-loader',
+        options: {
+          // Provide path to the file with resources
+          resources: path.resolve(__dirname, './src/components/styles/resources.scss')
+        }
+      }, {
+        loader: 'postcss-loader',
+        options: {
+          parser: 'postcss-scss',
+          sourceMap: true
+        }
+      }]
     }]
   },
   plugins: [
@@ -95,7 +94,10 @@ module.exports = {
       dry: false
     }),
     new CopyWebpackPlugin([
-      // {output}/file.txt
+      // {output}/favicon.ico
+      { from: 'src/favicon.ico' },
+
+      // {output}/index.jade
       { from: 'src/index.jade' },
 
       // Copy directory contents to {output}/images/

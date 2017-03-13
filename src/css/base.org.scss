@@ -1,19 +1,4 @@
-﻿$colorDefault: #708e25;
-
-@import "src/components/styles/resources";
-
-@import "../css/base/_lib";
-
-//-@import "_reset";
-@import "src/css/base/_animate";
-@import "src/css/base/_bootstrap-overrides";
-@import "src/css/base/_filter-search";
-@import "src/css/base/_material-overrides";
-@import "src/css/base/_md-dialogs";
-@import "src/css/base/_utilities";
-@import "src/css/base/_utility-menu";
-
-::-webkit-scrollbar {
+﻿::-webkit-scrollbar {
   overflow-y: overlay;
 }
 
@@ -40,7 +25,8 @@ html {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     overflow-y: overlay;
-    padding: 64px 0;
+    padding-top: 64px;
+    padding-bottom: 50px;
 
     &.busy {
       > .page-disabled {
@@ -143,7 +129,7 @@ html {
   }
 }
 
-#org {
+#app {
   overflow-y: hidden;
 
   > .container {
@@ -170,7 +156,7 @@ html {
           padding: 25px 10px;
         }
 
-        .title {
+        .content-title {
           font-size: 45px;
           text-align: center;
           text-transform: uppercase;

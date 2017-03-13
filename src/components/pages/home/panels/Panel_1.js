@@ -8,7 +8,7 @@ export default class Panel_1 extends React.Component {
     return (
       <div id="panel-1" className="parallax-block">
         <section className="parallax-content">
-          <h1 className="title caps">Panel 1 Under Construction</h1>
+          <h1 className="content-title caps">Panel 1 Under Construction</h1>
           <h3 className="sub-title">Panel 1 Subtitle</h3>
           <article className="content">
             <ReactRouter.Link

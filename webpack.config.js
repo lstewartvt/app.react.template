@@ -11,6 +11,7 @@ const WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = {
   cache: false,
+  context: __dirname,
   devtool: 'cheap-module-source-map',
   entry: build.path.JSX_ENTRY_POINT,
   output: {
@@ -41,12 +42,17 @@ module.exports = {
             // localIdentName: '[name]__[local]___[hash:base64:5]',
             localIdentName: '[local]',
             modules: true,
-            sourceMap: true
+            sourceMap: false
+          }
+        }, {
+          loader: 'resolve-url-loader',
+          options: {
+            sourceMap: false
           }
         }, {
           loader: 'sass-loader',
           options: {
-            sourceMap: true
+            sourceMap: false
           }
         }, {
           loader: 'sass-resources-loader',
@@ -57,7 +63,8 @@ module.exports = {
         }, {
           loader: 'postcss-loader',
           options: {
-            sourceMap: true
+            parser: 'postcss-scss',
+            sourceMap: false
           }
         }]
       })
@@ -70,11 +77,17 @@ module.exports = {
       dry: false
     }),
     new CopyWebpackPlugin([
+      // {output}/favicon.ico
+      { from: 'src/favicon.ico' },
+
       // {output}/file.txt
       { from: 'src/index.jade' },
 
       // Copy directory contents to {output}/images/
-      { from: 'src/images', to: 'images' }
+      { from: 'src/images', to: 'images' },
+
+      // Copy directory contents to {output}/
+      { from: 'dist-gulp' }
     ]),
     new webpack.DefinePlugin({
       'process.env': {
@@ -91,7 +104,7 @@ module.exports = {
       output: {
         comments: false,
       },
-      sourceMap: true
+      sourceMap: false
     }),
     new WriteFilePlugin()
   ],

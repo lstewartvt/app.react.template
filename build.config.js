@@ -6,6 +6,7 @@ module.exports = {
       'src/release/components.js'
     ],
     CSS: [
+      'src/components/styles/resources.scss',
       'src/css/**/*.org.scss'
     ],
     JADE: [

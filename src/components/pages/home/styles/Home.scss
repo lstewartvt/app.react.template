@@ -1,4 +1,4 @@
-﻿#org {
+﻿#app {
   .parallax-block {
     padding: 75px 0;
     position: relative;
@@ -41,12 +41,12 @@
         background-color: rgba($opaqueGray, 0.75);
         padding: 25px;
 
-        > .title {
+        > .content-title {
           color: $siteBg;
         }
       }
 
-      > .title {
+      > .content-title {
         text-align: center;
         text-transform: uppercase;
 
@@ -98,7 +98,7 @@
   }
 }
 
-#org {
+#app {
   .project-bullets {
     padding: 15px 0;
 

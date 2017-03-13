@@ -28,10 +28,10 @@ $file = $ProjectFolder + "\gulpfile.js"D:\Web Apps\Development\Basic.React\serve
 (Get-Content $file).replace('site.react.k0nrt15.com:32287', 'localhost:' + $DevPort) | Set-Content $file
 
 $file = $ProjectFolder + "\package.json"
-(Get-Content $file).replace('application.name', $ProjectName) | Set-Content $file
-(Get-Content $file).replace('application.name.lower', $ProjectNameLower) | Set-Content $file
+(Get-Content $file).replace('App.React', $ProjectName) | Set-Content $file
+(Get-Content $file).replace('App.React.Lower', $ProjectNameLower) | Set-Content $file
 (Get-Content $file).replace('"type": "git"', '"type": "' + $RepoType + '"') | Set-Content $file
-(Get-Content $file).replace('https://github.com/lstewartvt/site.react.template.git', $RepoUrl) | Set-Content $file
+(Get-Content $file).replace('https://github.com/lstewartvt/app.react.template.git', $RepoUrl) | Set-Content $file
 
 $file = $ProjectFolder + "\README.md"
 (Get-Content $file).replace('React Website template', $ProjectName + ' Website') | Set-Content $file
