@@ -7,15 +7,15 @@ const cookieParser = require('cookie-parser');
 const Cookies = require('cookies');
 const express = require('express');
 const helpers = includes('helpers/');
-var mongoose = require('mongoose');
+// var mongoose = require('mongoose');
 const morgan = require('morgan');
 const path = require('path');
 const props = includes('properties');
 
 var app = express();
 
-mongoose.Promise = bluebird;
-mongoose.connect(config.connections.mongodb); // connect to database
+// mongoose.Promise = bluebird;
+// mongoose.connect(config.connections.mongodb); // connect to database
 
 // Setup logger
 app.use(morgan('dev'));

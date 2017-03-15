@@ -28,7 +28,7 @@ module.exports = (app) => {
 
 
   // layout template
-  app.set('views', __dirname + '/../../dist');
+  app.set('views', `${__dirname}/../../dist`);
   app.set('view engine', 'jade');
   app.get('*', (request, response) => {
 
