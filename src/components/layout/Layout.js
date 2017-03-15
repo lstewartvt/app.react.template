@@ -6,13 +6,27 @@ export default class Layout extends React.Component {
 
   constructor(props) {
     super(props);
+
+    this.handleNavToggle = this.handleNavToggle.bind(this);
+
+    this.state = {
+      showNavSlide: false
+    };
+  };
+
+  handleNavToggle() {
+    this.setState({
+      showNavSlide: !this.state.showNavSlide
+    });
   };
 
   render() {
     return  (
       <div id="org">
-        <Header />
-        <NavSlide />
+        <Header handleNavToggle={this.handleNavToggle} />
+        <NavSlide
+          handleNavToggle={this.handleNavToggle}
+          showNavSlide={this.state.showNavSlide} />
         <div id="content-wrapper" className="animated body-content container fadeIn">
           {this.props.children}
         </div>

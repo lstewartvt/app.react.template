@@ -1,5 +1,12 @@
 #error {
+  padding: 25px;
+  text-align: center;
+
   > img {
-    height: 313px;
+    height: 331px;
+
+    @media (max-width: $screenXsMin) {
+      height: 213px;
+    }
   }
 }

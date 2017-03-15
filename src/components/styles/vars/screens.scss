@@ -1,6 +1,6 @@
 ﻿// Screen sizes
-$screenXsMin: 320px;
-$screenXsMax: 500px;
-$screenSmMin: 768px;
-$screenSmMax: 992px;
-$screenLgMax: 1080px;
+$screenXsMin: 320px; // Smartphones (portrait)
+$screenXsMax: 480px;
+$screenSmMin: 768px; // iPads (portrait)
+$screenSmMax: 1024px;
+$screenLgMin: 1224px; // Desktops and laptops

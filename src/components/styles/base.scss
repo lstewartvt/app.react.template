@@ -1,11 +1,66 @@
-@import "src/css/base/_lib";
+@import "./base/_animate";
+@import "./base/_tables";
+@import "./base/_lib";
+@import "./base/_animate";
+@import "./base/_filter-search";
+@import "./base/_utilities";
 
-@import "src/css/base/_animate";
-@import "src/css/base/_bootstrap-overrides";
-@import "src/css/base/_filter-search";
-@import "src/css/base/_material-overrides";
-@import "src/css/base/_md-dialogs";
-@import "src/css/base/_utilities";
-@import "src/css/base/_utility-menu";
+html {
+  background-color: $siteBg;
 
-@import "src/css/base.org.scss";
+  body {
+    background-color: $siteBg;
+    color: $text;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    overflow-y: overlay;
+    padding-top: 64px;
+    position: relative;
+
+    @media (max-width: $screenSmMax) {
+      padding-top: 56px;
+    }
+  }
+}
+
+#app {
+  /* Headings START */
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6 .h6 {
+    color: $cta;
+    font-weight: 300;
+    margin-top: 0;
+  }
+
+  @media (max-width: $screenSmMax) {
+    h1 {
+      font-size: 25px;
+      line-height: initial;
+    }
+
+    h2 {
+      font-size: 21px;
+      line-height: initial;
+    }
+
+    h3 {
+      font-size: 17px;
+      line-height: initial;
+    }
+  }
+
+  /* Headings END */
+  span.tm {
+    font-size: 13px;
+    vertical-align: super;
+  }
+}

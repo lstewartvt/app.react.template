@@ -2,7 +2,6 @@ const build = require('./build.config.js');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const cssnext = require('postcss-cssnext');
-const environments = require('gulp-environments');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
 const webpack = require('webpack');
@@ -84,10 +83,7 @@ module.exports = {
       { from: 'src/index.jade' },
 
       // Copy directory contents to {output}/images/
-      { from: 'src/images', to: 'images' },
-
-      // Copy directory contents to {output}/
-      { from: 'dist-gulp' }
+      { from: 'src/images', to: 'images' }
     ]),
     new webpack.DefinePlugin({
       'process.env': {

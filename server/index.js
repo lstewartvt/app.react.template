@@ -1,12 +1,11 @@
 const app = require('./app');
-const environments = require('gulp-environments');
 
 const PORT = process.env.PORT || 27773;
 
-console.log(`Starting server in ${environments.current().$name} mode...`);
+console.log(`Starting server in ${app.settings.env} mode...`);
 
 // We only want to run the workflow in development environment
-if (environments.development()) {
+if (app.settings.env === 'development') {
 
   console.log('Setting DEV environment variables...');
   const vars = require('dotenv').config();

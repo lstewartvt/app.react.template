@@ -1,3 +1,5 @@
+import './styles/HeaderLogo.scss';
+
 export default class HeaderLogo extends React.Component {
   
   render() {

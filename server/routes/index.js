@@ -32,7 +32,7 @@ module.exports = (app) => {
   app.set('view engine', 'jade');
   app.get('*', (request, response) => {
 
-    if (request.is_authenticated) {
+    if (true || request.is_authenticated) {
       return response.render('index', { description: 'React app template' });
     }
 

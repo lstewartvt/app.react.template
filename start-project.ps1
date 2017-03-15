@@ -24,9 +24,6 @@ $item = $ProjectFolder + "\.git"
 Remove-Item $item -Recurse -Force
 
 #replace file text
-$file = $ProjectFolder + "\gulpfile.js"D:\Web Apps\Development\Basic.React\server\index.js
-(Get-Content $file).replace('site.react.k0nrt15.com:32287', 'localhost:' + $DevPort) | Set-Content $file
-
 $file = $ProjectFolder + "\package.json"
 (Get-Content $file).replace('App.React', $ProjectName) | Set-Content $file
 (Get-Content $file).replace('App.React.Lower', $ProjectNameLower) | Set-Content $file

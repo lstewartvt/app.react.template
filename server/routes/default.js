@@ -5,7 +5,7 @@ module.exports = (app) => {
   // Set up smtp
   helpers.mail.init.call(app);
 
-  app.get('/contact', (request, response) => {
+  app.get('/contacts', (request, response) => {
 
     var message = {
       config: {

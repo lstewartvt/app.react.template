@@ -6,26 +6,18 @@ import './styles/Header.scss';
 
 export default class Header extends React.Component {
 
-  constructor() {
-    super();
-
-    this.state = {
-      active: false
-    };
+  constructor(props) {
+    super(props);
   };
 
   render() {
     return (
       <AppBar
-        id="header"
         className="header"
         fixed
-        leftIcon="menu"
+        onRightIconClick={this.props.handleNavToggle}
         rightIcon="menu"
         title={<HeaderLogo />}>
-        {/*<div id="nav-bar" className="container mui-appbar mui--appbar-line-height">
-          <HeaderLogo />
-        </div>*/}
         <NavMenu />
       </AppBar>
     );

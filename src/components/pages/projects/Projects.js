@@ -4,7 +4,7 @@ export default class Projects extends React.Component {
   render() {
     return (
       <div id="projects">
-        <Panel_2 />
+        <Panel_2 title="Projects Page" />
       </div>
     );
   };

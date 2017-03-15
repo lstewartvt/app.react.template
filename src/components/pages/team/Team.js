@@ -4,7 +4,7 @@ export default class Team extends React.Component {
   render() {
     return (
       <div id="team">
-        <Panel_3 />
+        <Panel_3 title="Team Page" />
       </div>
     );
   };

@@ -6,7 +6,7 @@ export default class Donate extends React.Component {
   render() {
     return (
       <div id="donate">
-        <Panel_1 />
+        <Panel_1 title="Donate Page" />
         <Panel_2 />
         <Panel_3 />
       </div>

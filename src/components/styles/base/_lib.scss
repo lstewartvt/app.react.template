@@ -1,0 +1,112 @@
+﻿.color-primary {
+  color: $colorPrimary;
+}
+
+.color-secondary {
+  color: $colorSecondary;
+}
+
+@mixin boxSizing($property) {
+  -moz-box-sizing: $property;
+  -webkit-box-sizing: $property;
+  box-sizing: $property;
+}
+
+@mixin fullScreenBg($background) {
+  background: $background no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin gradient($start, $end) {
+  background: $end;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($start), to($end));
+  background-image: -webkit-linear-gradient(top, $start, $end);
+  background-image: -moz-linear-gradient(top, $start, $end);
+  background-image: -ms-linear-gradient(top, $start, $end);
+  background-image: -o-linear-gradient(top, $start, $end);
+  background-image: linear-gradient(top, $start, $end);
+}
+
+@mixin tableStripes($stripeColor) {
+  tr:nth-child(odd) {
+    background-color: $stripeColor;
+  }
+}
+
+// Disabled page style START
+.page-disabled {
+  background-color: $darkGray;
+  background-color: rgba($darkGray, 0.75);
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 131;
+
+  > .fa-spin {
+    bottom: 50%;
+    color: $colorSecondary;
+    font-size: 131px;
+    left: 50%;
+    margin-bottom: -13px;
+    margin-left: 0;
+    position: fixed;
+    width: 0;
+  }
+}
+
+// Disabled page style END
+
+// Tags START
+.tags-container {
+  display: table;
+  padding: 0;
+
+  > .tag {
+    background-color: $lightGray;
+    border: 1px solid;
+    color: $black;
+    display: inline-table;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 1px 0;
+    padding: 1px 3px;
+
+    @include borderRadius(3);
+
+    &:not(:last-of-type) {
+      margin-right: 3px;
+    }
+  }
+}
+
+// Tags END
+
+// Favorites START
+i.fa-heart,
+i.fa-heart-o {
+  border-color: $favoriteHeart;
+  color: $favoriteHeart;
+  cursor: pointer;
+}
+
+i.fa-star,
+i.fa-star-o {
+  color: $favoriteStar;
+  cursor: pointer;
+}
+
+// Favorites END
+
+// Maps START
+i.fa-map-marker,
+i.fa-map-marker-o {
+  cursor: pointer;
+}
+
+// Maps END
