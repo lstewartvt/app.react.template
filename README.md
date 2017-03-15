@@ -1,11 +1,13 @@
-# site.react.k0nrt15.com
-App.React Website
+# app.react.k0nrt15.com
+React Application Template
 
 Stack:
   - Express.js
-  - Gulp
   - Jade
-  - Material-UI
+  - MongoDB
   - Node.js
   - React
+  - React Router
+  - React Toolbox (Material Design)
   - SASS
+  - Webpack
