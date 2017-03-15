@@ -1,6 +1,6 @@
 import Header from './header/Header';
 import Footer from './footer/Footer';
-import NavSlide from './nav/NavSlide';
+import NavDrawer from './nav/NavDrawer';
 
 export default class Layout extends React.Component {
 
@@ -10,13 +10,13 @@ export default class Layout extends React.Component {
     this.handleNavToggle = this.handleNavToggle.bind(this);
 
     this.state = {
-      showNavSlide: false
+      showNavDrawer: false
     };
   };
 
   handleNavToggle() {
     this.setState({
-      showNavSlide: !this.state.showNavSlide
+      showNavDrawer: !this.state.showNavDrawer
     });
   };
 
@@ -24,9 +24,9 @@ export default class Layout extends React.Component {
     return  (
       <div id="org">
         <Header handleNavToggle={this.handleNavToggle} />
-        <NavSlide
+        <NavDrawer
           handleNavToggle={this.handleNavToggle}
-          showNavSlide={this.state.showNavSlide} />
+          showNavDrawer={this.state.showNavDrawer} />
         <div id="content-wrapper" className="animated body-content container fadeIn">
           {this.props.children}
         </div>

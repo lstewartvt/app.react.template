@@ -23,42 +23,46 @@ html {
   }
 }
 
+/* Headings START */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6 .h6 {
+  color: $cta;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+@media (max-width: $screenSmMax) {
+  h1 {
+    font-size: 25px;
+    line-height: initial;
+  }
+
+  h2 {
+    font-size: 21px;
+    line-height: initial;
+  }
+
+  h3 {
+    font-size: 17px;
+    line-height: initial;
+  }
+}
+
 #app {
-  /* Headings START */
-  h1,
-  .h1,
-  h2,
-  .h2,
-  h3,
-  .h3,
-  h4,
-  .h4,
-  h5,
-  .h5,
-  h6 .h6 {
-    color: $cta;
-    font-weight: 300;
-    margin-top: 0;
+  a {
+    outline: none;
+    text-decoration: none;
   }
 
-  @media (max-width: $screenSmMax) {
-    h1 {
-      font-size: 25px;
-      line-height: initial;
-    }
-
-    h2 {
-      font-size: 21px;
-      line-height: initial;
-    }
-
-    h3 {
-      font-size: 17px;
-      line-height: initial;
-    }
-  }
-
-  /* Headings END */
   span.tm {
     font-size: 13px;
     vertical-align: super;
