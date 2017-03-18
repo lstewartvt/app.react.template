@@ -1,7 +1,10 @@
-import 'global/';
-import 'global/imports';
+const injectTapEventPlugin = require('react-tap-event-plugin');
 
-import Routes from 'Routes';
+// Needed for onTouchTap
+// http://stackoverflow.com/a/34015469/988941
+injectTapEventPlugin();
+
+import Router from 'Router';
 
 import 'styles/reset'
 import 'styles/base'
@@ -9,7 +12,7 @@ import 'styles/base'
 window.onload = () => {
   
   ReactDOM.render(
-    <Routes />,
+    <Router />,
     document.getElementById('app')
   );
 };

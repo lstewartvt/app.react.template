@@ -4,6 +4,58 @@
 		"selected_items":
 		[
 			[
+				"b",
+				"beautify"
+			],
+			[
+				"fi",
+				"FieldEmail"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"di",
+				"display: "
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"ali",
+				"align-items: "
+			],
+			[
+				"pad",
+				"padding: "
+			],
+			[
+				"clas",
+				"className"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"over",
+				"overflow-x: "
+			],
+			[
+				"Pane",
+				"Panel_1"
+			],
+			[
+				"to",
+				"toolbox"
+			],
+			[
+				"sou",
+				"sourceMap"
+			],
+			[
 				"envi",
 				"environment"
 			],
@@ -92,18 +144,6 @@
 				"getGreeting"
 			],
 			[
-				"over",
-				"overflow-y: "
-			],
-			[
-				"in",
-				"inherit"
-			],
-			[
-				"pad",
-				"padding-left"
-			],
-			[
 				"Reac",
 				"ReactRouter"
 			],
@@ -114,10 +154,6 @@
 			[
 				"Rea",
 				"ReactRouter"
-			],
-			[
-				"font",
-				"font-style"
 			],
 			[
 				"nav",
@@ -168,16 +204,8 @@
 				"font-size"
 			],
 			[
-				"fon",
-				"font-weight"
-			],
-			[
 				"bor",
 				"border-radius: "
-			],
-			[
-				"b",
-				"background-color"
 			],
 			[
 				"p",
@@ -486,127 +514,22 @@
 			[
 				"ste",
 				"stepKey"
-			],
-			[
-				"inlin",
-				"inline-block"
-			],
-			[
-				"tour",
-				"tourStep"
-			],
-			[
-				"n",
-				"normal"
-			],
-			[
-				"back",
-				"background-color"
-			],
-			[
-				"inl",
-				"inline-block"
-			],
-			[
-				"font-",
-				"font-style: "
-			],
-			[
-				"up",
-				"upload"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "webpack.dev.config.js",
+			"contents": "eslint --init",
 			"settings":
 			{
-				"buffer_size": 3853,
-				"line_ending": "Windows"
+				"buffer_size": 13,
+				"line_ending": "Windows",
+				"name": "eslint --init"
 			}
 		},
 		{
-			"file": "webpack.config.js",
-			"settings":
-			{
-				"buffer_size": 3932,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "gulpfile.js",
-			"settings":
-			{
-				"buffer_size": 7370,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/index.jade",
-			"settings":
-			{
-				"buffer_size": 1863,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Routes.js",
-			"settings":
-			{
-				"buffer_size": 1440,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/layout/Layout.js",
-			"settings":
-			{
-				"buffer_size": 480,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/layout/footer/Footer.js",
-			"settings":
-			{
-				"buffer_size": 341,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/pages/home/Home.js",
-			"settings":
-			{
-				"buffer_size": 324,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/pages/home/panels/Panel_1.js",
-			"settings":
-			{
-				"buffer_size": 650,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/layout/nav/NavSlide.js",
-			"settings":
-			{
-				"buffer_size": 684,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/helpers/TimeGreet.js",
+			"file": "src/components/forms/fields/FieldText.js",
 			"settings":
 			{
 				"buffer_size": 598,
@@ -615,10 +538,168 @@
 			}
 		},
 		{
-			"file": "src/components/layout/nav/menu.data.js",
+			"file": "src/components/forms/fields/FieldEmail.js",
 			"settings":
 			{
-				"buffer_size": 230,
+				"buffer_size": 487,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/forms/styles/FormLogin.scss",
+			"settings":
+			{
+				"buffer_size": 125,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "webpack.config.js",
+			"settings":
+			{
+				"buffer_size": 5157,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/forms/FormLogin.js",
+			"settings":
+			{
+				"buffer_size": 281,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/pages/login/Login.js",
+			"settings":
+			{
+				"buffer_size": 287,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/global/ContentTitle.js",
+			"settings":
+			{
+				"buffer_size": 254,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/forms/fields/index.js",
+			"settings":
+			{
+				"buffer_size": 224,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/pages/home/panels/Panel_1.js",
+			"settings":
+			{
+				"buffer_size": 788,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/pages/home/panels/Panel_2.js",
+			"settings":
+			{
+				"buffer_size": 422,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/global/ContentTitleCaps.js",
+			"settings":
+			{
+				"buffer_size": 286,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/global/MdIcon.js",
+			"settings":
+			{
+				"buffer_size": 182,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/global/styles/ContentTitle.scss",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/app.js",
+			"settings":
+			{
+				"buffer_size": 1421,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/index.js",
+			"settings":
+			{
+				"buffer_size": 714,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 2501,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dist/js/app.min.js",
+			"settings":
+			{
+				"buffer_size": 1067743,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "webpack.dev.config.js",
+			"settings":
+			{
+				"buffer_size": 4975,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/entry.js",
+			"settings":
+			{
+				"buffer_size": 222,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/forms/fields/styles/FieldText.scss",
+			"settings":
+			{
+				"buffer_size": 0,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -684,26 +765,123 @@
 	[
 		"/D/Web Apps/Development/React.App",
 		"/D/Web Apps/Development/React.App/server",
-		"/D/Web Apps/Development/React.App/server/data",
 		"/D/Web Apps/Development/React.App/server/routes",
 		"/D/Web Apps/Development/React.App/src",
-		"/D/Web Apps/Development/React.App/src/components"
+		"/D/Web Apps/Development/React.App/src/components",
+		"/D/Web Apps/Development/React.App/src/components/forms",
+		"/D/Web Apps/Development/React.App/src/components/forms/fields",
+		"/D/Web Apps/Development/React.App/src/components/global",
+		"/D/Web Apps/Development/React.App/src/components/helpers",
+		"/D/Web Apps/Development/React.App/src/components/pages/about",
+		"/D/Web Apps/Development/React.App/src/components/pages/home/panels",
+		"/D/Web Apps/Development/React.App/src/components/styles",
+		"/D/Web Apps/Development/React.App/node_modules/react-toolbox",
+		"/D/Web Apps/Development/React.App/node_modules/react-toolbox/lib",
+		"/D/Web Apps/Development/React.App/node_modules/react-toolbox/lib/app_bar"
 	],
 	"file_history":
 	[
-		"/D/Web Apps/Development/React.App/app.react.sublime-project",
-		"/D/Web Apps/Development/React.App/build.config.js",
-		"/D/Web Apps/Development/React.App/server/data/config.js",
-		"/D/Web Apps/Development/React.App/server/helpers/auth.helper.js",
+		"/D/Web Apps/Development/React.App/src/components/global/ContentSubTitle.js",
+		"/D/Web Apps/Development/React.App/src/components/global/ContentTitle.js",
+		"/D/Web Apps/Development/React.App/src/components/global/index.js",
+		"/D/Web Apps/Development/React.App/src/components/global/ContentTitleCaps.js",
+		"/D/Web Apps/Development/React.App/server/routes/index.js",
+		"/D/Web Apps/Development/React.App/src/components/styles/vars/colors.scss",
+		"/D/Web Apps/Development/React.App/dist/js/app.min.js.gz",
+		"/D/Web Apps/Development/React.App/src/components/global/imports.js",
+		"/D/Web Apps/Development/React.App/webpack.dev.config.js",
+		"/D/Web Apps/Development/React.App/dist/index.jade",
+		"/D/Web Apps/Development/React.App/src/index.jade",
+		"/D/Web Apps/Development/React.App/webpack.config.js",
+		"/D/Web Apps/Development/React.App/src/components/pages/home/styles/Home.scss",
+		"/D/Web Apps/Development/React.App/node_modules/react-toolbox/lib/app_bar/AppBar.js",
+		"/D/Web Apps/Development/React.App/src/components/pages/login/Login.js",
+		"/D/Web Apps/Development/React.App/src/components/layout/Layout.js",
+		"/D/Web Apps/Development/React.App/src/components/layout/nav/styles/NavMenu.scss",
+		"/D/Web Apps/Development/React.App/src/components/layout/nav/NavDrawer.js",
+		"/D/Web Apps/Development/React.App/src/components/layout/nav/styles/NavDrawer.scss",
+		"/D/Web Apps/Development/React.App/src/components/layout/header/Header.js",
+		"/D/Web Apps/Development/React.App/src/components/layout/header/styles/Header.scss",
+		"/D/Web Apps/Development/React.App/src/components/layout/nav/menu.data.js",
+		"/D/Web Apps/Development/React.App/src/components/layout/nav/NavMenu.js",
+		"/D/Web Apps/Development/React.App/src/components/pages/home/styles/Panel_1.scss",
+		"/D/Web Apps/Development/React.App/src/components/pages/home/panels/Panel_1.js",
+		"/D/Web Apps/Development/React.App/src/components/entry.js",
+		"/D/Web Apps/Development/React.App/dist/css/app.min.css",
+		"/D/Web Apps/Development/React.App/dist/js/app.min.js",
+		"/D/Web Apps/Development/React.App/src/components/Routes.js",
+		"/D/Web Apps/Development/React.App/src/components/styles/vars/mixins/transforms.scss",
+		"/D/Web Apps/Development/React.App/server/routes/anonymous.js",
+		"/D/Web Apps/Development/React.App/src/components/pages/notFound/NotFound.js",
+		"/D/Web Apps/Development/React.App/src/components/helpers/TimeGreet.js",
+		"/D/Web Apps/Development/React.App/src/components/layout/footer/Footer.js",
+		"/D/Web Apps/Development/React.App/src/components/app.data.js",
+		"/D/Web Apps/Development/React.App/src/components/forms/fields/index.js",
+		"/D/Web Apps/Development/React.App/src/components/forms/fields/FieldPassword.js",
+		"/D/Web Apps/Development/React.App/src/components/styles/base/_utilities.scss",
+		"/D/Web Apps/Development/React.App/src/components/forms/styles/FormLogin.scss",
+		"/D/Web Apps/Development/React.App/src/components/forms/FormLogin.js",
+		"/D/Web Apps/Development/React.App/src/components/layout/header/HeaderLogo.js",
+		"/D/Web Apps/Development/React.App/src/components/layout/header/styles/HeaderLogo.scss",
 		"/D/Web Apps/Development/React.App/server/index.js",
+		"/D/Web Apps/Development/React.App/README.md",
+		"/D/Web Apps/Development/React.App/src/components/styles/base.scss",
+		"/D/Web Apps/Development/React.App/src/components/styles/reset.scss",
 		"/D/Web Apps/Development/React.App/package.json",
+		"/D/Web Apps/Development/React.App/src/components/layout/nav/styles/NavSlide.scss",
+		"/D/Web Apps/Development/React.App/src/components/layout/nav/NavSlide.js",
+		"/D/Web Apps/Development/React.App/server/app.js",
+		"/D/Web Apps/Scripts/Powershell/git-replace-text.ps1",
+		"/D/Web Apps/Development/React.App/src/components/styles/base/_filter-search.scss",
+		"/D/Web Apps/Development/React.App/src/components/styles/base/_animate.scss",
+		"/D/Web Apps/Development/React.App/src/components/styles/vars/mixins/borders.scss",
+		"/D/Web Apps/Development/React.App/src/css/base.org.scss",
+		"/D/Web Apps/Development/React.App/gulpfile.webpack.js",
+		"/D/Web Apps/Development/React.App/gulpfile.js",
+		"/D/Web Apps/Development/React.App/start-project.ps1",
+		"/D/Web Apps/Development/React.App/src/css/base/_lib.scss",
+		"/D/Web Apps/Development/React.App/src/css/base/_utility-menu.scss",
+		"/D/Web Apps/Development/React.App/src/css/base/_modals.scss",
+		"/D/Web Apps/Development/React.App/src/css/base/_bootstrap-overrides.scss",
+		"/D/Web Apps/Development/React.App/src/components/styles/vars/skins/skin-default.scss",
+		"/D/Web Apps/Development/React.App/src/components/pages/about/About.js",
+		"/D/Web Apps/Development/React.App/src/components/pages/contact/Contact.js",
+		"/D/Web Apps/Development/React.App/src/components/pages/notFound/styles/NotFound.scss",
+		"/D/Web Apps/Development/React.App/server/templates/mail/contact.jade",
+		"/D/Web Apps/Development/React.App/src/components/layout/footer/styles/Footer.scss",
+		"/D/Web Apps/Development/React.App/src/components/styles/vars/screens.scss",
+		"/D/Web Apps/Development/React.App/server/routes/default.js",
+		"/D/Web Apps/Development/React.App/src/components/pages/donate/Donate.js",
+		"/D/Web Apps/Development/React.App/src/components/pages/team/Team.js",
+		"/D/Web Apps/Development/React.App/src/components/pages/projects/Projects.js",
+		"/D/Web Apps/Development/React.App/src/components/pages/home/panels/Panel_2.js",
+		"/D/Web Apps/Development/React.App/src/components/pages/home/panels/Panel_3.js",
+		"/D/Web Apps/Development/React.App/.gitignore",
+		"/D/Web Apps/Development/React.App/server/helpers/auth.helper.js",
 		"/D/Web Apps/Development/React.App/server/helpers/user.helper.js",
+		"/D/Web Apps/Development/React.App/src/components/pages/home/styles/Panel_3.scss",
+		"/D/Web Apps/Development/React.App/set-env-vars.ps1",
+		"/D/Web Apps/Development/React.App/server/webpack.js",
+		"/D/Web Apps/Development/React.App/src/components/layout/styles/Layout.scss",
+		"/D/Web Apps/Development/React.App/build.config.js",
+		"/D/Web Apps/Development/React.App/src/css/base/material-design/_md-nav.scss",
+		"/D/Web Apps/Development/React.App/src/css/base/material-design/_md-inputs.scss",
+		"/D/Web Apps/Development/React.App/src/components/styles/resources.scss",
+		"/D/Web Apps/Development/React.App/postcss.config.js",
+		"/D/Web Apps/Development/React.App/src/components/styles/vars/mixins/index.scss",
+		"/D/Web Apps/Development/React.App/src/components/pages/home/Home.js",
+		"/D/Web Apps/Development/React.App/src/components/styles/vars/index.scss",
+		"/D/Web Apps/Development/React.App/src/components/styles/vars/skins/index.scss",
+		"/D/Web Apps/Development/React.App/.babelrc",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/D/Web Apps/Development/React.App/server/bundle.js",
+		"/D/Web Apps/Development/React.App/src/components/layout/header/styles/Header.css",
+		"/D/Web Apps/Development/React.App/dist/0.04d462907149e542534d.hot-update.js",
+		"/D/Web Apps/Development/React.App/app.react.sublime-project",
+		"/D/Web Apps/Development/React.App/server/data/config.js",
 		"/D/Web Apps/Development/React.App/server/helpers/mail.helper.js",
 		"/D/Web Apps/Development/React.App/server/properties.js",
-		"/D/Web Apps/Development/React.App/set-env-vars.ps1",
-		"/D/Web Apps/Development/React.App/server/routes/index.js",
 		"/D/Web Apps/Development/React.App/server/includes.js",
-		"/D/Web Apps/Development/React.App/server/routes/anonymous.js",
 		"/D/Web Apps/Development/React.App/server/powershell.js",
 		"/D/Web Apps/Development/App.React/.gitignore",
 		"/D/Web Apps/Development/App.React/security/react-app.txt",
@@ -730,105 +908,33 @@
 		"/D/Web Apps/Development/Basic.React/src/_layout.jade",
 		"/D/Web Apps/Development/Basic.React/.environment.config",
 		"/D/Web Apps/Development/Basic.React/includes.js",
-		"/D/Web Apps/Development/Basic.React/build.config.js",
-		"/D/Web Apps/Development/Basic.React/sample.environment.config",
-		"/D/Web Apps/Development/Basic.React/set-environment-variables.heroku.ps1",
-		"/D/Web Apps/Development/Basic.React/heroku/node-js-getting-started/index.js",
-		"/D/Web Apps/Development/Basic.React/Procfile",
-		"/D/Web Apps/Development/Basic.React/.nvmrc",
-		"/D/Web Apps/Development/Basic.React/.git/config",
-		"/D/Web Apps/Development/Basic.React/webpack.config.js",
-		"/D/Web Apps/Development/Basic.React/set-environment-variables.ps1",
-		"/D/Web Apps/Development/Basic.React/server/properties.js",
-		"/D/Web Apps/Development/Basic.React/server/templates/mail/contact.jade",
-		"/D/Web Apps/Development/Basic.React/src/ng-views/base/_layout.jade",
-		"/D/Web Apps/Development/Basic.React/src/components/app.data.js",
-		"/D/Web Apps/Development/Basic.React/src/components/layout/nav/menu.data.js",
-		"/D/Web Apps/Development/Basic.React/src/components/pages/home/styles/Panel_1.scss",
-		"/D/Web Apps/Development/Basic.React/src/components/layout/header/styles/Header.scss",
-		"/D/Web Apps/Development/Basic.React/server/server.js",
-		"/D/Web Apps/Development/Basic.React/src/components/pages/contact/index.js",
-		"/D/Web Apps/Development/Basic.React/.gitignore",
-		"/D/Web Apps/Development/Basic.React/environment.config",
-		"/D/Web Apps/Development/Basic.React/environment.sample.config",
-		"/D/Web Apps/Development/Base/App.Source/Web.config",
-		"/D/Web Apps/Development/Basic.React/src/ng-modules/org-modules.scss",
-		"/D/Web Apps/Development/Basic.React/src/css/base.org.scss",
-		"/D/Web Apps/Development/Basic.React/gulpfile.webpack.js",
-		"/D/Web Apps/Development/Basic.React/dist/js/app.min.js",
-		"/D/Web Apps/Development/Basic.React/dist/css/app.min.css",
-		"/D/Web Apps/Development/Basic.React/src/components/pages/home/panels/Panel_2.js",
-		"/D/Web Apps/Development/Basic.React/src/components/pages/home/styles/Home.scss",
-		"/D/Web Apps/Development/Basic.React/src/components/pages/home/Home.js",
-		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
-		"/D/Web Apps/Development/Basic.React/src/components/layout/Layout.js",
-		"/D/Web Apps/Development/Basic.React/src/components/pages/error404/Error404.js",
-		"/D/Web Apps/Development/Basic.React/dist/js/map/app.min.js.map",
-		"/D/Web Apps/Development/Basic.React/src/css/base/_utilities.scss",
-		"/D/Web Apps/Development/Basic.React/src/css/mixins/_effects.scss",
-		"/D/Web Apps/Development/Basic.React/src/components/layout/header/Header.jsx",
-		"/D/Web Apps/Development/Basic.React/src/components/layout/header/HeaderLogo.jsx",
-		"/D/Web Apps/Development/Basic.React/src/components/layout/header/styles/HeaderLogo.scss",
-		"/D/Web Apps/Development/Basic.React/src/components/pages/home/Home.jsx",
-		"/D/Web Apps/Development/Basic.React/src/components/layout/Layout.jsx",
-		"/D/Web Apps/Development/Basic.React/src/components/layout/styles/Layout.scss",
-		"/D/Web Apps/Development/Basic.React/node_modules/webpack/bin/webpack.js",
-		"/D/Web Apps/Development/Basic.React/src/components/Routes.jsx",
-		"/D/Web Apps/Development/Basic.React/node_modules/browser-sync-ui/public/js/app.min.js",
-		"/D/Web Apps/Development/Basic.React/src/components/layout/nav/NavSlide.jsx",
-		"/D/Web Apps/Development/Basic.React/src/components/layout/nav/NavMenu.jsx",
-		"/D/Web Apps/Development/Basic.React/src/components/layout/footer/Footer.jsx",
-		"/D/Web Apps/Development/Basic.React/src/components/entry.jsx",
-		"/D/Web Apps/Development/Basic.React/src/js/app/controllers/org.controller.js",
-		"/D/Web Apps/Development/Basic.React/src/css/skins/_skin-default.scss",
-		"/D/Web Apps/Development/Basic.React/node_modules/material-ui/styles/MuiThemeProvider.js",
-		"/D/Web Apps/Development/Basic.React/src/components/layout/nav/styles/NavSlide.scss",
-		"/D/Web Apps/Development/Basic.React/src/components/layout/nav/styles/NavMenu.scss",
-		"/D/Web Apps/Development/Basic.React/src/css/base/_lib.scss",
-		"/D/Web Apps/Development/Basic.React/src/components/layout/nav/slideToggle.js",
-		"/D/Web Apps/Development/Basic.React/src/ng-filters/time-greet.filter.js",
-		"/D/Web Apps/Development/Basic.React/src/components/helpers/timeGreet/TimeGreet.scss",
-		"/D/Web Apps/Development/Basic.React/src/components/requires.js",
-		"/D/Web Apps/Development/Basic.React/src/css/base/material-design/_md-nav.scss",
-		"/D/Web Apps/Development/Basic.React/src/css/base/material-design/_md-inputs.scss",
-		"/D/Web Apps/Development/Basic.React/src/components/layout/footer/styles/Footer.scss",
-		"/D/Web Apps/Development/Basic.React/src/js/release/components.js",
-		"/D/Web Apps/Development/Basic.React/src/helpers/TimeGreet.js",
-		"/D/Web Apps/Development/Basic.React/src/components/pages/home/panels/Panel_3.js",
-		"/D/Web Apps/Development/Basic.React/src/components/pages/home/panels/Panel_1.js",
-		"/D/Web Apps/Development/Basic.React/src/css/base/_colors.scss",
-		"/D/Web Apps/Development/Basic.React/src/css/base/_material-overrides.scss",
-		"/D/Web Apps/Development/Basic.React/src/css/mixins/_org.scss",
-		"/D/Web Apps/Development/Basic.React/src/ng-directives/org/org-nav-slide.directive.js",
-		"/D/Web Apps/Development/Basic.React/src/ng-views/org/home/components/styles/_panel-1.scss",
-		"/D/Web Apps/Development/Basic.React/src/css/base/_nav.scss",
-		"/D/Web Apps/Development/Basic.React/src/css/base/_vars.scss",
-		"/D/Web Apps/Development/Basic.React/src/css/base/_screens.scss",
-		"/D/Web Apps/Development/Basic.React/src/components/app.js",
-		"/D/Web Apps/Development/Basic.React/src/js/app/configs/route.config.js",
-		"/D/Web Apps/Development/Basic.React/src/components/layout/nav/menu.js",
-		"/D/Web Apps/Development/Basic.React/src/components/pages/home/panels/Panel1.js",
-		"/D/Web Apps/Development/Basic.React/src/components/pages/home/panels/Panel2.js",
-		"/D/Web Apps/Development/Basic.React/src/components/pages/home/panels/Panel3.js",
-		"/D/Web Apps/Development/Basic.React/src/components/pages/error404/Error404.scss",
-		"/D/Web Apps/Development/Basic.React/src/ng-views/base/components/menus/_nav-slide.jade",
-		"/D/Web Apps/Development/Basic.React/src/ng-views/base/components/_nav-main.jade",
-		"/D/Web Apps/Development/Basic.React/src/ng-views/org/home/components/styles/_panel-3.scss",
-		"/D/Web Apps/Development/IceSolar/gulpfile.js",
-		"/D/Web Apps/Development/Basic.React/src/js/release/app.js",
-		"/D/Web Apps/Development/Basic.React/src/ng-views/org/home/components/_panel-1.jade",
-		"/D/Web Apps/Development/Basic.React/src/ng-modules/utilities/util-library.factory.js",
-		"/D/Web Apps/Development/IceSolar/.gitignore"
+		"/D/Web Apps/Development/Basic.React/build.config.js"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 45.0
 	},
 	"find_in_files":
 	{
 		"height": 114.0,
 		"where_history":
 		[
+			"*.js",
+			"*.css",
+			"*.scss",
+			"*.css",
+			"*.scss",
+			"*.css",
+			"*.scss",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.json",
+			"*.config",
+			"*.js",
+			"*.jade",
+			"*.scss",
+			"*.scs",
 			"*.js",
 			"*.scss",
 			"*.js",
@@ -940,22 +1046,6 @@
 			"*.js",
 			"*.scss",
 			"*.js",
-			"*.jade",
-			"*.scss",
-			"*.js",
-			"*.scss",
-			"*.jade",
-			"*.js",
-			"*.jade",
-			"*.js",
-			"*.scss",
-			"*.js",
-			"*.scss",
-			"*.js",
-			"*.scss",
-			"*.js",
-			"*.jade",
-			"*.scss",
 			"*.jade"
 		]
 	},
@@ -964,6 +1054,53 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\"",
+			"React",
+			"\"",
+			"org",
+			"\"",
+			"back",
+			"\"",
+			".icon",
+			"isotope",
+			".icon",
+			"\"",
+			".input",
+			"input",
+			"undefined",
+			"}\n",
+			"NavSlide",
+			"D:/Web Apps/Development/React.App/src/css",
+			"../base",
+			"title-link",
+			"#app",
+			";\n",
+			"org",
+			"cross-env",
+			"dotenv",
+			"uglify",
+			"sourcemaps",
+			"sass",
+			"cache",
+			"concat",
+			"cssnano",
+			"rename",
+			"del",
+			"notify",
+			"merge",
+			"title",
+			".title",
+			"overflow-x: hidden",
+			"overflow-x",
+			".title",
+			"#org",
+			"../css",
+			"}]\n",
+			"_skin-default",
+			"background-color",
+			"header",
+			"()\n",
+			"'concat-css'",
 			"'sass",
 			"require('app_modules/app.data')",
 			"props.google.password",
@@ -1044,54 +1181,7 @@
 			"class=",
 			"class",
 			"utility",
-			"ng-",
-			"\"",
-			"className",
-			"nav",
-			" class",
-			"react",
-			"\"",
-			"streamify",
-			"\"",
-			"Parent",
-			"#org",
-			"'src/css/release/'",
-			"'src/js/release/'",
-			"'dist/js/'",
-			"'dist/css/'",
-			"js",
-			"function()",
-			"App.Source",
-			"iceApp",
-			"orgApp",
-			"');');",
-			"ng-views/org/",
-			".html",
-			"Base-ic",
-			"../base",
-			"checkbox",
-			"form-control",
-			"ng-vie",
-			"3",
-			"orgLocation",
-			"\"",
-			"orgUtils.fac",
-			"text-",
-			"max-width: $screenXsMax",
-			"max-width: $screen",
-			"ICE Solar",
-			"\"",
-			"h1",
-			"menu-item",
-			"navbar-brand",
-			"ICE Solar",
-			"vision-mission",
-			"navbar-right",
-			"nav-slide",
-			"absolute-center",
-			"35px",
-			"base.elevate",
-			"$screenXsMax:"
+			"ng-"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1099,6 +1189,12 @@
 		"regex": false,
 		"replace_history":
 		[
+			"'",
+			"NavDrawer",
+			".",
+			"D:/Web Apps/Development/React.App/src/css/base",
+			"D:/Web Apps/Development/React.App/src/css",
+			"'concat-styles'",
 			"require('app.data')",
 			"process.env.google_password",
 			"process.env.google_user",
@@ -1220,13 +1316,7 @@
 			"appUtils",
 			"list.",
 			"ayce.tags",
-			"ayce",
-			"startsWith:{name:myDiet.query}",
-			"startsWith:{name:modal.data.query}",
-			"myDiet.query",
-			"myDiet.result.other",
-			"ParseDependentRequests=\"False\"",
-			"i.icon.fa"
+			"ayce"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1237,308 +1327,41 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "webpack.dev.config.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3853,
+						"buffer_size": 13,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								810,
-								810
+								13,
+								13
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"auto_name": "eslint --init",
+							"default_dir": "D:\\Web Apps\\Development\\React.App",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
-						"translation.x": -0.0,
-						"translation.y": 1008.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "webpack.config.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3932,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3268,
-								3213
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 2160.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "gulpfile.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7370,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1951,
-								1917
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 881.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/index.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1863,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								255,
-								255
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/components/Routes.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1440,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								523,
-								523
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/components/layout/Layout.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 480,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								293,
-								293
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/components/layout/footer/Footer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 341,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								325,
-								325
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/components/pages/home/Home.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 324,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								236,
-								236
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/components/pages/home/panels/Panel_1.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 650,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								346,
-								346
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "src/components/layout/nav/NavSlide.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 684,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								70,
-								70
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 72.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "src/components/helpers/TimeGreet.js",
+					"file": "src/components/forms/fields/FieldText.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -1549,8 +1372,271 @@
 						"selection":
 						[
 							[
-								597,
-								597
+								55,
+								55
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/components/forms/fields/FieldEmail.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 487,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								36,
+								0
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/components/forms/styles/FormLogin.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 125,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								125,
+								125
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "webpack.config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5157,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4556,
+								4556
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3915.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/components/forms/FormLogin.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								272,
+								272
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/components/pages/login/Login.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 287,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								36,
+								36
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/components/global/ContentTitle.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 254,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								106,
+								106
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/components/forms/fields/index.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 224,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/components/pages/home/panels/Panel_1.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 788,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								174,
+								127
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/components/pages/home/panels/Panel_2.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 422,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1568,19 +1654,19 @@
 				},
 				{
 					"buffer": 11,
-					"file": "src/components/layout/nav/menu.data.js",
+					"file": "src/components/global/ContentTitleCaps.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 230,
+						"buffer_size": 286,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								230,
-								230
+								234,
+								234
 							]
 						],
 						"settings":
@@ -1591,7 +1677,264 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "src/components/global/MdIcon.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 182,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57,
+								53
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "src/components/global/styles/ContentTitle.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "server/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1421,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1032,
+								1032
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": -0.0,
+						"translation.y": 522.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "server/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 714,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2501,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								216,
+								216
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "dist/js/app.min.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1067743,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								355559,
+								355559
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 492302.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "webpack.dev.config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4975,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								168,
+								168
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 435.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "src/components/entry.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 222,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								144,
+								144
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "src/components/forms/fields/styles/FieldText.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
 					"type": "text"
 				}
 			]
@@ -1599,7 +1942,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 30.0
+		"height": 45.0
 	},
 	"input":
 	{
@@ -1644,7 +1987,7 @@
 	"project": "app.react.sublime-project",
 	"replace":
 	{
-		"height": 56.0
+		"height": 84.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1654,8 +1997,360 @@
 		"selected_items":
 		[
 			[
+				"contentt",
+				"React.App\\src\\components\\global\\ContentTitle.js"
+			],
+			[
+				"log",
+				"React.App\\src\\components\\pages\\login\\Login.js"
+			],
+			[
+				"pane",
+				"React.App\\src\\components\\pages\\home\\panels\\Panel_2.js"
+			],
+			[
+				"for",
+				"React.App\\src\\components\\forms\\FormLogin.js"
+			],
+			[
+				"pack",
+				"React.App\\package.json"
+			],
+			[
+				"color",
+				"React.App\\src\\components\\styles\\vars\\colors.scss"
+			],
+			[
+				"serverind",
+				"React.App\\server\\routes\\index.js"
+			],
+			[
+				"webpa",
+				"React.App\\webpack.dev.config.js"
+			],
+			[
+				"webp",
+				"React.App\\webpack.dev.config.js"
+			],
+			[
+				"fiel",
+				"React.App\\src\\components\\forms\\fields\\styles\\FieldText.scss"
+			],
+			[
+				"navs",
+				"React.App\\src\\components\\layout\\nav\\NavDrawer.js"
+			],
+			[
+				"navmen",
+				"React.App\\src\\components\\layout\\nav\\styles\\NavMenu.scss"
+			],
+			[
+				"nav",
+				"React.App\\src\\components\\layout\\nav\\NavMenu.js"
+			],
+			[
+				"men",
+				"React.App\\src\\components\\layout\\nav\\menu.data.js"
+			],
+			[
+				"heade",
+				"React.App\\src\\components\\layout\\header\\styles\\Header.scss"
+			],
+			[
+				"pan",
+				"React.App\\src\\components\\pages\\home\\styles\\Panel_1.scss"
+			],
+			[
+				"ent",
+				"React.App\\src\\components\\entry.js"
+			],
+			[
+				"home",
+				"React.App\\src\\components\\pages\\home\\styles\\Home.scss"
+			],
+			[
+				"psc",
+				"React.App\\src\\components\\pages\\home\\styles\\Panel_1.scss"
+			],
+			[
+				"panel",
+				"React.App\\src\\components\\pages\\home\\panels\\Panel_1.js"
+			],
+			[
+				"navm",
+				"React.App\\src\\components\\layout\\nav\\NavMenu.js"
+			],
+			[
+				"head",
+				"React.App\\src\\components\\layout\\header\\Header.js"
+			],
+			[
+				"routes",
+				"src\\components\\Routes.js"
+			],
+			[
 				"ind",
 				"src\\index.jade"
+			],
+			[
+				"we",
+				"webpack.dev.config.js"
+			],
+			[
+				"",
+				"src\\components\\layout\\header\\Header.js"
+			],
+			[
+				"forml",
+				"src\\components\\forms\\styles\\FormLogin.scss"
+			],
+			[
+				"fiele",
+				"src\\components\\forms\\fields\\FieldEmail.js"
+			],
+			[
+				"fot",
+				"src\\components\\layout\\footer\\Footer.js"
+			],
+			[
+				"not",
+				"src\\components\\pages\\notFound\\NotFound.js"
+			],
+			[
+				"header",
+				"src\\components\\layout\\header\\Header.js"
+			],
+			[
+				"route",
+				"server\\routes\\anonymous.js"
+			],
+			[
+				"app",
+				"src\\components\\app.data.js"
+			],
+			[
+				"menu",
+				"src\\components\\layout\\nav\\menu.data.js"
+			],
+			[
+				"gre",
+				"src\\components\\helpers\\TimeGreet.js"
+			],
+			[
+				"res",
+				"src\\components\\styles\\reset.scss"
+			],
+			[
+				"base",
+				"src\\components\\styles\\base.scss"
+			],
+			[
+				"anvs",
+				"src\\components\\layout\\nav\\styles\\NavDrawer.scss"
+			],
+			[
+				"navd",
+				"src\\components\\layout\\nav\\NavDrawer.js"
+			],
+			[
+				"layou",
+				"src\\components\\layout\\Layout.js"
+			],
+			[
+				"rese",
+				"src\\components\\styles\\reset.scss"
+			],
+			[
+				"headers",
+				"src\\components\\layout\\header\\styles\\Header.scss"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"webpackd",
+				"webpack.dev.config.js"
+			],
+			[
+				"navsl",
+				"src\\components\\layout\\nav\\NavSlide.js"
+			],
+			[
+				"pac",
+				"package.json"
+			],
+			[
+				"inde",
+				"server\\index.js"
+			],
+			[
+				"gul",
+				"gulpfile.webpack.js"
+			],
+			[
+				"miixscs",
+				"src\\components\\styles\\vars\\mixins\\borders.scss"
+			],
+			[
+				"lib",
+				"src\\css\\base\\_lib.scss"
+			],
+			[
+				"bas",
+				"src\\components\\styles\\base.scss"
+			],
+			[
+				"utilimen",
+				"src\\css\\base\\_utility-menu.scss"
+			],
+			[
+				"bases",
+				"src\\components\\styles\\base.scss"
+			],
+			[
+				"ba",
+				"src\\css\\base.org.scss"
+			],
+			[
+				"tim",
+				"src\\components\\helpers\\TimeGreet.js"
+			],
+			[
+				"skind",
+				"src\\components\\styles\\vars\\skins\\skin-default.scss"
+			],
+			[
+				"foote",
+				"src\\components\\layout\\footer\\styles\\Footer.scss"
+			],
+			[
+				"notfoun",
+				"src\\components\\pages\\notFound\\styles\\NotFound.scss"
+			],
+			[
+				"foo",
+				"src\\components\\layout\\footer\\styles\\Footer.scss"
+			],
+			[
+				"con",
+				"server\\templates\\mail\\contact.jade"
+			],
+			[
+				"dona",
+				"src\\components\\pages\\donate\\Donate.js"
+			],
+			[
+				"team",
+				"src\\components\\pages\\team\\Team.js"
+			],
+			[
+				"pr",
+				"src\\components\\pages\\projects\\Projects.js"
+			],
+			[
+				"about",
+				"src\\components\\pages\\about\\About.js"
+			],
+			[
+				"lay",
+				"src\\components\\layout\\Layout.js"
+			],
+			[
+				"footers",
+				"src\\components\\layout\\footer\\styles\\Footer.scss"
+			],
+			[
+				"scree",
+				"src\\components\\styles\\vars\\screens.scss"
+			],
+			[
+				"headerjs",
+				"src\\components\\layout\\header\\Header.js"
+			],
+			[
+				"fote",
+				"src\\components\\layout\\footer\\styles\\Footer.scss"
+			],
+			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"web",
+				"webpack.dev.config.js"
+			],
+			[
+				"servinde",
+				"server\\index.js"
+			],
+			[
+				"servind",
+				"server\\index.js"
+			],
+			[
+				"star",
+				"start-project.ps1"
+			],
+			[
+				"pa",
+				"package.json"
+			],
+			[
+				"foot",
+				"src\\components\\layout\\footer\\Footer.js"
+			],
+			[
+				"bu",
+				"build.config.js"
+			],
+			[
+				"panelsc",
+				"src\\components\\pages\\home\\styles\\Panel_1.scss"
+			],
+			[
+				"headerlo",
+				"src\\components\\layout\\header\\HeaderLogo.js"
+			],
+			[
+				"he",
+				"src\\components\\layout\\header\\styles\\Header.scss"
+			],
+			[
+				"post",
+				"postcss.config.js"
+			],
+			[
+				"config",
+				"build.config.js"
+			],
+			[
+				"build",
+				"build.config.js"
+			],
+			[
+				"ski",
+				"src\\components\\styles\\vars\\skins\\skin-default.scss"
+			],
+			[
+				"skinind",
+				"src\\components\\styles\\vars\\skins\\index.scss"
+			],
+			[
+				"paca",
+				"package.json"
+			],
+			[
+				"b",
+				"src\\css\\base.org.scss"
+			],
+			[
+				"pacak",
+				"package.json"
+			],
+			[
+				"buildcon",
+				"build.config.js"
 			],
 			[
 				"buildc",
@@ -1666,32 +2361,8 @@
 				"src\\components\\helpers\\TimeGreet.js"
 			],
 			[
-				"menu",
-				"src\\components\\layout\\nav\\menu.data.js"
-			],
-			[
 				"navsli",
 				"src\\components\\layout\\nav\\NavSlide.js"
-			],
-			[
-				"pan",
-				"src\\components\\pages\\home\\panels\\Panel_1.js"
-			],
-			[
-				"foot",
-				"src\\components\\layout\\footer\\Footer.js"
-			],
-			[
-				"layou",
-				"src\\components\\layout\\Layout.js"
-			],
-			[
-				"home",
-				"src\\components\\pages\\home\\Home.js"
-			],
-			[
-				"route",
-				"src\\components\\Routes.js"
 			],
 			[
 				"conig",
@@ -1714,20 +2385,12 @@
 				"server\\helpers\\auth.helper.js"
 			],
 			[
-				"web",
-				"webpack.dev.config.js"
-			],
-			[
 				"start",
 				"start-project.ps1"
 			],
 			[
 				"git",
 				".gitignore"
-			],
-			[
-				"pack",
-				"package.json"
 			],
 			[
 				"entr",
@@ -1738,36 +2401,12 @@
 				"build.config.js"
 			],
 			[
-				"header",
-				"src\\components\\layout\\header\\HeaderLogo.js"
-			],
-			[
 				"rea",
 				"README.md"
 			],
 			[
-				"star",
-				"start-project.ps1"
-			],
-			[
 				"pro",
 				"Procfile"
-			],
-			[
-				"",
-				"src\\ng-views\\base\\_layout.jade"
-			],
-			[
-				"ent",
-				"src\\components\\entry.js"
-			],
-			[
-				"app",
-				"src\\components\\app.data.js"
-			],
-			[
-				"men",
-				"src\\components\\layout\\nav\\menu.data.js"
 			],
 			[
 				"/nav",
@@ -1778,18 +2417,6 @@
 				"src\\components\\Routes.js"
 			],
 			[
-				"pac",
-				"package.json"
-			],
-			[
-				"base",
-				"src\\css\\base.org.scss"
-			],
-			[
-				"lay",
-				"src\\ng-views\\base\\_layout.jade"
-			],
-			[
 				"ut",
 				"src\\css\\base\\_utilities.scss"
 			],
@@ -1798,20 +2425,12 @@
 				"src\\css\\mixins\\_effects.scss"
 			],
 			[
-				"gul",
-				"gulpfile.js"
-			],
-			[
 				"layouts",
 				"src\\components\\layout\\styles\\Layout.scss"
 			],
 			[
 				"layout",
 				"src\\ng-views\\base\\_layout.jade"
-			],
-			[
-				"head",
-				"src\\components\\layout\\header\\styles\\Header.scss"
 			],
 			[
 				"g",
@@ -1830,10 +2449,6 @@
 				"src\\components\\layout\\Layout.js"
 			],
 			[
-				"foote",
-				"src\\components\\layout\\footer\\Footer.js"
-			],
-			[
 				"time",
 				"src\\ng-filters\\time-greet.filter.js"
 			],
@@ -1850,15 +2465,7 @@
 				"src\\components\\layout\\nav\\NavSlide.js"
 			],
 			[
-				"foo",
-				"src\\components\\layout\\footer\\Footer.js"
-			],
-			[
 				"navme",
-				"src\\components\\layout\\nav\\styles\\NavMenu.scss"
-			],
-			[
-				"nav",
 				"src\\components\\layout\\nav\\styles\\NavMenu.scss"
 			],
 			[
@@ -1874,48 +2481,16 @@
 				"src\\components\\layout\\header\\Header.js"
 			],
 			[
-				"navsl",
-				"src\\components\\layout\\nav\\NavSlide.js"
-			],
-			[
-				"bas",
-				"src\\css\\base.org.scss"
-			],
-			[
 				"orgna",
 				"src\\ng-directives\\org\\org-nav-slide.directive.js"
-			],
-			[
-				"lib",
-				"src\\css\\base\\_lib.scss"
 			],
 			[
 				"mdi",
 				"src\\css\\base\\material-design\\_md-inputs.scss"
 			],
 			[
-				"navmen",
-				"src\\components\\layout\\nav\\NavMenu.js"
-			],
-			[
 				"orgcon",
 				"src\\js\\app\\controllers\\org.controller.js"
-			],
-			[
-				"panel",
-				"src\\components\\pages\\home\\panels\\Panel1.js"
-			],
-			[
-				"team",
-				"src\\components\\pages\\team\\Team.js"
-			],
-			[
-				"navs",
-				"src\\css\\base\\_nav.scss"
-			],
-			[
-				"log",
-				"src\\components\\layout\\header\\HeaderLogo.js"
 			],
 			[
 				"panel3",
@@ -1932,238 +2507,6 @@
 			[
 				"panescs",
 				"src\\ng-views\\org\\home\\components\\styles\\_panel-3.scss"
-			],
-			[
-				"la",
-				"src\\ng-views\\base\\_layout.jade"
-			],
-			[
-				"inde",
-				"src\\index.jade"
-			],
-			[
-				"panel1",
-				"src\\components\\pages\\home\\components\\Panel1.js"
-			],
-			[
-				"ign",
-				".gitignore"
-			],
-			[
-				"pan1s",
-				"src\\ng-views\\org\\home\\components\\styles\\_panel-1.scss"
-			],
-			[
-				"read",
-				"README.md"
-			],
-			[
-				"sln",
-				"Basic.React.sln"
-			],
-			[
-				"teamcon",
-				"src\\ng-views\\org\\team\\team.controller.js"
-			],
-			[
-				"proj",
-				"src\\ng-views\\org\\projects\\project-name\\project-name.controller.js"
-			],
-			[
-				"abou",
-				"src\\ng-views\\org\\about-us\\about-us.controller.js"
-			],
-			[
-				"orgocon",
-				"src\\ng-views\\org\\donate\\donate.controller.js"
-			],
-			[
-				"goog",
-				"src\\ng-services\\google-api.service.js"
-			],
-			[
-				"publ",
-				"src\\App_Data\\PublishProfiles\\BasicReactWeb.pubxml"
-			],
-			[
-				"them",
-				"src\\ng-modules\\utilities\\configs\\theme.config.js"
-			],
-			[
-				"navm",
-				"src\\ng-views\\base\\components\\_nav-main.jade"
-			],
-			[
-				"anai",
-				"src\\css\\base\\_animations.scss"
-			],
-			[
-				"layo",
-				"src\\ng-views\\base\\_layout.jade"
-			],
-			[
-				"utili",
-				"src\\css\\base\\_utilities.scss"
-			],
-			[
-				"homejad",
-				"src\\ng-views\\org\\home\\components\\_panel-1.jade"
-			],
-			[
-				"publi",
-				"src\\App_Data\\PublishProfiles\\BasicReactWeb.pubxml"
-			],
-			[
-				"field",
-				"src\\ng-modules\\utilities\\util-forms\\field-autofill.directive.js"
-			],
-			[
-				"projena",
-				"src\\ng-views\\org\\projects\\project-name\\project-name.controller.js"
-			],
-			[
-				"orgc",
-				"src\\js\\app\\controllers\\org.controller.js"
-			],
-			[
-				"homeon",
-				"src\\ng-views\\org\\home\\home.controller.js"
-			],
-			[
-				"pa",
-				"package.json"
-			],
-			[
-				"orgmo",
-				"src\\js\\app\\org.module.js"
-			],
-			[
-				"orgmod",
-				"src\\ng-modules\\org-modules.scss"
-			],
-			[
-				"baseor",
-				"src\\css\\base.org.scss"
-			],
-			[
-				"hom",
-				"App.Source\\ng-views\\org\\home\\components\\_0-body-home.jade"
-			],
-			[
-				"cont",
-				"App.Source\\ng-views\\org\\contact\\components\\styles\\contact.scss"
-			],
-			[
-				"skki",
-				"App.Source\\css\\skins\\_skin-default.scss"
-			],
-			[
-				"conta",
-				"App.Source\\ng-views\\org\\contact\\components\\_body-contact.jade"
-			],
-			[
-				"sk",
-				"App.Source\\css\\skins\\_skin-default.scss"
-			],
-			[
-				"aboutja",
-				"App.Source\\ng-views\\org\\about\\components\\_body-about.jade"
-			],
-			[
-				"ski",
-				"App.Source\\css\\skins\\_skin-default.scss"
-			],
-			[
-				"gru",
-				"App.Source\\gruntfile.js"
-			],
-			[
-				"about",
-				"App.Source\\ng-views\\org\\about\\components\\_body-about.jade"
-			],
-			[
-				"ba",
-				"App.Source\\css\\base.org.scss"
-			],
-			[
-				"home3",
-				"App.Source\\ng-views\\org\\home\\components\\styles\\_panel-3.scss"
-			],
-			[
-				"panja",
-				"App.Source\\ng-views\\org\\home\\components\\_panel-1.jade"
-			],
-			[
-				"util",
-				"App.Source\\css\\base\\_utilities.scss"
-			],
-			[
-				"bodhom",
-				"App.Source\\ng-views\\org\\home\\components\\_0-body-home.jade"
-			],
-			[
-				"module",
-				"App.Source\\js\\app\\org.module.js"
-			],
-			[
-				"google",
-				"App.Source\\ng-services\\google-api.service.js"
-			],
-			[
-				"modulejs",
-				"App.Source\\js\\app\\org.module.js"
-			],
-			[
-				"orgco",
-				"App.Source\\js\\app\\controllers\\org.controller.js"
-			],
-			[
-				"navsc",
-				"App.Source\\css\\base\\_nav.scss"
-			],
-			[
-				"navma",
-				"App.Source\\ng-views\\base\\components\\_nav-main.jade"
-			],
-			[
-				"homecon",
-				"App.Source\\ng-views\\org\\home\\home.controller.js"
-			],
-			[
-				"utilisc",
-				"App.Source\\css\\base\\_utilities.scss"
-			],
-			[
-				"navslidej",
-				"App.Source\\ng-views\\base\\components\\menus\\_nav-slide.jade"
-			],
-			[
-				"navslide",
-				"App.Source\\ng-directives\\org\\org-nav-slide.directive.js"
-			],
-			[
-				"resu",
-				"App.Source\\ng-views\\org\\resume\\resume.jade"
-			],
-			[
-				"contac",
-				"App.Source\\ng-views\\org\\contact\\contact.controller.js"
-			],
-			[
-				"resumecon",
-				"App.Source\\ng-views\\org\\resume\\resume.controller.js"
-			],
-			[
-				"routecon",
-				"App.Source\\js\\app\\configs\\route.config.js"
-			],
-			[
-				"markes",
-				"App.Source\\ng-views\\ice\\home\\components\\styles\\_market.scss"
-			],
-			[
-				"grun",
-				"App.Source\\gruntfile.js"
 			]
 		],
 		"width": 0.0

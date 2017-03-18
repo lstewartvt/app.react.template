@@ -47,8 +47,12 @@
         }
 
         > span {
+          padding: 0;
+
           > a {
             color: $text;
+            padding: 8px 15px;
+            width: 100%;
           }
         }
       }

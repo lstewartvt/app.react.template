@@ -9,7 +9,7 @@ export default class HeaderLogo extends React.Component {
         activeClassName="active"
         className="navbar-brand"
         to="/">
-        App.React
+        React.App
       </ReactRouter.IndexLink>
     );
   }

@@ -17,7 +17,7 @@ export default class Header extends React.Component {
         fixed
         onRightIconClick={this.props.handleNavToggle}
         rightIcon='menu'
-        title={'App.React'||<HeaderLogo />}>
+        title={'React.App'||<HeaderLogo />}>
         <NavMenu />
       </AppBar>
     );

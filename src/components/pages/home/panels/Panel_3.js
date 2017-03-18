@@ -1,5 +1,7 @@
 import '../styles/Panel_3.scss';
 
+import { ContentTitle } from 'shared';
+
 export default class Panel_3 extends React.Component {
 
   constructor(props) {
@@ -10,7 +12,7 @@ export default class Panel_3 extends React.Component {
     return (
       <div id="panel-3" className="parallax-block long">
         <section className="parallax-content">
-          <h1 className="content-title">{this.props.title || 'Panel 3'} Under Construction</h1>
+          <ContentTitle>{this.props.title || 'Panel 3'} Under Construction</ContentTitle>
           <article className="content"></article>
         </section>
       </div>
