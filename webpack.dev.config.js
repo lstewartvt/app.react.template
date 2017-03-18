@@ -50,13 +50,49 @@ module.exports = {
       ]
     }, {
       test: /\.s?css$/,
+      exclude: /src/,
       use: [{
         loader: 'style-loader'
       }, {
         loader: 'css-loader',
         options: {
           importLoaders: 1,
-          // localIdentName: '[name]__[local]___[hash:base64:5]',
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+          modules: true,
+          sourceMap: false
+        }
+      }, {
+        loader: 'resolve-url-loader',
+        options: {
+          sourceMap: true
+        }
+      }, {
+        loader: 'sass-loader',
+        options: {
+          sourceMap: true
+        }
+      }, {
+        loader: 'sass-resources-loader',
+        options: {
+          // Provide path to the file with resources
+          resources: path.resolve(__dirname, './src/components/styles/resources.scss')
+        }
+      }, {
+        loader: 'postcss-loader',
+        options: {
+          parser: 'postcss-scss',
+          sourceMap: true
+        }
+      }]
+    }, {
+      test: /\.s?css$/,
+      include: /src/,
+      use: [{
+        loader: 'style-loader'
+      }, {
+        loader: 'css-loader',
+        options: {
+          importLoaders: 1,
           localIdentName: '[local]',
           modules: true,
           sourceMap: false

@@ -1,4 +1,4 @@
-.drawer {
+.drawer-nav {
   align-items: initial;
   padding-top: 56px;
   vertical-align: initial;
@@ -7,8 +7,8 @@
   > aside {
     width: 100%;
 
-    > .list {
-      > .listItem {
+    > ul {
+      > li {
         font-size: 20px;
         font-weight: 300;
 
@@ -19,7 +19,7 @@
         }
 
         &.greeting-item {
-          > .item {
+          > span {
             padding: 0;
 
             > .greeting {
@@ -34,38 +34,19 @@
                 font-size: 31px;
                 line-height: 31px;
 
-                .name {
+                span {
                   display: block;
-                  font-weight: 500;
-                }
-              }
 
-              > .md-button {
-                background-color: $sectionBg;
-                background-color: rgba($sectionBg, 0.55);
-                border-radius: 0;
-                color: $colorPrimary;
-                font-weight: bold;
-                margin: 5px 0 0;
-                text-transform: lowercase;
-                width: 75px;
-
-                @include border1($siteBg);
-
-                &:not([disabled]):hover {
-                  background-color: $colorPrimary;
-                  background-color: rgba($colorPrimary, 0.75);
-                }
-
-                > .fa {
-                  margin-right: 5px;
+                  &.name {
+                    font-weight: 500;
+                  }
                 }
               }
             }
           }
         }
 
-        > .item {
+        > span {
           > a {
             color: $text;
           }

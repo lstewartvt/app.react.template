@@ -1,21 +1,10 @@
-.appBar {
-  &.header {
+#app {
+  .header {
+    background-color: $dark;
     font-size: 16px;
     z-index: 500;
 
-    > .rightIcon {
-      display: none;
-
-      @media (max-width: $screenSmMax) {
-        display: initial;
-      }
-
-      > .icon {
-        font-size: 25px;
-      }
-    }
-
-    > .title {
+    > h1 {
       color: $siteBg;
       font-size: 23px;
       font-weight: 300;

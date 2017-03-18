@@ -22,12 +22,12 @@ export default class Layout extends React.Component {
 
   render() {
     return  (
-      <div id="org">
+      <div id='root'>
         <Header handleNavToggle={this.handleNavToggle} />
         <NavDrawer
           handleNavToggle={this.handleNavToggle}
           showNavDrawer={this.state.showNavDrawer} />
-        <div id="content-wrapper" className="animated body-content container fadeIn">
+        <div id='content-wrapper' className='animated body-content container fadeIn'>
           {this.props.children}
         </div>
         <Footer />

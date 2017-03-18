@@ -1,6 +1,22 @@
 .nav {
-  @media (max-width: $screenSmMax) {
+  @media (max-width: $screenXsMax) {
     display: none;
+  }
+
+  > .link-group {
+    display: inline-block;
+
+    > .link {
+      display: inherit;
+
+      + .link {
+        &:before {
+          content: '/';
+          margin: 0 3px;
+          opacity: 0.5;
+        }
+      }
+    }
   }
 
   > .link[data-react-toolbox=link] {
@@ -8,7 +24,7 @@
     margin: 0 15px;
   }
 
-  + .button {
+  + .rightIcon {
     &.toggle {
       > .icon {
         font-size: 25px;

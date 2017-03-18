@@ -17,11 +17,11 @@ export default class TimeGreet extends React.Component {
     if (this.props.subject) {
       return (
         <span>
-          {greeting}, <span className="name">{this.props.subject}</span>
+          {greeting}, <span className='name'>{this.props.subject}</span>
         </span>
       );
     } else {
-      return <span className="greet">{greeting}</span>;
+      return <span className='greet'>{greeting}</span>;
     }
   };
 };

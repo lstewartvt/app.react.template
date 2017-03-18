@@ -13,11 +13,11 @@ export default class Header extends React.Component {
   render() {
     return (
       <AppBar
-        className="header"
+        className='header'
         fixed
         onRightIconClick={this.props.handleNavToggle}
-        rightIcon="menu"
-        title={<HeaderLogo />}>
+        rightIcon='menu'
+        title={'App.React'||<HeaderLogo />}>
         <NavMenu />
       </AppBar>
     );

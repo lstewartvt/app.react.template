@@ -3,6 +3,10 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"follow_symlinks": true,
+			"path": "D:\\Web Apps\\Development\\React.App\\node_modules\\react-toolbox"
 		}
 	]
 }

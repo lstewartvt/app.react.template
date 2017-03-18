@@ -1,32 +1,28 @@
-﻿#app {
-  #panel-1 {
-    background-color: $lightestGray;
-    text-align: center;
+﻿#panel-1 {
+  background-color: $lightestGray;
+  text-align: center;
 
-    > .parallax-content {
-      > .content-title {
-        // color: $siteBg;
-        font-size: 60px;
-        line-height: 60px;
+  > .parallax-content {
+    > .content-title {
+      font-size: 60px;
+      line-height: 60px;
 
-        @media (max-width: $screenSmMax) {
-          font-size: 35px;
-          line-height: 35px;
-        }
-
-        + .sub-title {
-          // color: $siteBg;
-          font-weight: 400;
-          font-style: italic;
-        }
+      @media (max-width: $screenSmMax) {
+        font-size: 35px;
+        line-height: 35px;
       }
 
-      > .content {
-        margin-top: 50px;
+      + .sub-title {
+        font-weight: 400;
+        font-style: italic;
+      }
+    }
 
-        @media (max-width: $screenSmMax) {
-          margin-top: 25px;
-        }
+    > .content {
+      margin-top: 50px;
+
+      @media (max-width: $screenSmMax) {
+        margin-top: 25px;
       }
     }
   }
