@@ -11,6 +11,7 @@ export default class FieldEmail extends React.Component {
       <FieldText
         type='email'
         name={this.props.name||'email'}
+        error='Email is required.'
         hint={this.props.hint}
         icon={this.props.icon}
         label={this.props.label||'Email'}

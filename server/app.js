@@ -1,6 +1,5 @@
 require('./includes');
 
-const bluebird = require('bluebird');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const config = includes('data/config');
@@ -8,15 +7,23 @@ const cookieParser = require('cookie-parser');
 const Cookies = require('cookies');
 const express = require('express');
 const helpers = includes('helpers/');
-// var mongoose = require('mongoose');
 const morgan = require('morgan');
 const path = require('path');
 const props = includes('properties');
 
 var app = express();
 
-// mongoose.Promise = bluebird;
-// mongoose.connect(config.connections.mongodb); // connect to database
+// try connect to mongodb
+if(process.env.mongo_db_connection) {
+  console.log('Connecting to mongodb...');
+
+  const bluebird = require('bluebird');
+  let mongoose = require('mongoose');
+  mongoose.Promise = bluebird;
+  mongoose.connect(process.env.mongo_db_connection);
+} else {
+  console.log('Mongo connection not found...skipping...');
+}
 
 // Setup logger
 app.use(morgan('dev'));

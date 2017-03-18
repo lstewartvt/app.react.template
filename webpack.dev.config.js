@@ -45,7 +45,7 @@ module.exports = {
       exclude: /node_modules/,
       use: [
         'react-hot-loader',
-        'babel-loader'
+        'babel-loader?cacheDirectory=true'
       ]
     }, {
       test: /\.s?css$/,
@@ -171,6 +171,7 @@ module.exports = {
     ],
     modules: [
       'node_modules',
+      path.resolve(__dirname, './src'),
       path.resolve(__dirname, './src/components'),
       path.resolve(__dirname, './node_modules')
     ]

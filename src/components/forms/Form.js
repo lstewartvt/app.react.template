@@ -1,3 +1,5 @@
+import FormErrors from './FormErrors';
+
 import './styles/Form.scss';
 
 export default class Form extends React.Component {
@@ -11,12 +13,23 @@ export default class Form extends React.Component {
     }
   };
 
+  renderErrors() {
+    if(this.props.errors) {
+      return (
+        <FormErrors errors={this.props.errors} />
+      );
+    }
+  };
+
   render() {
     return (
       <form
         id={this.props.id}
         className={this.classes.join(' ')}>
+
+        {this.renderErrors()}
         {this.props.children}
+        
       </form>
     );
   };

@@ -11,6 +11,7 @@ export default class FieldPassword extends React.Component {
       <FieldText
         type='password'
         name={this.props.name||'password'}
+        error='Password is required.'
         hint={this.props.hint}
         icon={this.props.icon}
         label={this.props.label||'Password'}
