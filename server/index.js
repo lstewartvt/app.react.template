@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 27773;
 
 console.log(`Starting server in ${app.settings.env} mode...`);
 
-// We only want to run the workflow in development environment
+// We only want to run webpack in development environment
 if (app.settings.env === 'development') {
 
   console.log('Setting DEV environment variables...');

@@ -1,12 +1,12 @@
 const build = require('./build.config.js');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const cssnext = require('postcss-cssnext');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
-const webpackCombineLoaders = require('webpack-combine-loaders');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = {
@@ -107,11 +107,19 @@ module.exports = {
     }]
   },
   plugins: [
+    new webpack.optimize.AggressiveMergingPlugin(), // merge chunks
     new CleanWebpackPlugin(['dist'], { // remove old build directory
       root: __dirname,
       verbose: true,
       dry: false
     }),
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
+    }), // gzip files
     new CopyWebpackPlugin([ // copy files
       // {output}/favicon.ico
       { from: 'src/favicon.ico' },
@@ -122,29 +130,29 @@ module.exports = {
       // Copy directory contents to {output}/images/
       { from: 'src/images', to: 'images' }
     ]),
+    // new webpack.optimize.DedupePlugin(), // dedupe similar code
     new webpack.DefinePlugin({ // set production environment
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
     new ExtractTextPlugin(path.join(build.path.DEST_CSS, build.path.MINIFIED_CSS)), // get physical CSS files
+    new webpack.NoErrorsPlugin(), // skip emitting phase
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new OptimizeCssAssetsPlugin({ // minifiy CSS
+    new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.min\.css$/g,
       cssProcessor: require('cssnano'),
       cssProcessorOptions: { discardComments: { removeAll: true } },
       canPrint: true
-    }),
-    new webpack.optimize.UglifyJsPlugin({ // minify JS
-      comments: false,
-      compress: {
-        warnings: false,
-      },
-      output: {
-        comments: false,
-      },
-      sourceMap: false
-    }),
+    }), // minifiy CSS
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      React: 'react',
+      ReactDOM: 'react-dom',
+      ReactIntl: 'react-intl',
+      ReactRouter: 'react-router'
+    }), // auto load modules
+    new webpack.optimize.UglifyJsPlugin(), // minify JS
     new WriteFilePlugin() // write physical files
   ],
   resolve: {

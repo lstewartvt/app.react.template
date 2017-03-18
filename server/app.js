@@ -2,6 +2,7 @@ require('./includes');
 
 const bluebird = require('bluebird');
 const bodyParser = require('body-parser');
+const compression = require('compression');
 const config = includes('data/config');
 const cookieParser = require('cookie-parser');
 const Cookies = require('cookies');
@@ -28,6 +29,20 @@ app.use(bodyParser.json());
 // Add cookie manager
 app.use(cookieParser());
 app.use(Cookies.express());
+
+// We only want to optimize assets in production environment
+if (app.settings.env === 'production') {
+
+  // load gzipped assets
+  app.get(/\.(js)$/, function(request, response, next) {
+    request.url = request.url + '.gz';
+    response.set('Content-Encoding', 'gzip');
+    next();
+  });
+
+  // Use gzip compression
+  app.use(compression());
+}
 
 // Serve static assets
 app.use(express.static(path.resolve(__dirname, './../dist')));

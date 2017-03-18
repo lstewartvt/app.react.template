@@ -5,7 +5,6 @@ const cssnext = require('postcss-cssnext');
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
-const webpackCombineLoaders = require('webpack-combine-loaders');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = {
@@ -138,6 +137,9 @@ module.exports = {
       // Copy directory contents to {output}/images/
       { from: 'src/images', to: 'images' }
     ]),
+    new webpack.DefinePlugin({ // set production environment
+      '_debug': true // custom variable to include debug code
+    }),
     // new NpmInstallPlugin({
     //   dev: function(module, path) {
     //     return [
@@ -150,7 +152,14 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new WriteFilePlugin()
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      React: 'react',
+      ReactDOM: 'react-dom',
+      ReactIntl: 'react-intl',
+      ReactRouter: 'react-router'
+    }), // auto load modules
+    new WriteFilePlugin() // write physical files
   ],
   resolve: {
     extensions: [

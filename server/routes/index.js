@@ -26,9 +26,8 @@ module.exports = (app) => {
   // set user routes
   require('./user')(app);
 
-
   // layout template
-  app.set('views', `${__dirname}/../../dist`);
+  app.set('views', path.resolve(__dirname, './../../dist'));
   app.set('view engine', 'jade');
   app.get('*', (request, response) => {
 
