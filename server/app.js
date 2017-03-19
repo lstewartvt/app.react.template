@@ -14,13 +14,21 @@ const props = includes('properties');
 var app = express();
 
 // try connect to mongodb
-if(process.env.mongo_db_connection) {
+if (process.env.mongo_db_connection) {
   console.log('Connecting to mongodb...');
 
   const bluebird = require('bluebird');
   let mongoose = require('mongoose');
   mongoose.Promise = bluebird;
-  mongoose.connect(process.env.mongo_db_connection);
+  mongoose.connect(process.env.mongo_db_connection, function(error, db) {
+    if (error) {
+      console.log('Error:', error);
+      console.log('Unable to connect to mongodb. Please start the server.');
+    } else {
+      app.set('mongo_live', true);
+      console.log('Connected to mongodb successfully!');
+    }
+  });
 } else {
   console.log('Mongo connection not found...skipping...');
 }
@@ -30,8 +38,8 @@ app.use(morgan('dev'));
 // app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :response[content-length] :response-time ms'));
 
 // use body parser so we can get info from POST and/or URL parameters
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
+app.use(bodyParser.json()); // parse application/json
 
 // Add cookie manager
 app.use(cookieParser());

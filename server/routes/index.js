@@ -26,12 +26,12 @@ module.exports = (app) => {
   // set user routes
   require('./user')(app);
 
-  // layout template
+  // index template
   app.set('views', path.resolve(__dirname, './../../dist'));
   app.set('view engine', 'jade');
   app.get('*', (request, response) => {
 
-    if (true || request.is_authenticated) {
+    if (request.is_authenticated || !app.get('mongo_live')) {
       return response.render('index', { description: 'React app template' });
     }
 
