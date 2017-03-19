@@ -1,0 +1,11 @@
+/.env
+/.nvmrc
+/dist
+/dist-gulp
+/gulpfile.js
+/HOURS.txt
+/node_modules
+/npm-debug.log.*
+/security
+/src/js
+/src/release

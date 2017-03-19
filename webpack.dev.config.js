@@ -137,8 +137,9 @@ module.exports = {
       // Copy directory contents to {output}/images/
       { from: 'src/images', to: 'images' }
     ]),
-    new webpack.DefinePlugin({ // set production environment
-      '_debug': true // custom variable to include debug code
+    new webpack.DefinePlugin({
+      '_debug': true, // include debug code
+      '_secure': false // has ssl cert
     }),
     // new NpmInstallPlugin({
     //   dev: function(module, path) {
@@ -153,9 +154,9 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.ProvidePlugin({
-      ReactCookie: 'react-cookie',
       jQuery: 'jquery',
       React: 'react',
+      ReactCookie: 'react-cookie',
       ReactDOM: 'react-dom',
       ReactIntl: 'react-intl',
       ReactRouter: 'react-router'
@@ -171,7 +172,6 @@ module.exports = {
       '.scss'
     ],
     modules: [
-      // path.resolve(__dirname, './server'),
       path.resolve(__dirname, './src'),
       path.resolve(__dirname, './src/components'),
       path.resolve(__dirname, './node_modules')

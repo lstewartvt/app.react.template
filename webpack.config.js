@@ -131,9 +131,11 @@ module.exports = {
       { from: 'src/images', to: 'images' }
     ]),
     // new webpack.optimize.DedupePlugin(), // dedupe similar code
-    new webpack.DefinePlugin({ // set production environment
+    new webpack.DefinePlugin({
+      '_debug': false, // exclude debug code
+      '_secure': false,  // has ssl cert
       'process.env': {
-        'NODE_ENV': JSON.stringify('production')
+        'NODE_ENV': JSON.stringify('production') // set production environment
       }
     }),
     new ExtractTextPlugin(path.join(build.path.DEST_CSS, build.path.MINIFIED_CSS)), // get physical CSS files
@@ -148,6 +150,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       jQuery: 'jquery',
       React: 'react',
+      ReactCookie: 'react-cookie',
       ReactDOM: 'react-dom',
       ReactIntl: 'react-intl',
       ReactRouter: 'react-router'
@@ -163,7 +166,6 @@ module.exports = {
       '.scss'
     ],
     modules: [
-      path.resolve(__dirname, './server'),
       path.resolve(__dirname, './src'),
       path.resolve(__dirname, './src/components'),
       path.resolve(__dirname, './node_modules')

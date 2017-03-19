@@ -29,6 +29,14 @@ if (process.env.mongo_db_connection) {
       console.log('Connected to mongodb successfully!');
     }
   });
+
+  // close the mongoose connection if Node process ends
+  process.on('SIGINT', function() {
+    mongoose.connection.close(function() {
+      console.log('Disconnected mongodb due to app termination.');
+      process.exit(0);
+    });
+  });
 } else {
   console.log('Mongo connection not found...skipping...');
 }

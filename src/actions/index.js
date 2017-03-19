@@ -53,7 +53,7 @@ export function login({ email, password }) {
       .then(data => {
         ReactCookie.save(app_data.auth.cookie_name, data.token, { 
           path: '/',
-          secure: !_debug
+          secure: _secure
         });
         dispatch({ type: AUTHENTICATED_USER });
         ReactRouter.browserHistory.push(app_data.nav.home);
