@@ -20,6 +20,7 @@ $twitter: #4ac9f4;
 $gray: #666666;
 $darkGray: #4c4c4c;
 $darkGray: #424242;
+$disabledGray: #d3d3d3;
 $mediumGray: #b3b3b3;
 $lightGray: #cccccc;
 $lighterGray: #d3d3d3;
@@ -33,7 +34,9 @@ $favoriteHeart: #dc143c;
 $ratingStar: #daa520;
 
 $bulbYellow: #e59400;
-$errorRed: #b94a48;
+$errorBg: rgba(#b94a48, 0.13);
+$errorBorder: #ebccd1;
+$errorText: #a94442;
 $excludedRed: #c02001;
 $includedGreen: #008000;
 $feedbackGreen: #006633;

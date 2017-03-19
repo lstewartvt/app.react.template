@@ -2,6 +2,10 @@ import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
 import { login } from 'actions';
 
+import {
+  RESET_FORM
+} from 'actions/types';
+
 import Form from './Form';
 import { FieldEmail, FieldPassword } from './fields';
 import { Button } from 'react-toolbox/lib/button';
@@ -30,7 +34,11 @@ const form = reduxForm({
 
 class FormLogin extends React.Component {
 
-  handleMouseUp(formProps) {
+  componentWillMount() {
+    this.props.dispatch({type:RESET_FORM});
+  }
+
+  handleClick(formProps) {
     this.props.login(formProps);
   };
 
@@ -53,7 +61,7 @@ class FormLogin extends React.Component {
           className='form-button button-login'
           icon='person'
           label='Log in'
-          onClick={handleSubmit(this.handleMouseUp.bind(this))}
+          onClick={handleSubmit(this.handleClick.bind(this))}
           primary
           raised />
 
@@ -66,8 +74,9 @@ class FormLogin extends React.Component {
         <ButtonLink
           className='form-button button-register'
           href='/register'
-          icon='person_add'
-          label='Create new account' />
+          icon='person_add'>
+          Don't have an account? <abbr>Sign up!</abbr>
+        </ButtonLink>
       </Form>
     );
   };

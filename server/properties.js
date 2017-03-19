@@ -7,7 +7,7 @@ module.exports = {
       default: 'An unknown error has occurred.'
     },
     mongoose: {
-      11000: 'Registration failed: handle and/or email already exists.'
+      11000: 'Email and/or username already exists.'
     }
   }
 };

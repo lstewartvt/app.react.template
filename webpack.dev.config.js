@@ -153,6 +153,7 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.ProvidePlugin({
+      ReactCookie: 'react-cookie',
       jQuery: 'jquery',
       React: 'react',
       ReactDOM: 'react-dom',
@@ -170,7 +171,7 @@ module.exports = {
       '.scss'
     ],
     modules: [
-      'node_modules',
+      // path.resolve(__dirname, './server'),
       path.resolve(__dirname, './src'),
       path.resolve(__dirname, './src/components'),
       path.resolve(__dirname, './node_modules')

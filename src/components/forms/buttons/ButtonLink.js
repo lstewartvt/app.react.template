@@ -1,17 +1,19 @@
 import { Button } from 'react-toolbox/lib/button';
 
+import './styles/ButtonLink.scss';
+
 export default class ButtonLink extends React.Component {
 
   constructor(props) {
     super(props);
 
-    this.classes = ['form'];
+    this.classes = ['button-link'];
     if(props.className) {
       this.classes = this.classes.concat(props.className.split(' '));
     }
   };
 
-  handleMouseUp() {
+  handleClick() {
     ReactRouter.browserHistory.push(this.props.href);
   };
 
@@ -22,8 +24,8 @@ export default class ButtonLink extends React.Component {
         disabled={this.props.disabled}
         accent={this.props.accent}
         icon={this.props.accent}
-        label={this.props.label}
-        onMouseUp={this.handleMouseUp.bind(this)}>
+        label={this.props.label || this.props.children}
+        onClick={this.handleClick.bind(this)}>
       </Button>
     );
   };

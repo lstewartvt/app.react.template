@@ -2,6 +2,7 @@ import {
   AUTHENTICATE_ERROR,
   AUTHENTICATED_USER,
   PROTECTED_TEST,
+  RESET_FORM,
   UNAUTHENTICATED_USER
 } from 'actions/types';
 
@@ -14,7 +15,7 @@ const INITIAL_STATE = {
 
 export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
-    
+
     case AUTHENTICATED_USER:
       return {...state,
         errors: undefined,
@@ -35,6 +36,14 @@ export default function(state = INITIAL_STATE, action) {
     case PROTECTED_TEST:
       return {...state,
         content: action.payload
+      };
+
+    case RESET_FORM:
+      return {...state,
+        authenticated: false,
+        content: undefined,
+        errors: undefined,
+        message: undefined
       };
   };
 

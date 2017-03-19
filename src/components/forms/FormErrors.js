@@ -1,3 +1,5 @@
+import './styles/FormErrors.scss';
+
 export default class FormErrors extends React.Component {
 
   constructor(props) {
@@ -7,7 +9,9 @@ export default class FormErrors extends React.Component {
   render() {
 
     return (
-      <div class='mui--bg-danger mui--text-white'>
+      <div
+        id='form-errors'
+        className='error-block'>
         <ol>
           <li>{this.props.errors}</li>
         </ol>

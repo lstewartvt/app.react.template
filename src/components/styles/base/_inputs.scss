@@ -1,0 +1,12 @@
+input,
+textarea {
+  &:-webkit-autofill {
+    margin-top: 3px;
+    padding-left: 10px;
+
+    ~ label {
+      font-size: 1.2rem;
+      top: 0.6rem;
+    }
+  }
+}

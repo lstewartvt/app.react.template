@@ -1,4 +1,5 @@
-import cookie from 'react-cookie';
+const app_data = require('app.data');
+
 import promise from 'es6-promise';
 import 'isomorphic-fetch';
 promise.polyfill();
@@ -7,10 +8,11 @@ import {
   AUTHENTICATE_ERROR,
   AUTHENTICATED_USER,
   PROTECTED_TEST,
+  RESET_FORM,
   UNAUTHENTICATED_USER
 } from './types';
 
-const API_URL = '';//'http://react.app.k0nrt15.com';
+const API_URL = ''; //'http://react.app.k0nrt15.com';
 
 export function handleErrors(response, dispatch, type) {
 
@@ -21,17 +23,17 @@ export function handleErrors(response, dispatch, type) {
         payload: 'You are not authorized to do this. Please login and try again.'
       });
       logout();
-    } else {
-      dispatch({
-        type: type,
-        payload: response.statusText
-      });
     }
 
-    throw new Error(response.statusText);
+    return response.json().then(data => {
+      dispatch({
+        type: AUTHENTICATE_ERROR,
+        payload: data.message
+      });
+      throw new Error(data.message);
+    });
   }
 
-  console.log(response);
   return response.json();
 };
 
@@ -39,53 +41,61 @@ export function login({ email, password }) {
   return function(dispatch) {
     fetch(`${API_URL}/auth/login`, {
         method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify({ email, password })
       })
       .then(response => {
-        handleErrors(response, dispatch, AUTHENTICATE_ERROR);
+        return handleErrors(response, dispatch, AUTHENTICATE_ERROR);
       })
-      .then(function(data) {
-        // cookie.save('token', data.token, { path: '/' });
-        console.log('data:',data);
+      .then(data => {
+        ReactCookie.save(app_data.auth.cookie_name, data.token, { 
+          path: '/',
+          secure: !_debug
+        });
         dispatch({ type: AUTHENTICATED_USER });
-        // window.location.href = CLIENT_ROOT_URL + '/dashboard';
+        ReactRouter.browserHistory.push(app_data.nav.home);
       })
-      .catch(error => console.log('error:',error));
+      .catch(error => console.error(error.message));
   }
 };
 
 export function register({ email, handle, password }) {
   return function(dispatch) {
     fetch(`${API_URL}/auth/register`, {
-        method: 'PUT',
-        body: { email, handle, password }
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email,handle, password })
       })
       .then(response => {
-        handleErrors(response, dispatch, AUTHENTICATE_ERROR);
+        return handleErrors(response, dispatch, AUTHENTICATE_ERROR);
       })
       .then(data => {
-        // cookie.save('token', data.token, { path: '/' });
-        console.log(data);
+        ReactCookie.save(app_data.auth.cookie_name, data.token, { path: '/' });
         dispatch({ type: AUTHENTICATED_USER });
-        // window.location.href = CLIENT_ROOT_URL + '/dashboard';
+        ReactRouter.browserHistory.push(app_data.nav.home);
       })
-      .catch(error => console.log(error));
+      .catch(error => console.log(error.message));
   }
 };
 
 export function logout() {
   return function(dispatch) {
     dispatch({ type: UNAUTHENTICATED_USER });
-    cookie.remove('token', { path: '/' });
-
-    window.location.href = CLIENT_ROOT_URL + '/login';
+    ReactCookie.remove(app_data.auth.cookie_name, { path: '/' });
+    ReactRouter.browserHistory.push(app_data.nav.login);
   }
 };
 
 export function protectedTest() {
   return function(dispatch) {
     fetch(`${API_URL}/protected`, {
-        headers: { 'Authorization': cookie.load('token') }
+        headers: { 'Authorization': ReactCookie.load(app_data.auth.cookie_name) }
       })
       .then(response => {
         handleErrors(response, dispatch, AUTHENTICATE_ERROR);
@@ -96,6 +106,13 @@ export function protectedTest() {
           payload: data
         });
       })
-      .catch(error => console.log(error));
+      .catch(error => console.log(error.message));
+  }
+};
+
+export function reset() {
+  return function(dispatch) {
+    console.log(RESET_FORM);
+    dispatch({ type: RESET_FORM });
   }
 };

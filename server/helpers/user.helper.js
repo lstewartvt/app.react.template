@@ -25,7 +25,7 @@ var userHelper = module.exports = {
   verify: function(request, response) {
 
     // attempt to get token from cookies
-    var token = request.cookies.get(config.auth.cookie_name);
+    var token = request.cookies.get(process.env.cookie_name);
 
     // decode token
     if (token) {
@@ -37,7 +37,7 @@ var userHelper = module.exports = {
       } catch (error) {
 
         this.errors.push(error);
-        response.cookies.set(config.auth.cookie_name);
+        response.cookies.set(process.env.cookie_name);
       }
     }
   }

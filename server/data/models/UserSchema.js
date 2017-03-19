@@ -20,14 +20,13 @@ const UserSchema = new Schema({
     type: String
   },
   first_name: String,
-  handle: String,
   last_name: String,
   password: {
     minlength: 5,
     required: true,
     type: String
   },
-  username: {
+  handle: {
     index: {
       unique: true
     },

@@ -1,0 +1,7 @@
+.error-block {
+  background-color: $errorBg;
+  border: 1px solid $errorBorder;
+  border-radius: 3px;
+  color: $errorText;
+  padding: 5px;
+}

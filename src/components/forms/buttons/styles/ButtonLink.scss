@@ -1,0 +1,18 @@
+.button-link {
+  font-weight: 300;
+  text-transform: initial;
+
+  &[disabled] {
+    color: $disabledGray;
+
+    > abbr {
+      color: $disabledGray;
+    }
+  }
+
+  &:not([disabled]) {
+    > abbr {
+      color: $cta;
+    }
+  }
+}

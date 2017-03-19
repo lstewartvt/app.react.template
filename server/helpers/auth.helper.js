@@ -7,7 +7,7 @@ const user_helper = require('./user.helper');
 const User = includes('data/models/UserSchema'); // get our mongoose model
 
 // Set up authentication
-module.exports = {
+let auth_helper = module.exports = {
   init: function() {
     var app = this;
     app.set('auth_secret', process.env.auth_secret); // secret variable
@@ -25,18 +25,21 @@ module.exports = {
 
     // find the user
     User.findOne({
-      handle: request.body.username || 'lstewartvt@gmail.com'
+      $or: [
+        { email: request.body.email },
+        { handle: request.body.email }
+      ]
     }).then(function(existingUser) {
 
       if (!existingUser) {
-        response.json({
+        response.status(400).json({
           error: true,
           message: props.messages.auth.failed
         });
       } else if (existingUser) {
 
         // check if password matches
-        existingUser.passwordIsValid(request.body.password || 'password')
+        existingUser.passwordIsValid(request.body.password)
           .then(function(isValid) {
 
             if (isValid) {
@@ -47,7 +50,7 @@ module.exports = {
                 subject: existingUser.id
               });
 
-              response.cookies.set(config.auth.cookie_name, token, {
+              response.cookies.set(process.env.cookie_name, token, {
                 httpOnly: true,
                 // secure: true // for your production environment
               });
@@ -60,7 +63,7 @@ module.exports = {
               });
             } else {
 
-              response.json({
+              response.status(400).json({
                 error: true,
                 message: props.messages.auth.failed
               });
@@ -68,32 +71,27 @@ module.exports = {
           });
       }
     }).catch(function(error) {
-      throw error;
-      response.json({ error: true });
+      response.status(500).json({ error: true, message: error });
     });
   },
   register: (request, response) => {
 
-    // create me
-    var me = new User({
-      admin: true, // and you know this...man
-      email: 'lstewartvt@gmail.com',
-      handle: 'lstewartvt@gmail.com',
-      name: 'Lemaire Stewart',
-      password: 'password'
+    // create user
+    var user = new User({
+      admin: request.body.admin,
+      email: request.body.email,
+      handle: request.body.handle || request.body.email,
+      name: request.body.name,
+      password: request.body.password
     });
 
-    // save me
-    me.save()
+    // save user
+    user.save()
       .then(function(new_user) {
-        console.log(`${new_user.handle}(${new_user.id}) saved successfully`);
-        response.json({
-          user: new_user,
-          success: true
-        });
+        auth_helper.login(request, response);
       })
       .catch(function(error) {
-        response.json({
+        response.status(500).json({
           error: true,
           message: app_helper.get_error_message(props.messages.mongoose[error.code])
         });

@@ -163,8 +163,10 @@ module.exports = {
       '.scss'
     ],
     modules: [
-      path.resolve('./src/components'),
-      path.resolve('./node_modules')
+      path.resolve(__dirname, './server'),
+      path.resolve(__dirname, './src'),
+      path.resolve(__dirname, './src/components'),
+      path.resolve(__dirname, './node_modules')
     ]
   },
   // this is a default value; just be aware of it
