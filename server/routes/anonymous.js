@@ -15,7 +15,7 @@ module.exports = (app) => {
 
   // index template
   app.set('views', path.resolve(__dirname, './../../dist'));
-  app.set('view engine', 'jade');
+  app.set('view engine', 'pug');
   app.get('/login', function(request, response) {
       return response.render('index', { description: 'React app template login form' });
   });

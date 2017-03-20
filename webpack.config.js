@@ -24,7 +24,7 @@ module.exports = {
     filename: path.join(build.path.DEST_JS, build.path.MINIFIED_JS),
 
     // Everything related to Webpack should go through a build path,
-    // localhost:27773/. That makes proxying easier to handle
+    // localhost:27773/dist. That makes proxying easier to handle
     publicPath: '/dist'
   },
   module: {
@@ -125,7 +125,7 @@ module.exports = {
       { from: 'src/favicon.ico' },
 
       // {output}/file.txt
-      { from: 'src/index.jade' },
+      { from: 'src/index.pug' },
 
       // Copy directory contents to {output}/images/
       { from: 'src/images', to: 'images' }

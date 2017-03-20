@@ -31,7 +31,7 @@ module.exports = {
 
     // set mail templates
     app.set('views', __dirname + '/../templates/mail');
-    app.set('view engine', 'jade');
+    app.set('view engine', 'pug');
   },
   send: function(message) {
 

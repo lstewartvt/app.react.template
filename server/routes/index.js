@@ -28,7 +28,7 @@ module.exports = (app) => {
 
   // index template
   app.set('views', path.resolve(__dirname, './../../dist'));
-  app.set('view engine', 'jade');
+  app.set('view engine', 'pug');
   app.get('*', (request, response) => {
 
     if (request.is_authenticated || !app.get('mongo_live')) {

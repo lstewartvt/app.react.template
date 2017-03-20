@@ -2,15 +2,15 @@
 React Application Template
 
 Stack:
-  - Express.js
-  - Jade
-  - MongoDB
-  - Node.js
-  - React
-  - React Router
-  - React Toolbox (Material Design)
+  - Express.js - v4.14.1
+  - MongoDB - v3.2.9
+  - Node.js - v6.5.0
+  - Pug
+  - React - v15.4.2
+  - React Router - v3.0.2
+  - React Toolbox - v1.3.4
   - SASS
-  - Webpack
+  - Webpack - v2.2.1
 
 Getting started:
 1.	Install packages
