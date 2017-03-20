@@ -1,0 +1,10 @@
+#!/bin/bash
+
+input=".env"
+while IFS= read -r line
+do
+	IFS='=' read -a var <<< "$line"
+
+	export $line
+	echo "$line"
+done < "$input"

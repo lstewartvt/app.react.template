@@ -9,3 +9,5 @@
 /security
 /src/js
 /src/release
+
+\.DS_Store
