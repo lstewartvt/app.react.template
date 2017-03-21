@@ -3,6 +3,8 @@ React Application Template
 
 Stack:
   - Express.js - v4.14.1
+  - Jasmine - v2.5.3
+  - Karma - v1.5.0
   - MongoDB - v3.2.9
   - Node.js - v6.5.0
   - Pug
@@ -15,11 +17,19 @@ Stack:
 Getting started:
 1.	Install packages
 	1. npm install
-2.	Install [cross-env](https://www.npmjs.com/package/cross-env) and [nodemon](https://www.npmjs.com/package/nodemon)
+2.	Install (global) [cross-env](https://www.npmjs.com/package/cross-env), [karma-cli](https://www.npmjs.com/package/karma-cli), and [nodemon](https://www.npmjs.com/package/nodemon)
 	1. npm install -g cross-env nodemon
 3.	Build application
  	1.	npm run dev (Development)
 	2.	npm run build (Production)
+
+Run Tests:
+1.  Install (global) [karma-cli](https://www.npmjs.com/package/karma-cli)
+  1. npm install -g karma-cli
+2.  Run once
+  1.  karma start
+3.  Run continuous
+  1.  karma start --single-run=false
 
 Set Environment Variables (optional):
 	Rename '.env.sample' to '.env' and set values

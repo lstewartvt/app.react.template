@@ -1,11 +1,11 @@
-const build = require('./build.config.js');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const cssnext = require('postcss-cssnext');
-const NpmInstallPlugin = require('npm-install-webpack-plugin');
-const path = require('path');
-const webpack = require('webpack');
-const WriteFilePlugin = require('write-file-webpack-plugin');
+const build = require('./build.config.js'),
+  CleanWebpackPlugin = require('clean-webpack-plugin'),
+  CopyWebpackPlugin = require('copy-webpack-plugin'),
+  cssnext = require('postcss-cssnext'),
+  NpmInstallPlugin = require('npm-install-webpack-plugin'),
+  path = require('path'),
+  webpack = require('webpack'),
+  WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = {
   cache: true,

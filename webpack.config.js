@@ -1,13 +1,13 @@
-const build = require('./build.config.js');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const cssnext = require('postcss-cssnext');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const path = require('path');
-const webpack = require('webpack');
-const WriteFilePlugin = require('write-file-webpack-plugin');
+const build = require('./build.config.js'),
+  CleanWebpackPlugin = require('clean-webpack-plugin'),
+  CompressionPlugin = require('compression-webpack-plugin'),
+  CopyWebpackPlugin = require('copy-webpack-plugin'),
+  cssnext = require('postcss-cssnext'),
+  ExtractTextPlugin = require('extract-text-webpack-plugin'),
+  OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
+  path = require('path'),
+  webpack = require('webpack'),
+  WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = {
   cache: false,
@@ -133,7 +133,7 @@ module.exports = {
     // new webpack.optimize.DedupePlugin(), // dedupe similar code
     new webpack.DefinePlugin({
       '_debug': false, // exclude debug code
-      '_secure': false,  // has ssl cert
+      '_secure': false, // has ssl cert
       'process.env': {
         'NODE_ENV': JSON.stringify('production') // set production environment
       }

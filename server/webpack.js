@@ -4,8 +4,6 @@ const webpack = require('webpack'),
   webpackConfig = require('./../webpack.dev.config.js'),
   webpackCompiler = webpack(webpackConfig);
 
-
-
 module.exports = {
   // Enables webpack middleware for hot-reloads in development
   use: function use() {
