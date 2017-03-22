@@ -151,7 +151,6 @@ module.exports = {
     //   },
     // }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.ProvidePlugin({
       jQuery: 'jquery',

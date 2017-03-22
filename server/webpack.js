@@ -16,7 +16,8 @@ module.exports = {
       stats: {
         colors: true,
         chunks: false, // this reduces the amount of stuff I see in my terminal; configure to your needs
-        'errors-only': true
+        'errors-only': true,
+        progress: true
       }
     }));
 

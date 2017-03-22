@@ -139,7 +139,7 @@ module.exports = {
       }
     }),
     new ExtractTextPlugin(path.join(build.path.DEST_CSS, build.path.MINIFIED_CSS)), // get physical CSS files
-    new webpack.NoErrorsPlugin(), // skip emitting phase
+    new webpack.NoEmitOnErrorsPlugin(), // skip emitting phase
     new webpack.optimize.OccurrenceOrderPlugin(),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.min\.css$/g,
