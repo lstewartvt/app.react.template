@@ -4,37 +4,44 @@ const path = require('path');
 
 module.exports = (app) => {
 
-  // set anonymous routes
-  require('./anonymous')(app);
+	// set anonymous routes
+	require('./anonymous')(app);
 
-  // route middleware to verify auth
-  app.use(function(request, response, next) {
+	// route middleware to verify auth
+	app.use(function(request, response, next) {
 
-    var result = helpers.auth.check.apply(this, arguments);
-    if (result) {
-      return result.then(function() {
-        next();
-      });
-    }
+		if (app.get('mongo_live')) {
 
-    next();
-  });
+			var result = helpers.auth.check.apply(this, arguments);
+			if (result) {
+				return result.then(function() {
+					next();
+				});
+			}
+		} else {
+			request.is_authorized = true;
+		}
 
-  // set default routes
-  require('./default')(app);
+		next();
+	});
 
-  // set user routes
-  require('./user')(app);
+	// set default routes
+	require('./default')(app);
 
-  // index template
-  app.set('views', path.resolve(__dirname, './../../dist'));
-  app.set('view engine', 'pug');
-  app.get('*', (request, response) => {
+	// set user routes
+	require('./user')(app);
 
-    if (request.is_authenticated || !app.get('mongo_live')) {
-      return response.render('index', { description: 'React app template' });
-    }
+	// index template
+	app.set('views', path.resolve(__dirname, './../../dist'));
+	app.set('view engine', 'pug');
+	app.get('*', (request, response) => {
 
-    return response.redirect(app_data.nav.login);
-  });
+		if (request.is_authorized) {
+			return response.render('index', {
+				description: 'React app template'
+			});
+		}
+
+		return response.redirect(app_data.nav.login);
+	});
 };
