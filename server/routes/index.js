@@ -2,46 +2,52 @@ const app_data = includes('../src/components/app.data');
 const helpers = includes('helpers/');
 const path = require('path');
 
+let anonymous_routes = require('./anonymous');
+let protected_routes = require('./protected');
+let user_routes = require('./user');
+
 module.exports = (app) => {
 
+	const mongo_live = app.get('mongo_live');
+
+	// set templates
+	app.set('views', [
+		path.resolve(__dirname, './../../dist'),
+		path.resolve(__dirname, './../templates/mail')
+	]);
+	app.set('view engine', 'pug');
+
+	// Set up smtp
+	helpers.mail.init.call(app);
+
 	// set anonymous routes
-	require('./anonymous')(app);
+	app.use(anonymous_routes);
 
 	// route middleware to verify auth
-	app.use(function(request, response, next) {
+	if (mongo_live) {
+		app.use(helpers.user.verify);
+	}
 
-		if (app.get('mongo_live')) {
-
-			var result = helpers.auth.check.apply(this, arguments);
-			if (result) {
-				return result.then(function() {
-					next();
-				});
-			}
-		} else {
-			request.is_authorized = true;
-		}
-
-		next();
-	});
-
-	// set default routes
-	require('./default')(app);
+	// set protected routes
+	app.use(protected_routes);
 
 	// set user routes
-	require('./user')(app);
+	app.use('/user', user_routes);
 
-	// index template
-	app.set('views', path.resolve(__dirname, './../../dist'));
-	app.set('view engine', 'pug');
 	app.get('*', (request, response) => {
 
-		if (request.is_authorized) {
+		response.cookies.set('mongo_live', app.get('mongo_live'), {
+			httpOnly: false,
+			// secure: true // for your production environment
+		});
+
+		if (request.user || !mongo_live) {
+
 			return response.render('index', {
 				description: 'React app template'
 			});
 		}
 
-		return response.redirect(app_data.nav.login);
+		return response.redirect(app_data.nav.account.login);
 	});
 };

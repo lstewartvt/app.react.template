@@ -19,8 +19,9 @@ const injectTapEventPlugin = require('react-tap-event-plugin');
 injectTapEventPlugin();
 
 // check auth on load
-if (AppCookies.load('mongo_live') && AppCookies.load(app_data.auth.cookie_name)) {
-	console.log(AppCookies.load(app_data.auth.cookie_name))
+const auth = AppCookies.load(app_data.auth.cookie_name);
+const mongo_live = AppCookies.load('mongo_live');
+if (!mongo_live || (mongo_live && auth)) {
 	store.dispatch({
 		type: AUTHENTICATED_USER
 	});

@@ -1,16 +1,15 @@
 import Link from 'react-toolbox/lib/link';
 import Navigation from 'react-toolbox/lib/navigation';
 
-import app_data from 'app.data';
 import menu_data from './menu.data';
 
 import './styles/NavMenu.scss';
 
 export default class NavMenu extends React.Component {
 
-  render() {
-    return (
-      <Navigation
+	render() {
+		return (
+			<Navigation
         className='nav'
         type='horizontal'>
         {
@@ -33,7 +32,7 @@ export default class NavMenu extends React.Component {
                 activeClassName='active'
                 className='link'
                 data-react-toolbox='link'
-                to={app_data.nav[link.id]}>
+                to={app_data.nav.account[link.id]}>
                 <abbr>{link.title}</abbr>
               </ReactRouter.IndexLink>
             ))
@@ -47,6 +46,6 @@ export default class NavMenu extends React.Component {
           <abbr>Error 404</abbr>
         </ReactRouter.IndexLink>
       </Navigation>
-    );
-  }
+		);
+	}
 };

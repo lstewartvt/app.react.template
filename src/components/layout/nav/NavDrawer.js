@@ -1,7 +1,11 @@
 import Drawer from 'react-toolbox/lib/drawer';
 import TimeGreet from 'helpers/TimeGreet';
 
-import { List, ListItem, ListSubHeader } from 'react-toolbox/lib/list';
+import {
+	List,
+	ListItem,
+	ListSubHeader
+} from 'react-toolbox/lib/list';
 
 import app_data from 'app.data';
 import menu_data from './menu.data';
@@ -9,7 +13,7 @@ import menu_data from './menu.data';
 import './styles/NavDrawer.scss';
 
 const Greeting = (props) => (
-  <section className='greeting'>
+	<section className='greeting'>
     <h1>
       <TimeGreet subject={props.subject} />
     </h1>
@@ -17,7 +21,7 @@ const Greeting = (props) => (
 );
 
 const ItemContent = (props) => (
-  <ReactRouter.IndexLink
+	<ReactRouter.IndexLink
     activeClassName='active'
     to={app_data.nav[props.link.id]}>
     {props.link.title}
@@ -26,19 +30,19 @@ const ItemContent = (props) => (
 
 export default class NavDrawer extends React.Component {
 
-  constructor(props, context) {
-    super(props);
+	constructor(props, context) {
+		super(props);
 
-    this.context = {
-      router: context.router
-    };
-  };
+		this.context = {
+			router: context.router
+		};
+	};
 
-  render() {
-    let context = this.context;
-    let props = this.props;
-    return (
-      <Drawer
+	render() {
+		let context = this.context;
+		let props = this.props;
+		return (
+			<Drawer
         active={this.props.showNavDrawer}
         className='drawer-nav'
         onOverlayClick={this.props.handleNavToggle}>
@@ -63,7 +67,7 @@ export default class NavDrawer extends React.Component {
           }
           {
             menu_data.account.map(function(link, index) {
-              let isActive = context.router.isActive(app_data.nav[link.id], true),
+              let isActive = context.router.isActive(app_data.nav.account[link.id], true),
               className = isActive ? 'active' : undefined;
               return (
                 <ListItem
@@ -76,10 +80,10 @@ export default class NavDrawer extends React.Component {
           }
         </List>
       </Drawer>
-    );
-  };
+		);
+	};
 };
 
 NavDrawer.contextTypes = {
-  router: React.PropTypes.object.isRequired
+	router: React.PropTypes.object.isRequired
 };

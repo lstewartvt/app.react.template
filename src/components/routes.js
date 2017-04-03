@@ -1,6 +1,10 @@
-const { IndexRoute, Route } = ReactRouter;
+const {
+	IndexRoute,
+	Route
+} = ReactRouter;
 
 import About from './pages/about/About';
+import Authenticate from './auth/Authenticate';
 import Contact from './pages/contact/Contact';
 import Donate from './pages/donate/Donate';
 import NotFound from './pages/notFound/NotFound';
@@ -13,12 +17,12 @@ import Register from './pages/register/Register';
 import Team from './pages/team/Team';
 
 module.exports = (
-  <section id='routes'>
+	<section id='routes'>
     <Route component={Layout}>
         <Route path='login' component={Login} />
         <Route path='register' component={Register} />
     </Route>
-    <Route component={LayoutFull}>
+    <Route component={Authenticate(LayoutFull)} >
         <Route path='/' component={Home} />
         <Route path='about' component={About} />
         <Route path='contact' component={Contact} />

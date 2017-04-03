@@ -11,6 +11,9 @@
   }
 
   &:not([disabled]) {
+    &:hover {
+      background: rgba($cta, 0.31) !important;
+    }
     > abbr {
       color: $cta;
     }

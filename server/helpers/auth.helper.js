@@ -1,3 +1,4 @@
+const _ = require('lodash');
 const app_helper = require('./app.helper');
 const config = includes('data/config'); // get our config file
 const http_helper = require('./http.helper');
@@ -12,23 +13,14 @@ let auth_helper = module.exports = {
 		var app = this;
 		app.set('auth_secret', process.env.auth_secret); // secret variable
 	},
-	check: function(request, response, next) {
-		var result = user_helper.current.apply(this, arguments);
-		if (result) {
-			return result.then(function(user) {
-				request.is_authenticated = request.is_authorized = true;
-				request.user = user;
-			});
-		}
-	},
 	login: (request, response) => {
 
 		// find the user
 		User.findOne({
 			$or: [{
-				email: request.body.email
+				email: request.body.username.trim()
 			}, {
-				handle: request.body.email
+				handle: request.body.username.trim()
 			}]
 		}).then(function(existingUser) {
 
@@ -40,27 +32,24 @@ let auth_helper = module.exports = {
 			} else if (existingUser) {
 
 				// check if password matches
-				existingUser.passwordIsValid(request.body.password)
+				existingUser.isPasswordValid(request.body.password.trim())
 					.then(function(isValid) {
 
 						if (isValid) {
-							// create a token with claims
-							var token = user_helper.get_token({
-								issuer: request.get('host'),
-								permissions: undefined,
-								subject: existingUser.id
-							});
 
+							// create a token with claims
+							var token = user_helper.get_token(existingUser = _.omit(existingUser.toObject(), ['password']));
 							response.cookies.set(process.env.cookie_name, token, {
-								httpOnly: true,
-								// secure: true // for your production environment
+							httpOnly: false,
+							// secure: true // for your production environment
 							});
 
 							// return the information including token as JSON
 							response.json({
 								success: true,
 								message: `Welcome, ${existingUser.handle}!`,
-								token: token
+								token: token,
+								user: existingUser
 							});
 						} else {
 
@@ -80,13 +69,15 @@ let auth_helper = module.exports = {
 	},
 	register: (request, response) => {
 
+		var email = request.body.email.trim();
+
 		// create user
 		var user = new User({
 			admin: request.body.admin,
-			email: request.body.email,
-			handle: request.body.handle || request.body.email,
-			name: request.body.name,
-			password: request.body.password
+			email: email,
+			handle: request.body.handle.trim() || email,
+			name: request.body.name.trim(),
+			password: request.body.password.trim()
 		});
 
 		// save user

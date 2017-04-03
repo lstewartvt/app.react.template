@@ -1,9 +1,9 @@
-# react.app.k0nrt15.com
-React Application Template
+# [React Application Template](http://react.app.k0nrt15.com)
 
 Stack:
   - Express.js - v4.14.1
   - Jasmine - v2.5.3
+  - JWT
   - Karma - v1.5.0
   - MongoDB - v3.2.9
   - Node.js - v6.5.0
