@@ -1,21 +1,21 @@
-import './styles/FormErrors.scss';
+import './styles/FormErrors';
 
 export default class FormErrors extends React.Component {
 
-  constructor(props) {
-    super(props);
-  };
+	constructor(props) {
+		super(props);
+	};
 
-  render() {
+	render() {
 
-    return (
-      <div
+		return (
+			<div
         id='form-errors'
         className='error-block'>
         <ol>
           <li>{this.props.errors}</li>
         </ol>
       </div>
-    );
-  };
+		);
+	};
 };

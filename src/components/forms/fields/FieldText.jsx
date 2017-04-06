@@ -1,15 +1,22 @@
-import { Field, reduxForm } from 'redux-form'
+import {
+	Field,
+	reduxForm
+} from 'redux-form'
 import Input from 'react-toolbox/lib/input';
 
-import './styles/FieldText.scss';
+import './styles/FieldText';
 
 const renderTextField = ({
-  errorText,
-  input,
-  label,
-  meta: { touched, error },
-  ...custom }) => (
-  <Input
+	errorText,
+	input,
+	label,
+	meta: {
+		touched,
+		error
+	},
+	...custom
+}) => (
+	<Input
     error={touched && error ? errorText:undefined}
     label={label}
     {...input}
@@ -18,13 +25,13 @@ const renderTextField = ({
 
 export default class FieldText extends React.Component {
 
-  constructor(props) {
-    super(props);
-  };
+	constructor(props) {
+		super(props);
+	};
 
-  render() {
-    return (
-      <Field
+	render() {
+		return (
+			<Field
         className={this.props.className}
         type={this.props.type||'text'}
         name={this.props.name}
@@ -38,6 +45,6 @@ export default class FieldText extends React.Component {
         onChange={this.props.onChange}
         required={this.props.required}
         value={this.props.value} />
-    );
-  };
+		);
+	};
 };

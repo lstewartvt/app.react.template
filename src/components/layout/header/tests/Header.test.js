@@ -1,4 +1,4 @@
-import Header from '../Header.js';
+import Header from '../Header';
 
 describe('Header', () => {
 
@@ -21,16 +21,16 @@ describe('Header', () => {
 		expect(logo.textContent).toEqual('React.App');
 	});
 
-  // it('should display mobile menu icon', function() {
+	// it('should display mobile menu icon', function() {
 
-  //  let menuIcon = ReactTests.findRenderedDOMComponentWithClass(
-  //    component,
-  //    'material-icons'
-  //  );
+	//  let menuIcon = ReactTests.findRenderedDOMComponentWithClass(
+	//    component,
+	//    'material-icons'
+	//  );
 
-  //  expect(menuIcon).toBeTruthy();
-  //  expect(menuIcon.textContent).toEqual('menu');
-  // });
+	//  expect(menuIcon).toBeTruthy();
+	//  expect(menuIcon.textContent).toEqual('menu');
+	// });
 
 	it('should display navigation', function() {
 

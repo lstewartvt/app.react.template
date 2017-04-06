@@ -1,17 +1,19 @@
-import { ContentTitle } from 'shared';
+import {
+	ContentTitle
+} from 'shared';
 import FormLogin from 'forms/FormLogin';
 
-import './styles/Login.scss';
+import './styles/Login';
 
 export default class Login extends React.Component {
-  render() {
-    return (
-      <section
+	render() {
+		return (
+			<section
         id='login'
         className='content'>
         <ContentTitle>Welcome</ContentTitle>
         <FormLogin />
       </section>
-    );
-  };
+		);
+	};
 };

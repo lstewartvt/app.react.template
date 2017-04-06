@@ -10,7 +10,7 @@ import {
 import app_data from 'app.data';
 import menu_data from './menu.data';
 
-import './styles/NavDrawer.scss';
+import './styles/NavDrawer';
 
 const Greeting = (props) => (
 	<section className='greeting'>

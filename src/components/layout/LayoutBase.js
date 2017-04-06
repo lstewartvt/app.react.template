@@ -1,28 +1,34 @@
-import Header from './header/Header';
-import Footer from './footer/Footer';
-import NavDrawer from './nav/NavDrawer';
+import {
+	Header
+} from './header';
+import {
+  Footer
+} from './footer';
+import {
+	NavDrawer
+} from './nav';
 
 import './styles/Layout';
 
 export default class Layout extends React.Component {
 
-  constructor(props) {
-    super(props);
+	constructor(props) {
+		super(props);
 
-    this.state = {
-      showNavDrawer: false
-    };
-  };
+		this.state = {
+			showNavDrawer: false
+		};
+	};
 
-  handleNavToggle() {
-    this.setState({
-      showNavDrawer: !this.state.showNavDrawer
-    });
-  };
+	handleNavToggle() {
+		this.setState({
+			showNavDrawer: !this.state.showNavDrawer
+		});
+	};
 
-  render() {
-    return  (
-      <div id='root'>
+	render() {
+		return (
+			<div id='root'>
         <Header handleNavToggle={this.handleNavToggle.bind(this)} />
         <NavDrawer
           handleNavToggle={this.handleNavToggle.bind(this)}
@@ -30,6 +36,6 @@ export default class Layout extends React.Component {
         {this.props.children}
         <Footer />
       </div>
-    );
-  };
+		);
+	};
 };

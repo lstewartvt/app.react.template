@@ -2,7 +2,7 @@ import {
 	Button
 } from 'react-toolbox/lib/button';
 
-import './styles/ButtonLink.scss';
+import './styles/ButtonLink';
 
 export default class ButtonLink extends React.Component {
 

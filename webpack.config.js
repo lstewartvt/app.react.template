@@ -177,6 +177,7 @@ module.exports = {
 		extensions: [
 			'.css',
 			'.js',
+			'.json',
 			'.jsx',
 			'.scss'
 		],

@@ -3,7 +3,7 @@ import Navigation from 'react-toolbox/lib/navigation';
 
 import menu_data from './menu.data';
 
-import './styles/NavMenu.scss';
+import './styles/NavMenu';
 
 export default class NavMenu extends React.Component {
 

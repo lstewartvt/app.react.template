@@ -1,5 +1,3 @@
-import app_data from 'app.data';
-
 export default function(Layout) {
 	class Authentication extends React.Component {
 		static contextTypes = {

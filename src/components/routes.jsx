@@ -3,18 +3,21 @@ const {
 	Route
 } = ReactRouter;
 
-import About from './pages/about/About';
 import Authenticate from './auth/Authenticate';
-import Contact from './pages/contact/Contact';
-import Donate from './pages/donate/Donate';
-import NotFound from './pages/notFound/NotFound';
-import Home from './pages/home/Home';
-import Layout from 'layout/Layout';
-import LayoutFull from 'layout/LayoutFull';
-import Login from './pages/login/Login';
-import Projects from './pages/projects/Projects';
-import Register from './pages/register/Register';
-import Team from './pages/team/Team';
+
+import {
+	About,
+	Contact,
+	Donate,
+	Home,
+	Layout,
+	LayoutFull,
+	Login,
+	NotFound,
+	Projects,
+	Register,
+	Team
+} from './pages';
 
 module.exports = (
 	<section id='routes'>

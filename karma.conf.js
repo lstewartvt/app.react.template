@@ -119,6 +119,13 @@ module.exports = function(config) {
 				}), // auto load modules
 			],
 			resolve: {
+				extensions: [
+					'.css',
+					'.js',
+					'.json',
+					'.jsx',
+					'.scss'
+				],
 				modules: [
 					path.resolve(__dirname, './src'),
 					path.resolve(__dirname, './src/components'),

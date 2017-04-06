@@ -1,17 +1,19 @@
-import { ContentTitle } from 'shared';
+import {
+	ContentTitle
+} from 'shared';
 import FormRegister from 'forms/FormRegister';
 
-import './styles/Register.scss';
+import './styles/Register';
 
 export default class Register extends React.Component {
-  render() {
-    return (
-      <section
+	render() {
+		return (
+			<section
         id='register'
         className='content'>
         <ContentTitle>Join Today!</ContentTitle>
         <FormRegister />
       </section>
-    );
-  };
+		);
+	};
 };
