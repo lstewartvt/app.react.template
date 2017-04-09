@@ -1,5 +1,6 @@
 /.env
 /.nvmrc
+/.sublime-workspace
 /dist
 /dist-gulp
 /gulpfile.js
@@ -10,4 +11,4 @@
 /src/js
 /src/release
 
-/.DS_Store
+.DS_Store

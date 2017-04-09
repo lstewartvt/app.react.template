@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const bluebird = require('bluebird');
 
 mongoose.Promise = bluebird;
-// const bcrypt = bluebird.promisifyAll(require('bcrypt'));
+// const bcrypt = bluebird.promisifyAll(require('bcryptjs'));
 const Schema = mongoose.Schema;
 
 // set up a mongoose model and pass it using module.exports
@@ -26,6 +26,7 @@ const UserSchema = new Schema({
 		index: {
 			unique: true
 		},
+		required: true,
 		type: String
 	},
 	password: {

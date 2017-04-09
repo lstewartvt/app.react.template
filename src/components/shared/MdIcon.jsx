@@ -1,10 +1,15 @@
 import FontIcon from 'react-toolbox/lib/font_icon';
 
-let MdIcon = (props) => (
-  <FontIcon
-    className="icon md-icon">
-    {props.children}
-  </FontIcon>
-);
+window.MdIcon = (props) => {
 
-export default MdIcon;
+	const classes = ['icon'];
+	if (props.className) {
+		classes.push(props.className);
+	}
+	return (
+		<FontIcon
+	    {...props}
+	    className={classes.join(' ')}>
+	  </FontIcon>
+	);
+};

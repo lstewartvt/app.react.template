@@ -40,8 +40,8 @@ let auth_helper = module.exports = {
 							// create a token with claims
 							var token = user_helper.get_token(existingUser = _.omit(existingUser.toObject(), ['password']));
 							response.cookies.set(process.env.cookie_name, token, {
-							httpOnly: false,
-							// secure: true // for your production environment
+								httpOnly: false,
+								// secure: true // for your production environment
 							});
 
 							// return the information including token as JSON
@@ -75,19 +75,23 @@ let auth_helper = module.exports = {
 		var user = new User({
 			admin: request.body.admin,
 			email: email,
+			first_name: request.body.first_name && request.body.first_name.trim(),
 			handle: request.body.handle.trim() || email,
-			name: request.body.name.trim(),
+			last_name: request.body.last_name && request.body.last_name.trim(),
 			password: request.body.password.trim()
 		});
+		console.log(user);
 
 		// save user
 		user.save()
-			.then(function(new_user) {
+			.then((new_user) => {
+				request.body.username = new_user.handle;
 				auth_helper.login(request, response);
 			})
-			.catch(function(error) {
+			.catch((error) => {
 				response.status(500).json({
 					error: true,
+					debug: process.env.NODE_ENV === 'development' && error,
 					message: app_helper.get_error_message(props.messages.mongoose[error.code])
 				});
 			});

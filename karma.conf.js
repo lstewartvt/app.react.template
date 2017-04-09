@@ -108,6 +108,7 @@ module.exports = function(config) {
 					_: 'lodash',
 					api: 'app.api',
 					app_data: 'app.data',
+					app_local: 'app.local',
 					AppCookies: 'react-cookie',
 					jQuery: 'jquery',
 					React: 'react',

@@ -20,14 +20,13 @@ if (process.env.mongo_db_connection) {
 	const bluebird = require('bluebird');
 	let mongoose = require('mongoose');
 	mongoose.Promise = bluebird;
-	mongoose.connect(process.env.mongo_db_connection, function(error, db) {
-		if (error) {
-			console.log('Error:', error);
-			console.log('Unable to connect to mongodb. Please start the server.');
-		} else {
-			app.set('mongo_live', true);
-			console.log('Connected to mongodb successfully!');
-		}
+
+	mongoose.connect(process.env.mongo_db_connection).then(() => {
+		app.set('mongo_live', true);
+		console.log('Connected to mongodb successfully!');
+	}).catch((error) => {
+		console.log('Error:', error);
+		console.log(`Unable to connect to ${process.env.mongo_db_connection}. Please restart the server.`);
 	});
 
 	// close the mongoose connection if Node process ends

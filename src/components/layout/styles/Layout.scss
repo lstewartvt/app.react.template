@@ -1,3 +1,19 @@
 #content-wrapper {
   padding: 25px;
 }
+
+.info {
+	&.mongo {
+		background-color: rgba($error, 0.31);
+		bottom: 0;
+		color: $siteBg;
+		padding: 5px 10px;
+		position:  fixed;
+		right: 0;
+		z-index: 131;
+
+		&.connected {
+			background-color: rgba($success, 0.31);
+		}
+	}
+}

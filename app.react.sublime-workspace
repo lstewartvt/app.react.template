@@ -4,6 +4,102 @@
 		"selected_items":
 		[
 			[
+				"Pan",
+				"Panel_3"
+			],
+			[
+				"Pa",
+				"Panel_3"
+			],
+			[
+				"La",
+				"LayoutFull"
+			],
+			[
+				"no",
+				"NotFound"
+			],
+			[
+				"do",
+				"Donate"
+			],
+			[
+				"cont",
+				"Contact"
+			],
+			[
+				"au",
+				"Authenticate"
+			],
+			[
+				"For",
+				"FormErrors"
+			],
+			[
+				"N",
+				"NavMenu"
+			],
+			[
+				"Nav",
+				"NavDrawer"
+			],
+			[
+				"hand",
+				"handleLeftIconClick"
+			],
+			[
+				"is",
+				"isValid"
+			],
+			[
+				"Au",
+				"AUTHENTICATED_USER"
+			],
+			[
+				"user",
+				"user_routes"
+			],
+			[
+				"use",
+				"user_routes"
+			],
+			[
+				"pro",
+				"protected_routes"
+			],
+			[
+				"a",
+				"anonymous_routes"
+			],
+			[
+				"auth",
+				"auth_secret"
+			],
+			[
+				"fi",
+				"first_name"
+			],
+			[
+				"da",
+				"app_data"
+			],
+			[
+				"ex",
+				"existingUser"
+			],
+			[
+				"app",
+				"app_data"
+			],
+			[
+				"c",
+				"children"
+			],
+			[
+				"con",
+				"contextTypes"
+			],
+			[
 				"Con",
 				"ContentSubTitle"
 			],
@@ -12,16 +108,8 @@
 				"classes"
 			],
 			[
-				"con",
-				"content-title"
-			],
-			[
 				"b",
 				"beautify"
-			],
-			[
-				"fi",
-				"FieldEmail"
 			],
 			[
 				"in",
@@ -80,10 +168,6 @@
 				"apply-prod-env"
 			],
 			[
-				"a",
-				"admin_email"
-			],
-			[
 				"tra",
 				"transform-server"
 			],
@@ -138,10 +222,6 @@
 			[
 				"pat",
 				"pathmodify"
-			],
-			[
-				"app",
-				"apply-dev-env"
 			],
 			[
 				"bab",
@@ -260,10 +340,6 @@
 				"coordinates"
 			],
 			[
-				"c",
-				"coordinates"
-			],
-			[
 				"cach",
 				"cacheExpired"
 			],
@@ -274,10 +350,6 @@
 			[
 				"new",
 				"newTime"
-			],
-			[
-				"da",
-				"datePast"
 			],
 			[
 				"date",
@@ -324,10 +396,6 @@
 				"ayceCookies"
 			],
 			[
-				"is",
-				"isAuthenticated"
-			],
-			[
 				"t",
 				"text-align: "
 			],
@@ -370,10 +438,6 @@
 			[
 				"m",
 				"margin: "
-			],
-			[
-				"no",
-				"nowrap"
 			],
 			[
 				"wor",
@@ -440,14 +504,6 @@
 				"padding: "
 			],
 			[
-				"ex",
-				"experience"
-			],
-			[
-				"cont",
-				"content: "
-			],
-			[
 				"backgrou",
 				"background-color"
 			],
@@ -458,62 +514,6 @@
 			[
 				"rout",
 				"routeParams"
-			],
-			[
-				"v",
-				"vertical-align"
-			],
-			[
-				"co",
-				"color"
-			],
-			[
-				"lef",
-				"left: "
-			],
-			[
-				"defau",
-				"defaultFilters"
-			],
-			[
-				"ayc",
-				"ayceLib"
-			],
-			[
-				"defa",
-				"defaultFilter"
-			],
-			[
-				"pro",
-				"profile"
-			],
-			[
-				"text",
-				"text-align: "
-			],
-			[
-				"ng",
-				"ng-class"
-			],
-			[
-				"box",
-				"box-shadow: "
-			],
-			[
-				"cro",
-				"crop_rotate"
-			],
-			[
-				"border-right-r",
-				"border-bottom-right-radius: "
-			],
-			[
-				"form",
-				"formatted_address"
-			],
-			[
-				"upload",
-				"uploadEnabled"
 			]
 		]
 	},
@@ -529,28 +529,47 @@
 			}
 		},
 		{
-			"file": "server/app.js",
+			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 1542,
+				"buffer_size": 1046,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 2501,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "{\n  \"name\": \"App.React.Lower\",\n  \"version\": \"1.0.0\",\n  \"description\": \"App.React React website\",\n  \"main\": \"server\",\n  \"scripts\": {\n    \"build\": \"webpack && cross-env NODE_ENV=production nodemon --watch server server\",\n    \"postinstall\": \"webpack --env production\",\n    \"prod\": \"cross-env NODE_ENV=production nodemon --watch server server\",\n    \"start\": \"cross-env NODE_ENV=development nodemon --watch server server\",\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"webpack\": \"webpack --env production\"\n  },\n  \"author\": \"Lemaire Stewart\",\n  \"license\": \"ISC\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/lstewartvt/app.react.template.git\"\n  },\n  \"dependencies\": {\n    \"autoprefixer\": \"^6.7.7\",\n    \"babel-core\": \"^6.23.1\",\n    \"babel-loader\": \"6.3.2\",\n    \"babel-plugin-root-import\": \"^5.0.0\",\n    \"babel-preset-es2015\": \"^6.22.0\",\n    \"babel-preset-node6\": \"^11.0.0\",\n    \"babel-preset-react\": \"^6.23.0\",\n    \"babel-preset-react-hmre\": \"^1.1.1\",\n    \"body-parser\": \"1.17.0\",\n    \"chalk\": \"^1.1.3\",\n    \"clean-webpack-plugin\": \"^0.1.15\",\n    \"compression-webpack-plugin\": \"^0.3.2\",\n    \"copy-webpack-plugin\": \"^4.0.1\",\n    \"cross-env\": \"^3.2.3\",\n    \"css-loader\": \"0.26.2\",\n    \"dotenv\": \"^4.0.0\",\n    \"extract-text-webpack-plugin\": \"2.0.0\",\n    \"jquery\": \"3.1.1\",\n    \"node-sass\": \"^4.5.0\",\n    \"npm-install-webpack-plugin\": \"4.0.4\",\n    \"optimize-css-assets-webpack-plugin\": \"^1.3.0\",\n    \"path\": \"^0.12.7\",\n    \"postcss-cssnext\": \"2.9.0\",\n    \"postcss-import\": \"9.1.0\",\n    \"postcss-loader\": \"1.3.3\",\n    \"postcss-scss\": \"0.4.1\",\n    \"react-css-modules\": \"4.1.0\",\n    \"react-hot-loader\": \"1.3.1\",\n    \"react-toolbox\": \"1.3.4\",\n    \"resolve-url-loader\": \"^2.0.2\",\n    \"sass-loader\": \"6.0.2\",\n    \"sass-resources-loader\": \"1.2.0\",\n    \"style-loader\": \"0.13.2\",\n    \"webpack\": \"2.2.1\",\n    \"webpack-dev-server\": \"^2.4.1\",\n    \"webpack-hot-middleware\": \"^2.17.1\",\n    \"webpack-hot-server-middleware\": \"0.0.4\",\n    \"write-file-webpack-plugin\": \"^3.4.2\"\n  },\n  \"devDependencies\": {\n    \"bcrypt\": \"1.0.2\",\n    \"bluebird\": \"3.4.7\",\n    \"compression\": \"^1.6.2\",\n    \"cookie-parser\": \"1.4.3\",\n    \"cookies\": \"^0.7.0\",\n    \"express\": \"4.14.1\",\n    \"express-mailer\": \"0.3.1\",\n    \"jade\": \"^1.11.0\",\n    \"mongoose\": \"4.8.5\",\n    \"morgan\": \"1.8.1\",\n    \"multer\": \"1.3.0\",\n    \"njwt\": \"0.4.0\",\n    \"react\": \"15.4.2\",\n    \"react-dom\": \"15.4.2\",\n    \"react-intl\": \"2.2.3\",\n    \"react-router\": \"3.0.2\",\n    \"react-tap-event-plugin\": \"^2.0.1\",\n    \"utils-merge\": \"^1.0.0\"\n  }\n}\n",
+			"file": "server/index.js",
 			"settings":
 			{
-				"buffer_size": 2501,
-				"line_ending": "Windows"
+				"buffer_size": 705,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/shared/MdIcon.jsx",
+			"settings":
+			{
+				"buffer_size": 265,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/app.api.js",
+			"settings":
+			{
+				"buffer_size": 375,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/app.local.js",
+			"settings":
+			{
+				"buffer_size": 337,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -562,16 +581,16 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "",
+		"last_filter": "in",
 		"selected_items":
 		[
 			[
-				"Package Control: ",
+				"in",
 				"Package Control: Install Package"
 			],
 			[
-				"Package Control: ins",
-				"Package Control: Install Package"
+				"remove",
+				"Package Control: Remove Package"
 			],
 			[
 				"Package Control: in",
@@ -579,6 +598,14 @@
 			],
 			[
 				"Package Control: i",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
 				"Package Control: Install Package"
 			],
 			[
@@ -590,7 +617,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 392.0
+		"width": 521.0
 	},
 	"console":
 	{
@@ -612,34 +639,109 @@
 	},
 	"expanded_folders":
 	[
-		"/D/Web Apps/Development/React.App",
-		"/D/Web Apps/Development/React.App/server",
-		"/D/Web Apps/Development/React.App/server/routes",
-		"/D/Web Apps/Development/React.App/src",
-		"/D/Web Apps/Development/React.App/src/components",
-		"/D/Web Apps/Development/React.App/src/components/forms",
-		"/D/Web Apps/Development/React.App/src/components/forms/buttons",
-		"/D/Web Apps/Development/React.App/src/components/forms/fields",
-		"/D/Web Apps/Development/React.App/src/components/forms/styles",
-		"/D/Web Apps/Development/React.App/src/components/helpers",
-		"/D/Web Apps/Development/React.App/src/components/layout",
-		"/D/Web Apps/Development/React.App/src/components/layout/styles",
-		"/D/Web Apps/Development/React.App/src/components/pages",
-		"/D/Web Apps/Development/React.App/src/components/pages/home",
-		"/D/Web Apps/Development/React.App/src/components/pages/home/panels",
-		"/D/Web Apps/Development/React.App/src/components/pages/login",
-		"/D/Web Apps/Development/React.App/src/components/pages/login/styles",
-		"/D/Web Apps/Development/React.App/src/components/pages/register",
-		"/D/Web Apps/Development/React.App/src/components/pages/register/styles",
-		"/D/Web Apps/Development/React.App/src/components/shared",
-		"/D/Web Apps/Development/React.App/src/components/shared/styles",
-		"/D/Web Apps/Development/React.App/src/components/styles",
-		"/D/Web Apps/Development/React.App/node_modules/react-toolbox",
-		"/D/Web Apps/Development/React.App/node_modules/react-toolbox/lib",
-		"/D/Web Apps/Development/React.App/node_modules/react-toolbox/lib/app_bar"
+		"/Users/lstewart/projects/react-app",
+		"/Users/lstewart/projects/react-app/server",
+		"/Users/lstewart/projects/react-app/server/data",
+		"/Users/lstewart/projects/react-app/server/data/models",
+		"/Users/lstewart/projects/react-app/server/helpers",
+		"/Users/lstewart/projects/react-app/server/routes",
+		"/Users/lstewart/projects/react-app/server/templates",
+		"/Users/lstewart/projects/react-app/src",
+		"/Users/lstewart/projects/react-app/src/actions",
+		"/Users/lstewart/projects/react-app/src/components",
+		"/Users/lstewart/projects/react-app/src/components/auth",
+		"/Users/lstewart/projects/react-app/src/components/forms",
+		"/Users/lstewart/projects/react-app/src/components/forms/fields",
+		"/Users/lstewart/projects/react-app/src/components/helpers",
+		"/Users/lstewart/projects/react-app/src/components/pages",
+		"/Users/lstewart/projects/react-app/src/components/shared",
+		"/Users/lstewart/projects/react-app/src/reducers"
 	],
 	"file_history":
 	[
+		"/Users/lstewart/projects/react-app/webpack.dev.config.js",
+		"/Users/lstewart/projects/react-app/webpack.config.js",
+		"/Users/lstewart/projects/react-app/karma.conf.js",
+		"/Users/lstewart/projects/react-app/package.json",
+		"/Users/lstewart/projects/react-app/server/data/models/UserSchema.js",
+		"/Users/lstewart/projects/react-app/src/components/routes.jsx",
+		"/Users/lstewart/projects/react-app/src/components/pages/index.js",
+		"/Users/lstewart/projects/react-app/src/components/auth/Authenticate.jsx",
+		"/Users/lstewart/projects/react-app/src/components/auth/index.js",
+		"/Users/lstewart/projects/react-app/src/components/forms/Form.jsx",
+		"/Users/lstewart/projects/react-app/src/components/forms/FormErrors.jsx",
+		"/Users/lstewart/projects/react-app/src/components/forms/fields/FieldText.jsx",
+		"/Users/lstewart/projects/react-app/src/components/layout/header/HeaderLogo.jsx",
+		"/Users/lstewart/projects/react-app/src/components/pages/home/Home.jsx",
+		"/Users/lstewart/projects/react-app/src/components/pages/home/panels/Panel_1.jsx",
+		"/Users/lstewart/projects/react-app/src/components/pages/home/panels/Panel_3.jsx",
+		"/Users/lstewart/projects/react-app/src/components/pages/notFound/NotFound.jsx",
+		"/Users/lstewart/projects/react-app/src/components/pages/register/Register.jsx",
+		"/Users/lstewart/projects/react-app/src/components/shared/ContentSubTitle.jsx",
+		"/Users/lstewart/projects/react-app/src/components/shared/ContentTitle.jsx",
+		"/Users/lstewart/projects/react-app/server/index.js",
+		"/Users/lstewart/projects/react-app/src/components/forms/buttons/ButtonLink.jsx",
+		"/Users/lstewart/projects/react-app/src/components/helpers/TimeGreet.jsx",
+		"/Users/lstewart/projects/react-app/src/components/pages/home/panels/index.js",
+		"/Users/lstewart/projects/react-app/src/components/pages/login/Login.jsx",
+		"/Users/lstewart/projects/react-app/src/components/pages/about/About.jsx",
+		"/Users/lstewart/projects/react-app/src/components/helpers/index.js",
+		"/Users/lstewart/projects/react-app/src/components/forms/index.js",
+		"/Users/lstewart/projects/react-app/src/components/layout/header/Header.jsx",
+		"/Users/lstewart/projects/react-app/src/components/layout/LayoutBase.js",
+		"/Users/lstewart/projects/react-app/src/components/layout/nav/NavDrawer.jsx",
+		"/Users/lstewart/projects/react-app/src/components/layout/header/tests/Header.test.js",
+		"/Users/lstewart/projects/react-app/src/components/layout/footer/Footer.jsx",
+		"/Users/lstewart/projects/react-app/src/components/layout/nav/index.js",
+		"/Users/lstewart/projects/react-app/src/components/layout/nav/NavMenu.jsx",
+		"/Users/lstewart/projects/react-app/src/components/layout/footer/index.js",
+		"/Users/lstewart/projects/react-app/src/components/layout/header/tests/HeaderLogo.test.js",
+		"/Users/lstewart/projects/react-app/src/components/layout/header/index.js",
+		"/Users/lstewart/projects/react-app/src/components/forms/FormLogin.js",
+		"/Users/lstewart/projects/react-app/src/components/app.api.js",
+		"/Users/lstewart/projects/react-app/src/components/layout/nav/NavMenu.js",
+		"/Users/lstewart/projects/react-app/src/reducers/auth.reducer.js",
+		"/Users/lstewart/projects/react-app/src/components/entry.js",
+		"/Users/lstewart/projects/react-app/src/actions/index.js",
+		"/Users/lstewart/projects/react-app/server/helpers/user.helper.js",
+		"/Users/lstewart/projects/react-app/README.md",
+		"/Users/lstewart/projects/react-app/server/routes/index.js",
+		"/Users/lstewart/projects/react-app/src/components/layout/nav/tests/NavMenu.test.js",
+		"/Users/lstewart/projects/react-app/tests.webpack.js",
+		"/Users/lstewart/projects/react-app/server/helpers/auth.helper.js",
+		"/Users/lstewart/projects/react-app/src/components/app.data.js",
+		"/Users/lstewart/projects/react-app/server/app.data.js",
+		"/Users/lstewart/projects/react-app/src/components/forms/buttons/ButtonLink.js",
+		"/Users/lstewart/projects/react-app/src/components/layout/header/styles/Header.scss",
+		"/Users/lstewart/projects/react-app/src/components/layout/header/Header.js",
+		"/Users/lstewart/projects/react-app/src/components/routes.js",
+		"/Users/lstewart/projects/react-app/src/components/forms/buttons/styles/ButtonLink.scss",
+		"/Users/lstewart/projects/react-app/src/components/layout/header/HeaderLogo.js",
+		"/Users/lstewart/projects/react-app/src/components/forms/FormRegister.js",
+		"/Users/lstewart/projects/react-app/src/components/layout/Layout.js",
+		"/Users/lstewart/projects/react-app/server/routes/protected.js",
+		"/Users/lstewart/projects/react-app/server/routes/anonymous.js",
+		"/Users/lstewart/projects/react-app/src/components/layout/nav/NavDrawer.js",
+		"/Users/lstewart/projects/react-app/server/app.js",
+		"/Users/lstewart/projects/react-app/server/properties.js",
+		"/Users/lstewart/projects/react-app/server/data/config.js",
+		"/Users/lstewart/projects/react-app/server/helpers/mail.helper.js",
+		"/Users/lstewart/projects/react-app/server/routes/user.js",
+		"/Users/lstewart/projects/react-app/src/components/layout/LayoutFull.js",
+		"/Users/lstewart/Library/Application Support/Sublime Text 3/Packages/JsFormat/JsFormat.sublime-settings",
+		"/Users/lstewart/Library/Application Support/Sublime Text 3/Packages/User/JsFormat.sublime-settings",
+		"/Users/lstewart/projects/react-app/postcss.config.js",
+		"/Users/lstewart/projects/react-app/src/components/styles/resources.scss",
+		"/Users/lstewart/projects/react-app/src/components/styles/vars/index.scss",
+		"/Users/lstewart/projects/react-app/src/components/styles/vars/skins/index.scss",
+		"/Users/lstewart/projects/react-app/src/components/styles/vars/mixins/index.scss",
+		"/Users/lstewart/projects/react-app/.gitignore",
+		"/Users/lstewart/projects/react-app/.env.sample",
+		"/Users/lstewart/projects/react-app/app.react.sublime-project",
+		"/Users/lstewart/projects/react-app/.env",
+		"/Users/lstewart/projects/react-app/set-env-vars",
+		"/Users/lstewart/projects/react-app/test.txt",
+		"/Users/lstewart/projects/react-app/set-env-vars.sh",
 		"/D/Web Apps/Development/React.App/src/components/forms/styles/Form.scss",
 		"/D/Web Apps/Development/React.App/src/components/forms/Form.js",
 		"/D/Web Apps/Development/React.App/src/components/forms/buttons/ButtonLink.js",
@@ -684,100 +786,22 @@
 		"/D/Web Apps/Development/React.App/webpack.dev.config.js",
 		"/D/Web Apps/Development/React.App/src/components/shared/styles/ContentTitle.scss",
 		"/D/Web Apps/Development/React.App/src/components/shared/styles/ContentSubTitle.scss",
-		"/D/Web Apps/Development/React.App/src/components/global/styles/ContentTitle.scss",
-		"/D/Web Apps/Development/React.App/src/components/global/MdIcon.js",
-		"/D/Web Apps/Development/React.App/src/components/global/ContentTitleCaps.js",
-		"/D/Web Apps/Development/React.App/src/components/global/ContentTitle.js",
-		"/D/Web Apps/Development/React.App/src/components/global/ContentSubTitle.js",
-		"/D/Web Apps/Development/React.App/src/components/global/index.js",
-		"/D/Web Apps/Development/React.App/server/routes/index.js",
-		"/D/Web Apps/Development/React.App/src/components/styles/vars/colors.scss",
-		"/D/Web Apps/Development/React.App/dist/js/app.min.js.gz",
-		"/D/Web Apps/Development/React.App/src/components/global/imports.js",
-		"/D/Web Apps/Development/React.App/dist/index.jade",
-		"/D/Web Apps/Development/React.App/src/index.jade",
-		"/D/Web Apps/Development/React.App/node_modules/react-toolbox/lib/app_bar/AppBar.js",
-		"/D/Web Apps/Development/React.App/src/components/layout/nav/styles/NavMenu.scss",
-		"/D/Web Apps/Development/React.App/src/components/layout/nav/NavDrawer.js",
-		"/D/Web Apps/Development/React.App/src/components/layout/header/styles/Header.scss",
-		"/D/Web Apps/Development/React.App/src/components/layout/nav/menu.data.js",
-		"/D/Web Apps/Development/React.App/src/components/layout/nav/NavMenu.js",
-		"/D/Web Apps/Development/React.App/src/components/pages/home/styles/Panel_1.scss",
-		"/D/Web Apps/Development/React.App/dist/css/app.min.css",
-		"/D/Web Apps/Development/React.App/src/components/Routes.js",
-		"/D/Web Apps/Development/React.App/src/components/styles/vars/mixins/transforms.scss",
-		"/D/Web Apps/Development/React.App/server/routes/anonymous.js",
-		"/D/Web Apps/Development/React.App/src/components/pages/notFound/NotFound.js",
-		"/D/Web Apps/Development/React.App/src/components/helpers/TimeGreet.js",
-		"/D/Web Apps/Development/React.App/src/components/app.data.js",
-		"/D/Web Apps/Development/React.App/src/components/forms/fields/index.js",
-		"/D/Web Apps/Development/React.App/src/components/forms/styles/FormLogin.scss",
-		"/D/Web Apps/Development/React.App/src/components/layout/header/styles/HeaderLogo.scss",
-		"/D/Web Apps/Development/React.App/README.md",
-		"/D/Web Apps/Development/React.App/src/components/styles/reset.scss",
-		"/D/Web Apps/Development/React.App/src/components/layout/nav/styles/NavSlide.scss",
-		"/D/Web Apps/Development/React.App/src/components/layout/nav/NavSlide.js",
-		"/D/Web Apps/Development/React.App/server/app.js",
-		"/D/Web Apps/Scripts/Powershell/git-replace-text.ps1",
-		"/D/Web Apps/Development/React.App/src/components/styles/base/_filter-search.scss",
-		"/D/Web Apps/Development/React.App/src/components/styles/base/_animate.scss",
-		"/D/Web Apps/Development/React.App/src/components/styles/vars/mixins/borders.scss",
-		"/D/Web Apps/Development/React.App/src/css/base.org.scss",
-		"/D/Web Apps/Development/React.App/gulpfile.webpack.js",
-		"/D/Web Apps/Development/React.App/gulpfile.js",
-		"/D/Web Apps/Development/React.App/start-project.ps1",
-		"/D/Web Apps/Development/React.App/src/css/base/_lib.scss",
-		"/D/Web Apps/Development/React.App/src/css/base/_utility-menu.scss",
-		"/D/Web Apps/Development/React.App/src/css/base/_modals.scss",
-		"/D/Web Apps/Development/React.App/src/css/base/_bootstrap-overrides.scss",
-		"/D/Web Apps/Development/React.App/src/components/styles/vars/skins/skin-default.scss",
-		"/D/Web Apps/Development/React.App/src/components/pages/about/About.js",
-		"/D/Web Apps/Development/React.App/src/components/pages/contact/Contact.js",
-		"/D/Web Apps/Development/React.App/src/components/pages/notFound/styles/NotFound.scss",
-		"/D/Web Apps/Development/React.App/server/templates/mail/contact.jade",
-		"/D/Web Apps/Development/React.App/src/components/layout/footer/styles/Footer.scss",
-		"/D/Web Apps/Development/React.App/src/components/styles/vars/screens.scss",
-		"/D/Web Apps/Development/React.App/server/routes/default.js",
-		"/D/Web Apps/Development/React.App/src/components/pages/donate/Donate.js",
-		"/D/Web Apps/Development/React.App/src/components/pages/team/Team.js",
-		"/D/Web Apps/Development/React.App/src/components/pages/projects/Projects.js",
-		"/D/Web Apps/Development/React.App/.gitignore",
-		"/D/Web Apps/Development/React.App/server/helpers/auth.helper.js",
-		"/D/Web Apps/Development/React.App/server/helpers/user.helper.js",
-		"/D/Web Apps/Development/React.App/src/components/pages/home/styles/Panel_3.scss",
-		"/D/Web Apps/Development/React.App/set-env-vars.ps1",
-		"/D/Web Apps/Development/React.App/server/webpack.js",
-		"/D/Web Apps/Development/React.App/build.config.js",
-		"/D/Web Apps/Development/React.App/src/css/base/material-design/_md-nav.scss",
-		"/D/Web Apps/Development/React.App/src/css/base/material-design/_md-inputs.scss",
-		"/D/Web Apps/Development/React.App/src/components/styles/resources.scss",
-		"/D/Web Apps/Development/React.App/postcss.config.js",
-		"/D/Web Apps/Development/React.App/src/components/styles/vars/mixins/index.scss",
-		"/D/Web Apps/Development/React.App/src/components/styles/vars/index.scss",
-		"/D/Web Apps/Development/React.App/src/components/styles/vars/skins/index.scss",
-		"/D/Web Apps/Development/React.App/.babelrc",
-		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
-		"/D/Web Apps/Development/React.App/server/bundle.js",
-		"/D/Web Apps/Development/React.App/src/components/layout/header/styles/Header.css",
-		"/D/Web Apps/Development/React.App/dist/0.04d462907149e542534d.hot-update.js",
-		"/D/Web Apps/Development/React.App/app.react.sublime-project",
-		"/D/Web Apps/Development/React.App/server/data/config.js",
-		"/D/Web Apps/Development/React.App/server/helpers/mail.helper.js",
-		"/D/Web Apps/Development/React.App/server/properties.js",
-		"/D/Web Apps/Development/React.App/server/includes.js",
-		"/D/Web Apps/Development/React.App/server/powershell.js",
-		"/D/Web Apps/Development/App.React/.gitignore",
-		"/D/Web Apps/Development/App.React/security/react-app.txt"
+		"/D/Web Apps/Development/React.App/src/components/global/styles/ContentTitle.scss"
 	],
 	"find":
 	{
-		"height": 45.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
 		"height": 114.0,
 		"where_history":
 		[
+			"*.jsx",
+			"*.js",
+			"*.jsx",
+			"*.js",
+			"*.scss",
 			"*.js",
 			"*.scss",
 			"*.js",
@@ -900,12 +924,7 @@
 			"*.jade",
 			"*.js",
 			"*.jade",
-			"*.js",
-			"*.scss",
-			"*.js",
-			"*.scss",
-			"*.js",
-			"*.scss"
+			"*.js"
 		]
 	},
 	"find_state":
@@ -913,6 +932,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"MdIcon",
+			"};",
+			"bcrypt",
+			"/pages",
+			".scss",
+			"\"",
+			"nav.login",
+			"\"",
+			"';\n",
+			"ReactCookie",
+			"app.data",
+			"react-redux",
+			"D:/Web Apps/Development/React.App/src",
 			"import",
 			"module.exports",
 			"Apps",
@@ -1027,20 +1059,7 @@
 			"_org",
 			"$restricted",
 			"animated",
-			"animated-",
-			"hidden-xs",
-			"_vars",
-			"$restrictedRed",
-			"_nav",
-			"nav-slide",
-			"Panel3",
-			"Panel2",
-			"Panel1",
-			"#error",
-			"#org",
-			"#home",
-			"../../Layout",
-			"OrgContainer"
+			"animated-"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1048,6 +1067,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
+			"'",
+			"AppCookies",
+			"src",
 			"'",
 			"NavDrawer",
 			".",
@@ -1171,11 +1194,7 @@
 			": function",
 			": function()",
 			"",
-			".table-cell.table-cell-1-3.table-cell-mobile",
-			"appUtils",
-			"list.",
-			"ayce.tags",
-			"ayce"
+			".table-cell.table-cell-1-3.table-cell-mobile"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1215,59 +1234,60 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "server/app.js",
+					"file": "README.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1542,
+						"buffer_size": 1046,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1348,
-								1348
+								141,
+								141
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 61.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "package.json",
+					"file": "server/index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2501,
+						"buffer_size": 705,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								2501
+								567,
+								567
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1278,32 +1298,90 @@
 				},
 				{
 					"buffer": 3,
+					"file": "src/components/shared/MdIcon.jsx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2501,
+						"buffer_size": 265,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2501,
-								2501
+								265,
+								265
 							]
 						],
 						"settings":
 						{
-							"default_dir": "D:\\Web Apps\\Development\\React.App",
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1582.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/components/app.api.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 375,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/components/app.local.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 337,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								337,
+								337
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1311,7 +1389,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 45.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -1356,7 +1434,7 @@
 	"project": "app.react.sublime-project",
 	"replace":
 	{
-		"height": 84.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1366,6 +1444,234 @@
 		"selected_items":
 		[
 			[
+				"mdic",
+				"src/components/shared/MdIcon.jsx"
+			],
+			[
+				"kar",
+				"karma.conf.js"
+			],
+			[
+				"webpa",
+				"webpack.config.js"
+			],
+			[
+				"web",
+				"webpack.dev.config.js"
+			],
+			[
+				"inde",
+				"server/index.js"
+			],
+			[
+				"rou",
+				"src/components/routes.jsx"
+			],
+			[
+				"log",
+				"src/components/pages/login/Login.js"
+			],
+			[
+				"rout",
+				"src/components/routes.js"
+			],
+			[
+				"serverind",
+				"server/index.js"
+			],
+			[
+				"lay",
+				"src/components/layout/LayoutBase.js"
+			],
+			[
+				"header",
+				"src/components/layout/header/Header.jsx"
+			],
+			[
+				"la",
+				"src/components/layout/LayoutBase.js"
+			],
+			[
+				"hea",
+				"src/components/layout/header/Header.jsx"
+			],
+			[
+				"karm",
+				"karma.conf.js"
+			],
+			[
+				"we",
+				"webpack.dev.config.js"
+			],
+			[
+				"rea",
+				"README.md"
+			],
+			[
+				"pa",
+				"package.json"
+			],
+			[
+				"test",
+				"tests.webpack.js"
+			],
+			[
+				"navmen",
+				"src/components/layout/nav/tests/NavMenu.test.js"
+			],
+			[
+				"redu",
+				"src/reducers/auth.reducer.js"
+			],
+			[
+				"aut",
+				"src/components/auth/Authenticate.jsx"
+			],
+			[
+				"red",
+				"src/reducers/auth.reducer.js"
+			],
+			[
+				"ent",
+				"src/components/entry.js"
+			],
+			[
+				"appda",
+				"src/components/app.data.js"
+			],
+			[
+				"webpac",
+				"webpack.dev.config.js"
+			],
+			[
+				"nav",
+				"src/components/layout/nav/NavMenu.js"
+			],
+			[
+				"forre",
+				"src/components/forms/FormRegister.js"
+			],
+			[
+				"heade",
+				"src/components/layout/header/Header.js"
+			],
+			[
+				"head",
+				"src/components/layout/header/HeaderLogo.js"
+			],
+			[
+				"package",
+				"package.json"
+			],
+			[
+				"route",
+				"src/components/routes.js"
+			],
+			[
+				"protec",
+				"server/routes/protected.js"
+			],
+			[
+				"",
+				"src/components/forms/FormLogin.js"
+			],
+			[
+				"login",
+				"src/components/forms/FormLogin.js"
+			],
+			[
+				"action",
+				"src/actions/index.js"
+			],
+			[
+				"navdra",
+				"src/components/layout/nav/NavDrawer.js"
+			],
+			[
+				"appd",
+				"src/components/app.data.js"
+			],
+			[
+				"apd",
+				"src/components/app.data.js"
+			],
+			[
+				"webp",
+				"webpack.dev.config.js"
+			],
+			[
+				"config",
+				"server/data/config.js"
+			],
+			[
+				"pacakg",
+				"package.json"
+			],
+			[
+				"users",
+				"server/data/models/UserSchema.js"
+			],
+			[
+				"ayou",
+				"src/components/layout/Layout.js"
+			],
+			[
+				"buttonl",
+				"src/components/forms/buttons/ButtonLink.js"
+			],
+			[
+				"formlo",
+				"src/components/forms/FormLogin.js"
+			],
+			[
+				"actonin",
+				"src/actions/index.js"
+			],
+			[
+				"layout",
+				"src/components/layout/Layout.js"
+			],
+			[
+				"forr",
+				"src/components/forms/FormRegister.js"
+			],
+			[
+				"servin",
+				"server/index.js"
+			],
+			[
+				"form",
+				"src/components/forms/FormRegister.js"
+			],
+			[
+				"wep",
+				"webpack.dev.config.js"
+			],
+			[
+				"routeind",
+				"server/routes/index.js"
+			],
+			[
+				"userhe",
+				"server/helpers/user.helper.js"
+			],
+			[
+				"routesin",
+				"server/routes/index.js"
+			],
+			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"headerlo",
+				"src/components/layout/header/HeaderLogo.js"
+			],
+			[
+				"serverap",
+				"react-app/server/app.js"
+			],
+			[
 				"pac",
 				"React.App\\package.json"
 			],
@@ -1374,28 +1680,12 @@
 				"React.App\\src\\components\\shared\\ContentTitle.js"
 			],
 			[
-				"form",
-				"React.App\\src\\components\\forms\\Form.js"
-			],
-			[
 				"forml",
 				"React.App\\src\\components\\forms\\styles\\Form.scss"
 			],
 			[
 				"formr",
 				"React.App\\src\\components\\forms\\FormRegister.js"
-			],
-			[
-				"head",
-				"React.App\\src\\components\\layout\\header\\Header.js"
-			],
-			[
-				"route",
-				"React.App\\src\\components\\Router.js"
-			],
-			[
-				"rout",
-				"React.App\\src\\components\\Routes.js"
 			],
 			[
 				"he",
@@ -1442,20 +1732,12 @@
 				"React.App\\src\\components\\styles\\base.scss"
 			],
 			[
-				"web",
-				"React.App\\webpack.dev.config.js"
-			],
-			[
 				"contentsc",
 				"React.App\\src\\components\\shared\\styles\\ContentTitle.scss"
 			],
 			[
 				"contentt",
 				"React.App\\src\\components\\global\\ContentTitle.js"
-			],
-			[
-				"log",
-				"React.App\\src\\components\\pages\\login\\Login.js"
 			],
 			[
 				"for",
@@ -1470,18 +1752,6 @@
 				"React.App\\src\\components\\styles\\vars\\colors.scss"
 			],
 			[
-				"serverind",
-				"React.App\\server\\routes\\index.js"
-			],
-			[
-				"webpa",
-				"React.App\\webpack.dev.config.js"
-			],
-			[
-				"webp",
-				"React.App\\webpack.dev.config.js"
-			],
-			[
 				"fiel",
 				"React.App\\src\\components\\forms\\fields\\styles\\FieldText.scss"
 			],
@@ -1490,28 +1760,12 @@
 				"React.App\\src\\components\\layout\\nav\\NavDrawer.js"
 			],
 			[
-				"navmen",
-				"React.App\\src\\components\\layout\\nav\\styles\\NavMenu.scss"
-			],
-			[
-				"nav",
-				"React.App\\src\\components\\layout\\nav\\NavMenu.js"
-			],
-			[
 				"men",
 				"React.App\\src\\components\\layout\\nav\\menu.data.js"
 			],
 			[
-				"heade",
-				"React.App\\src\\components\\layout\\header\\styles\\Header.scss"
-			],
-			[
 				"pan",
 				"React.App\\src\\components\\pages\\home\\styles\\Panel_1.scss"
-			],
-			[
-				"ent",
-				"React.App\\src\\components\\entry.js"
 			],
 			[
 				"psc",
@@ -1530,14 +1784,6 @@
 				"src\\index.jade"
 			],
 			[
-				"we",
-				"webpack.dev.config.js"
-			],
-			[
-				"",
-				"src\\components\\layout\\header\\Header.js"
-			],
-			[
 				"fiele",
 				"src\\components\\forms\\fields\\FieldEmail.js"
 			],
@@ -1548,10 +1794,6 @@
 			[
 				"not",
 				"src\\components\\pages\\notFound\\NotFound.js"
-			],
-			[
-				"header",
-				"src\\components\\layout\\header\\Header.js"
 			],
 			[
 				"app",
@@ -1596,10 +1838,6 @@
 			[
 				"navsl",
 				"src\\components\\layout\\nav\\NavSlide.js"
-			],
-			[
-				"inde",
-				"server\\index.js"
 			],
 			[
 				"gul",
@@ -1666,10 +1904,6 @@
 				"src\\components\\pages\\about\\About.js"
 			],
 			[
-				"lay",
-				"src\\components\\layout\\Layout.js"
-			],
-			[
 				"footers",
 				"src\\components\\layout\\footer\\styles\\Footer.scss"
 			],
@@ -1686,10 +1920,6 @@
 				"src\\components\\layout\\footer\\styles\\Footer.scss"
 			],
 			[
-				"giti",
-				".gitignore"
-			],
-			[
 				"servinde",
 				"server\\index.js"
 			],
@@ -1700,10 +1930,6 @@
 			[
 				"star",
 				"start-project.ps1"
-			],
-			[
-				"pa",
-				"package.json"
 			],
 			[
 				"foot",
@@ -1718,16 +1944,8 @@
 				"src\\components\\pages\\home\\styles\\Panel_1.scss"
 			],
 			[
-				"headerlo",
-				"src\\components\\layout\\header\\HeaderLogo.js"
-			],
-			[
 				"post",
 				"postcss.config.js"
-			],
-			[
-				"config",
-				"build.config.js"
 			],
 			[
 				"build",
@@ -1736,146 +1954,6 @@
 			[
 				"ski",
 				"src\\components\\styles\\vars\\skins\\skin-default.scss"
-			],
-			[
-				"skinind",
-				"src\\components\\styles\\vars\\skins\\index.scss"
-			],
-			[
-				"paca",
-				"package.json"
-			],
-			[
-				"b",
-				"src\\css\\base.org.scss"
-			],
-			[
-				"pacak",
-				"package.json"
-			],
-			[
-				"buildcon",
-				"build.config.js"
-			],
-			[
-				"buildc",
-				"build.config.js"
-			],
-			[
-				"timegr",
-				"src\\components\\helpers\\TimeGreet.js"
-			],
-			[
-				"navsli",
-				"src\\components\\layout\\nav\\NavSlide.js"
-			],
-			[
-				"conig",
-				"server\\data\\config.js"
-			],
-			[
-				"prop",
-				"server\\properties.js"
-			],
-			[
-				"mail",
-				"server\\helpers\\mail.helper.js"
-			],
-			[
-				"packa",
-				"package.json"
-			],
-			[
-				"helperjs",
-				"server\\helpers\\auth.helper.js"
-			],
-			[
-				"start",
-				"start-project.ps1"
-			],
-			[
-				"git",
-				".gitignore"
-			],
-			[
-				"entr",
-				"src\\components\\entry.js"
-			],
-			[
-				"confi",
-				"build.config.js"
-			],
-			[
-				"rea",
-				"README.md"
-			],
-			[
-				"pro",
-				"Procfile"
-			],
-			[
-				"/nav",
-				"src\\components\\layout\\nav\\NavMenu.js"
-			],
-			[
-				"ut",
-				"src\\css\\base\\_utilities.scss"
-			],
-			[
-				"efe",
-				"src\\css\\mixins\\_effects.scss"
-			],
-			[
-				"layouts",
-				"src\\components\\layout\\styles\\Layout.scss"
-			],
-			[
-				"layout",
-				"src\\ng-views\\base\\_layout.jade"
-			],
-			[
-				"g",
-				"gulpfile.js"
-			],
-			[
-				"gu",
-				"gulpfile.js"
-			],
-			[
-				"gulp",
-				"gulpfile.js"
-			],
-			[
-				"layouj",
-				"src\\components\\layout\\Layout.js"
-			],
-			[
-				"time",
-				"src\\ng-filters\\time-greet.filter.js"
-			],
-			[
-				"skin",
-				"src\\css\\skins\\_skin-default.scss"
-			],
-			[
-				"layouscs",
-				"src\\components\\layout\\styles\\Layout.scss"
-			],
-			[
-				"navslid",
-				"src\\components\\layout\\nav\\NavSlide.js"
-			],
-			[
-				"navme",
-				"src\\components\\layout\\nav\\styles\\NavMenu.scss"
-			],
-			[
-				"logo",
-				"src\\components\\layout\\header\\HeaderLogo.js"
-			],
-			[
-				"md",
-				"src\\css\\base\\material-design\\_md-inputs.scss"
 			]
 		],
 		"width": 0.0
@@ -1886,6 +1964,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"~/projects/react-training/react.training.sublime-project"
+			]
 		],
 		"width": 380.0
 	},
@@ -1906,7 +1988,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 310.0,
+	"side_bar_width": 259.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

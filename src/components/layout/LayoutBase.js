@@ -2,13 +2,15 @@ import {
 	Header
 } from './header';
 import {
-  Footer
+	Footer
 } from './footer';
 import {
 	NavDrawer
 } from './nav';
 
 import './styles/Layout';
+
+const mongo_live = AppCookies.load('mongo_live');
 
 export default class Layout extends React.Component {
 
@@ -35,6 +37,12 @@ export default class Layout extends React.Component {
           showNavDrawer={this.state.showNavDrawer} />
         {this.props.children}
         <Footer />
+        {mongo_live && (
+      		<p className='info mongo connected'>Mongo Connected...</p>
+      	)}
+        {!mongo_live && (
+      		<p className='info mongo'>Mongo Disconnected...</p>
+      	)}
       </div>
 		);
 	};

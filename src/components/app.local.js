@@ -1,0 +1,16 @@
+let app_local = module.exports = {
+
+	get: (key) => {
+		return localStorage.getItem(key);
+	},
+	getObject: (key) => {
+		const value = app_local.get(key);
+		return value && JSON.parse(value);
+	},
+	set: (key, value) => {
+		localStorage.setItem(key, value);
+	},
+	setObject: (key, value) => {
+		app_local.set(key, JSON.stringify(value));
+	}
+};
