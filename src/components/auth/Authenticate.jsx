@@ -19,13 +19,13 @@ export default function(Layout) {
 		render() {
 			return <Layout {...this.props} />;
 		};
-	}
+	};
 
 	function mapStateToProps(state) {
 		return {
 			authenticated: state.auth.authenticated
 		};
-	}
+	};
 
-	return Redux.connect(mapStateToProps)(Authentication);
-}
+	return ReactRedux.connect(mapStateToProps)(Authentication);
+};

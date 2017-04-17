@@ -7,6 +7,7 @@ Stack:
   - Karma - v1.5.0
   - MongoDB - v3.2.9
   - Node.js - v6.5.0
+  - Passport
   - Pug
   - React - v15.4.2
   - React Router - v3.0.2

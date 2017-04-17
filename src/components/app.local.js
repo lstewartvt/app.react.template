@@ -7,6 +7,9 @@ let app_local = module.exports = {
 		const value = app_local.get(key);
 		return value && JSON.parse(value);
 	},
+	remove: (key) => {
+		localStorage.removeItem(key);
+	},
 	set: (key, value) => {
 		localStorage.setItem(key, value);
 	},

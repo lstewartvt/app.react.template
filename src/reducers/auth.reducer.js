@@ -3,12 +3,13 @@ import {
 	AUTHENTICATED_USER,
 	RESET_FORM,
 	UNAUTHENTICATED_USER
-} from 'actions/types';
+} from 'actions/auth/types';
 
 const INITIAL_STATE = {
 	authenticated: false,
 	errors: undefined,
-	message: undefined
+	field_errors: undefined,
+	messages: undefined
 };
 
 export default function(state = INITIAL_STATE, action) {
@@ -17,7 +18,7 @@ export default function(state = INITIAL_STATE, action) {
 		case AUTHENTICATED_USER:
 			return {...state,
 				errors: undefined,
-				message: undefined,
+				messages: undefined,
 				authenticated: true
 			};
 
@@ -28,15 +29,17 @@ export default function(state = INITIAL_STATE, action) {
 
 		case AUTHENTICATE_ERROR:
 			return {...state,
-				errors: action.payload
+				errors: action.errors,
+				field_errors: action.field_errors
 			};
 
 		case RESET_FORM:
 			return {...state,
 				errors: undefined,
-				message: undefined
+				messages: undefined
 			};
-	};
 
-	return state;
+		default:
+			return state;
+	};
 };

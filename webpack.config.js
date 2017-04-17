@@ -168,8 +168,10 @@ module.exports = {
 			React: 'react',
 			ReactDOM: 'react-dom',
 			ReactIntl: 'react-intl',
+			ReactRedux: 'react-redux',
 			ReactRouter: 'react-router',
-			Redux: 'react-redux'
+			Redux: 'redux',
+			ReduxForm: 'redux-form'
 		}), // auto load modules
 		new webpack.optimize.UglifyJsPlugin(), // minify JS
 		new WriteFilePlugin() // write physical files

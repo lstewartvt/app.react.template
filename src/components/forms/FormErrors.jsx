@@ -13,7 +13,11 @@ export default class FormErrors extends React.Component {
         id='form-errors'
         className='error-block'>
         <ol>
-          <li>{this.props.errors}</li>
+        	{
+        		this.props.errors.map((error) => {
+        			return <li>{error}</li>;
+        		})
+        	}
         </ol>
       </div>
 		);

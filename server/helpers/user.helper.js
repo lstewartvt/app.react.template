@@ -4,13 +4,13 @@ const eJwt = require('express-jwt');
 const jwt = require('jsonwebtoken'); // used to create, sign, and verify tokens
 const props = includes('properties'); // get server properties
 
-const User = includes('data/models/UserSchema'); // get our mongoose model
+const User = includes('data/models/user.schema'); // get our mongoose model
 
 // Mongoose User helper methods
 var userHelper = module.exports = {
-	get_token: (claims) => {
+	get_token: (user) => {
 
-		return token = jwt.sign(claims, process.env.auth_secret, {
+		return token = jwt.sign(user, process.env.auth_secret, {
 			expiresIn: 60 * config.auth.expire
 		});
 	},

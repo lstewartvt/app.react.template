@@ -1,10 +1,26 @@
-import Header from '../Header';
+import {
+	createStore,
+	applyMiddleware
+} from 'redux';
+import reduxThunk from 'redux-thunk';
+import reducers from 'reducers';
+
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
+const store = createStoreWithMiddleware(reducers);
+
+import {
+	Header
+} from '../Header';
 
 describe('Header', () => {
 
 	let component;
 	beforeEach(function() {
-		component = ReactTests.renderIntoDocument(<Header />);
+		component = ReactTests.renderIntoDocument(
+			<ReactRedux.Provider store={store}>
+	      <Header />
+	    </ReactRedux.Provider>
+		);
 	});
 
 	it('renders', () => {

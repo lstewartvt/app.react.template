@@ -114,9 +114,11 @@ module.exports = function(config) {
 					React: 'react',
 					ReactDOM: 'react-dom',
 					ReactIntl: 'react-intl',
+					ReactRedux: 'react-redux',
 					ReactRouter: 'react-router',
 					ReactTests: 'react-addons-test-utils',
-					Redux: 'react-redux'
+					Redux: 'redux',
+					ReduxForm: 'redux-form'
 				}), // auto load modules
 			],
 			resolve: {

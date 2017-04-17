@@ -8,6 +8,7 @@ module.exports = {
 		about: '/about',
 		account: {
 			login: '/login',
+			logout: '/logout',
 			register: '/register'
 		},
 		anonymous: [

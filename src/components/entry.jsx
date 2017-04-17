@@ -7,7 +7,7 @@ import reducers from 'reducers';
 
 import {
 	AUTHENTICATED_USER
-} from 'actions/types';
+} from 'actions/auth/types';
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 const store = createStoreWithMiddleware(reducers);
@@ -42,9 +42,9 @@ import 'styles/base';
 window.onload = () => {
 
 	ReactDOM.render(
-		<Redux.Provider store={store}>
+		<ReactRedux.Provider store={store}>
       <Router />
-    </Redux.Provider>,
+    </ReactRedux.Provider>,
 		document.getElementById('app')
 	);
 };

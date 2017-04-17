@@ -1,15 +1,16 @@
 require('./includes');
 
-const bodyParser = require('body-parser');
-const compression = require('compression');
-const config = includes('data/config');
-const cookieParser = require('cookie-parser');
-const Cookies = require('cookies');
-const express = require('express');
-const helpers = includes('helpers/');
-const morgan = require('morgan');
-const path = require('path');
-const props = includes('properties');
+const bodyParser = require('body-parser'),
+	compression = require('compression'),
+	config = includes('data/config'),
+	cookieParser = require('cookie-parser'),
+	Cookies = require('cookies'),
+	express = require('express'),
+	expressValidator = require('express-validator'),
+	helpers = includes('helpers/'),
+	morgan = require('morgan'),
+	path = require('path'),
+	props = includes('properties');
 
 var app = express();
 
@@ -24,6 +25,9 @@ if (process.env.mongo_db_connection) {
 	mongoose.connect(process.env.mongo_db_connection).then(() => {
 		app.set('mongo_live', true);
 		console.log('Connected to mongodb successfully!');
+
+		// Initialize passport
+		require('./passport');
 	}).catch((error) => {
 		console.log('Error:', error);
 		console.log(`Unable to connect to ${process.env.mongo_db_connection}. Please restart the server.`);
@@ -42,7 +46,16 @@ if (process.env.mongo_db_connection) {
 
 // Setup logger
 app.use(morgan('dev'));
-// app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :response[content-length] :response-time ms'));
+// app.use(morgan(':remote-addr - :remote-user [:date[clf]] ':method :url HTTP/:http-version' :status :response[content-length] :response-time ms'));
+
+// Enable CORS
+app.use(function(req, res, next) {
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Credentials');
+	res.header('Access-Control-Allow-Credentials', 'true');
+	next();
+});
 
 // use body parser so we can get info from POST and/or URL parameters
 app.use(bodyParser.urlencoded({
@@ -53,6 +66,24 @@ app.use(bodyParser.json()); // parse application/json
 // Add cookie manager
 app.use(cookieParser());
 app.use(Cookies.express());
+
+// Validation
+app.use(expressValidator({
+	errorFormatter: function(param, msg, value) {
+		var namespace = param.split('.'),
+			root = namespace.shift(),
+			formParam = root;
+
+		while (namespace.length) {
+			formParam += '[' + namespace.shift() + ']';
+		}
+		return {
+			param: formParam,
+			msg: msg,
+			value: value
+		};
+	}
+}));
 
 // We only want to optimize assets in production environment
 if (app.settings.env === 'production') {
@@ -70,8 +101,5 @@ if (app.settings.env === 'production') {
 
 // Serve static assets
 app.use(express.static(path.resolve(__dirname, './../dist')));
-
-// Set up authentication
-helpers.auth.init.call(app);
 
 module.exports = app;

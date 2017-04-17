@@ -22,6 +22,11 @@ html {
     @media (max-width: $screenSmMax) {
       padding-top: 56px;
     }
+
+    // @media (min-width: $screenLgMin) {
+    //   margin: 0 auto;
+    //   max-width: 1366px;
+    // }
   }
 }
 

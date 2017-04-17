@@ -1,13 +1,10 @@
 import {
-	reduxForm
-} from 'redux-form';
-import {
 	register
-} from 'actions';
+} from 'actions/auth';
 
 import {
 	RESET_FORM
-} from 'actions/types';
+} from 'actions/auth/types';
 
 import Form from './Form';
 import {
@@ -38,7 +35,7 @@ const validations = values => {
 	return errors;
 };
 
-const form = reduxForm({
+const form = ReduxForm.reduxForm({
 	form: 'register',
 	validations,
 	enableReinitialize: true // this is needed!!
@@ -71,8 +68,8 @@ class FormRegister extends React.Component {
           className='form-field field-email'
           required />
         <FieldText
-          name='handle'
-          className='form-field field-handle'
+          name='username'
+          className='form-field field-username'
           label='Username' />
         <FieldPassword
           className='form-field field-password'
@@ -110,6 +107,6 @@ function mapStateToProps(state) {
 	};
 };
 
-export default Redux.connect(mapStateToProps, {
+export default ReactRedux.connect(mapStateToProps, {
 	register
 })(form(FormRegister));

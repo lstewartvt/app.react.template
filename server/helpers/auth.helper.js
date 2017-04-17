@@ -1,69 +1,53 @@
-const _ = require('lodash');
-const app_helper = require('./app.helper');
-const config = includes('data/config'); // get our config file
-const http_helper = require('./http.helper');
-const props = includes('properties'); // application constant values
-const user_helper = require('./user.helper');
-
-const User = includes('data/models/UserSchema'); // get our mongoose model
+const _ = require('lodash'),
+	app_data = includes('../src/components/app.data'),
+	app_helper = require('./app.helper'),
+	config = includes('data/config'), // get our config file
+	http_helper = require('./http.helper'),
+	passport = require('passport'),
+	props = includes('properties'), // application constant values
+	user_helper = require('./user.helper'),
+	User = includes('data/models/user.schema'); // get our mongoose model
 
 // Set up authentication
 let auth_helper = module.exports = {
-	init: function() {
-		var app = this;
-		app.set('auth_secret', process.env.auth_secret); // secret variable
-	},
-	login: (request, response) => {
+	check: passport.authenticate('jwt', {
+		failureRedirect: app_data.nav.account.login,
+		session: false
+	}),
+	local_login: passport.authenticate('local', {
+		session: false
+	}),
+	login: (username, password, done) => {
 
 		// find the user
-		User.findOne({
-			$or: [{
-				email: request.body.username.trim()
-			}, {
-				handle: request.body.username.trim()
-			}]
-		}).then(function(existingUser) {
+		return User.getUserByHandle(username).then(function(existingUser) {
 
 			if (!existingUser) {
-				response.status(400).json({
-					error: true,
-					message: props.messages.auth.failed
+				return done(null, false, {
+					success: false,
+					errors: props.messages.auth.failed
 				});
-			} else if (existingUser) {
-
-				// check if password matches
-				existingUser.isPasswordValid(request.body.password.trim())
-					.then(function(isValid) {
-
-						if (isValid) {
-
-							// create a token with claims
-							var token = user_helper.get_token(existingUser = _.omit(existingUser.toObject(), ['password']));
-							response.cookies.set(process.env.cookie_name, token, {
-								httpOnly: false,
-								// secure: true // for your production environment
-							});
-
-							// return the information including token as JSON
-							response.json({
-								success: true,
-								message: `Welcome, ${existingUser.handle}!`,
-								token: token,
-								user: existingUser
-							});
-						} else {
-
-							response.status(400).json({
-								error: true,
-								message: props.messages.auth.failed
-							});
-						}
-					});
 			}
+
+			// check if password matches
+			return existingUser.isPasswordValid(password.trim())
+				.then(function(isValid) {
+
+					if (isValid) {
+
+						return done(null, existingUser = _.omit(existingUser.toObject(), ['password']));
+					} else {
+
+						return done(null, false, {
+							success: false,
+							errors: [props.messages.auth.failed]
+						});
+					}
+				});
 		}).catch(function(error) {
 			response.status(500).json({
-				error: true,
-				message: error
+				success: false,
+				errors: [error]
 			});
 		});
 	},
@@ -76,24 +60,56 @@ let auth_helper = module.exports = {
 			admin: request.body.admin,
 			email: email,
 			first_name: request.body.first_name && request.body.first_name.trim(),
-			handle: request.body.handle.trim() || email,
+			handle: request.body.username.trim() || email,
 			last_name: request.body.last_name && request.body.last_name.trim(),
 			password: request.body.password.trim()
 		});
-		console.log(user);
 
 		// save user
 		user.save()
 			.then((new_user) => {
-				request.body.username = new_user.handle;
-				auth_helper.login(request, response);
+
+				// return the user information as JSON
+				response.json({
+					success: true,
+					message: `Welcome, ${new_user.handle}!`,
+					token: 'JWT ' + helpers.user.get_token(new_user = _.omit(new_user.toObject(), ['password'])),
+					user: new_user
+				});
 			})
 			.catch((error) => {
 				response.status(500).json({
-					error: true,
+					success: false,
 					debug: process.env.NODE_ENV === 'development' && error,
-					message: app_helper.get_error_message(props.messages.mongoose[error.code])
+					errors: [app_helper.get_error_message(props.messages.mongoose[error.code])]
 				});
 			});
+	},
+	roleCheck: role => {
+
+		return function(request, response, next) {
+
+			const user = request.user;
+			User.getUserById(user._id).then(existingUser => {
+
+				// If user is found, check role.
+				if (existingUser.role === role) {
+					return next();
+				}
+
+				response.status(401).json({
+					success: false,
+					errors: ['You are not authorized to view this content.']
+				});
+				return next('401:Unauthorized');
+			}).catch(error => {
+
+				response.status(422).json({
+					success: false,
+					errors: ['No user was found.']
+				});
+				return next(error);
+			});
+		}
 	}
 };

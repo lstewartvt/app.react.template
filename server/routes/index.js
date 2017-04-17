@@ -1,10 +1,10 @@
-const app_data = includes('../src/components/app.data');
-const helpers = includes('helpers/');
-const path = require('path');
+const app_data = includes('../src/components/app.data'),
+	helpers = includes('helpers/'),
+	path = require('path');
 
-let anonymous_routes = require('./anonymous');
-let protected_routes = require('./protected');
-let user_routes = require('./user');
+let anonymous_routes = require('./anonymous'),
+	protected_routes = require('./protected'),
+	user_routes = require('./user');
 
 module.exports = (app) => {
 
@@ -23,31 +23,31 @@ module.exports = (app) => {
 	// set anonymous routes
 	app.use(anonymous_routes);
 
-	// route middleware to verify auth
-	if (mongo_live) {
-		app.use(helpers.user.verify);
-	}
-
 	// set protected routes
 	app.use(protected_routes);
 
 	// set user routes
 	app.use('/user', user_routes);
 
-	app.get('*', (request, response) => {
+	// store database status
+	app.use((request, response, next) => {
 
 		response.cookies.set('mongo_live', app.get('mongo_live'), {
 			httpOnly: false,
 			// secure: true // for your production environment
 		});
+		next();
+	});
 
-		if (request.user || !mongo_live) {
-
+	if (mongo_live) {
+		app.get('*', helpers.auth.check, (request, response) => {
+			return response.redirect(app_data.nav.account.login);
+		});
+	} else {
+		app.get('*', (request, response) => {
 			return response.render('index', {
 				description: 'React app template'
 			});
-		}
-
-		return response.redirect(app_data.nav.account.login);
-	});
+		});
+	}
 };

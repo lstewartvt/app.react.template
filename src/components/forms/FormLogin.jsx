@@ -1,13 +1,10 @@
 import {
-	reduxForm
-} from 'redux-form';
-import {
 	login
-} from 'actions';
+} from 'actions/auth';
 
 import {
 	RESET_FORM
-} from 'actions/types';
+} from 'actions/auth/types';
 
 import Form from './Form';
 import {
@@ -37,7 +34,7 @@ const validations = values => {
 	return errors;
 };
 
-const form = reduxForm({
+const form = ReduxForm.reduxForm({
 	form: 'login', // form unique identifier
 	validations
 });
@@ -67,7 +64,8 @@ class FormLogin extends React.Component {
         
         <FieldEmail
           className='form-field field-email'
-          name='username' />
+          name='username'
+          label='Username (email/handle)' />
         <FieldPassword
           className='form-field field-password' />
 
@@ -99,10 +97,10 @@ class FormLogin extends React.Component {
 function mapStateToProps(state) {
 	return {
 		errors: state.auth.errors,
-		message: state.auth.message
+		messages: state.auth.messages
 	};
 };
 
-export default Redux.connect(mapStateToProps, {
+export default ReactRedux.connect(mapStateToProps, {
 	login
 })(form(FormLogin));
