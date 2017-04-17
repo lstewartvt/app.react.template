@@ -24,7 +24,7 @@ describe('Header', () => {
 	});
 
 	it('renders', () => {
-		expect(component).toBeTruthy();
+		expect(component).to.be.ok;
 	});
 
 	it('should display logo text', function() {
@@ -34,7 +34,7 @@ describe('Header', () => {
 			'h1'
 		);
 
-		expect(logo.textContent).toEqual('React.App');
+		expect(logo.textContent).to.equal('React.App');
 	});
 
 	// it('should display mobile menu icon', function() {
@@ -44,8 +44,8 @@ describe('Header', () => {
 	//    'material-icons'
 	//  );
 
-	//  expect(menuIcon).toBeTruthy();
-	//  expect(menuIcon.textContent).toEqual('menu');
+	//  expect(menuIcon).to.be.ok;
+	//  expect(menuIcon.textContent).to.equal('menu');
 	// });
 
 	it('should display navigation', function() {
@@ -54,6 +54,6 @@ describe('Header', () => {
 			component,
 			'nav'
 		);
-		expect(navigation).toBeTruthy();
+		expect(navigation).to.be.ok;
 	});
 });

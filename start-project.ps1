@@ -38,7 +38,13 @@ $file = $ProjectFolder + "\server\index.js"
 $file = $ProjectFolder + "\src\components\layout\header\HeaderLogo.jsx"
 (Get-Content $file).replace('React.App', $ProjectName) | Set-Content $file
 
+$file = $ProjectFolder + "\src\components\layout\header\tests\Header.test.js"
+(Get-Content $file).replace('React.App', $ProjectName) | Set-Content $file
+
 $file = $ProjectFolder + "\src\components\layout\header\tests\HeaderLogo.test.js"
+(Get-Content $file).replace('React.App', $ProjectName) | Set-Content $file
+
+$file = $ProjectFolder + "\src\components\layout\footer\Footer.jsx"
 (Get-Content $file).replace('React.App', $ProjectName) | Set-Content $file
 
 #rename project files

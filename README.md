@@ -1,6 +1,7 @@
 # [React Application Template](http://react.app.k0nrt15.com)
 
 Stack:
+  - Chai Assertion Library
   - Express.js - v4.14.1
   - Jasmine - v2.5.3
   - JWT

@@ -8,7 +8,7 @@ module.exports = function(config) {
 			pattern: 'tests.webpack.js',
 			watched: false
 		}],
-		frameworks: ['jasmine-jquery', 'jasmine'],
+		frameworks: ['chai', 'chai-as-promised', 'chai-dom', 'jasmine'],
 		preprocessors: {
 			'tests.webpack.js': ['webpack', 'sourcemap']
 		},
@@ -111,6 +111,7 @@ module.exports = function(config) {
 					app_local: 'app.local',
 					AppCookies: 'react-cookie',
 					jQuery: 'jquery',
+					MdIcon: 'shared/MdIcon',
 					React: 'react',
 					ReactDOM: 'react-dom',
 					ReactIntl: 'react-intl',

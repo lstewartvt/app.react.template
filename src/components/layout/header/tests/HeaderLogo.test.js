@@ -8,18 +8,18 @@ describe('HeaderLogo', () => {
 	});
 
 	it('renders', () => {
-		expect(component).toBeTruthy();
+		expect(component).to.be.ok;
 	});
 
 	it('should display logo link', function() {
 
 		let link = ReactTests.findRenderedDOMComponentWithTag(
-			component,
-			'a'
+		component,
+		'a'
 		);
 
-		expect(link).toBeTruthy();
-		expect(link).toHaveId('header-logo-link');
-		expect(link.textContent).toEqual('React.App');
+		expect(link).to.be.ok;
+		expect(link).to.have.id('header-logo-link');
+		expect(link.textContent).to.equal('React.App');
 	});
 });

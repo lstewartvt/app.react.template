@@ -10,7 +10,7 @@ describe('NavMenu', () => {
 	});
 
 	it('renders', () => {
-		expect(component).toBeTruthy();
+		expect(component).to.be.ok;
 	});
 
 	it('should have seven links', function() {
@@ -21,10 +21,10 @@ describe('NavMenu', () => {
 		);
 
 		const totalLinks = links.length;
-		expect(links).toBeTruthy();
-		expect(totalLinks).toEqual(7);
-		expect(links[0].textContent).toBe('Home');
-		expect(links[totalLinks - 1].textContent).toBe('Error 404');
+		expect(links).to.be.ok;
+		expect(totalLinks).to.equal(7);
+		expect(links[0].textContent).to.equal('Home');
+		expect(links[totalLinks - 1].textContent).to.equal('Error 404');
 	});
 
 	it('should have one link group', function() {
@@ -35,7 +35,7 @@ describe('NavMenu', () => {
 		);
 
 		const totalLinkGroups = linkGroups.length;
-		expect(linkGroups).toBeTruthy();
-		expect(totalLinkGroups).toEqual(1);
+		expect(linkGroups).to.be.ok;
+		expect(totalLinkGroups).to.equal(1);
 	});
 });

@@ -165,6 +165,7 @@ module.exports = {
 			app_local: 'app.local',
 			AppCookies: 'react-cookie',
 			jQuery: 'jquery',
+			MdIcon: 'shared/MdIcon',
 			React: 'react',
 			ReactDOM: 'react-dom',
 			ReactIntl: 'react-intl',
