@@ -1,6 +1,6 @@
 import {
 	toggleNav
-} from 'actions/global';
+} from 'sagas';
 
 import {
 	AppBar

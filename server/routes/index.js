@@ -2,7 +2,8 @@ const app_data = includes('../src/components/app.data'),
 	helpers = includes('helpers/'),
 	path = require('path');
 
-let anonymous_routes = require('./anonymous'),
+let admin_routes = require('./admin'),
+	anonymous_routes = require('./anonymous'),
 	protected_routes = require('./protected'),
 	user_routes = require('./user');
 
@@ -24,6 +25,7 @@ module.exports = (app) => {
 	app.use(anonymous_routes);
 
 	// set protected routes
+	app.use(admin_routes);
 	app.use(protected_routes);
 
 	// set user routes
@@ -36,18 +38,14 @@ module.exports = (app) => {
 			httpOnly: false,
 			// secure: true // for your production environment
 		});
+
 		next();
 	});
 
-	if (mongo_live) {
-		app.get('*', helpers.auth.check, (request, response) => {
-			return response.redirect(app_data.nav.account.login);
+	app.get('*', helpers.auth.check, (request, response) => {
+
+		return response.render('index', {
+			description: 'React app template'
 		});
-	} else {
-		app.get('*', (request, response) => {
-			return response.render('index', {
-				description: 'React app template'
-			});
-		});
-	}
+	});
 };

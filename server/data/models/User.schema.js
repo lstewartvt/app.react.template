@@ -21,11 +21,21 @@ const UserSchema = new Schema({
 		required: true,
 		type: String
 	},
+	emailLower: {
+		match: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+		type: String
+	},
 	handle: {
 		index: {
 			unique: true
 		},
 		required: true,
+		type: String
+	},
+	handleLower: {
+		index: {
+			unique: true
+		},
 		type: String
 	},
 	password: {
@@ -53,10 +63,21 @@ const UserSchema = new Schema({
 	timestamps: true
 });
 
+// hash password
 UserSchema.pre('save', function(next) {
 
 	const user = this,
 		SALT_FACTOR = 13;
+
+	// update email
+	if (user.isModified('email')) {
+		user.emailLower = user.email.toLowerCase();
+	}
+
+	// update handle
+	if (user.isModified('handle')) {
+		user.handleLower = user.handle.toLowerCase();
+	}
 
 	if (!user.isModified('password')) {
 		return next();
@@ -87,12 +108,14 @@ let User = module.exports = mongoose.model('User', UserSchema);
 
 module.exports.getUserByHandle = (username) => {
 
+	let handle = username.trim().toLowerCase();
+
 	// find the user
 	return User.findOne({
 		$or: [{
-			email: username.trim()
+			emailLower: handle
 		}, {
-			handle: username.trim()
+			handleLower: handle
 		}]
 	});
 };

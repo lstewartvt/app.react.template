@@ -2,11 +2,10 @@ const _ = require('lodash'),
 	app_data = includes('../src/components/app.data'),
 	app_helper = require('./app.helper'),
 	config = includes('data/config'), // get our config file
-	http_helper = require('./http.helper'),
 	passport = require('passport'),
 	props = includes('properties'), // application constant values
 	user_helper = require('./user.helper'),
-	User = includes('data/models/user.schema'); // get our mongoose model
+	User = includes('data/models/User.schema'); // get our mongoose model
 
 // Set up authentication
 let auth_helper = module.exports = {
@@ -25,7 +24,7 @@ let auth_helper = module.exports = {
 			if (!existingUser) {
 				return done(null, false, {
 					success: false,
-					errors: props.messages.auth.failed
+					errors: [props.messages.auth.failed]
 				});
 			}
 
@@ -53,36 +52,39 @@ let auth_helper = module.exports = {
 	},
 	register: (request, response) => {
 
-		var email = request.body.email.trim();
+		const email = request.body.email.trim();
+		const handle = (request.body.username || email).trim();
 
 		// create user
 		var user = new User({
-			admin: request.body.admin,
 			email: email,
 			first_name: request.body.first_name && request.body.first_name.trim(),
-			handle: request.body.username.trim() || email,
+			handle: handle,
 			last_name: request.body.last_name && request.body.last_name.trim(),
 			password: request.body.password.trim()
 		});
 
 		// save user
 		user.save()
-			.then((new_user) => {
+			.then(new_user => {
 
 				// return the user information as JSON
 				response.json({
 					success: true,
 					message: `Welcome, ${new_user.handle}!`,
-					token: 'JWT ' + helpers.user.get_token(new_user = _.omit(new_user.toObject(), ['password'])),
+					token: user_helper.get_token(new_user = _.omit(new_user.toObject(), ['password'])),
 					user: new_user
 				});
 			})
-			.catch((error) => {
+			.catch(error => {
+
 				response.status(500).json({
 					success: false,
 					debug: process.env.NODE_ENV === 'development' && error,
 					errors: [app_helper.get_error_message(props.messages.mongoose[error.code])]
 				});
+
+				throw new Error(error);
 			});
 	},
 	roleCheck: role => {

@@ -15,6 +15,7 @@ const bodyParser = require('body-parser'),
 var app = express();
 
 // try connect to mongodb
+console.log(process.env.mongo_db_connection);
 if (process.env.mongo_db_connection) {
 	console.log('Connecting to mongodb...');
 

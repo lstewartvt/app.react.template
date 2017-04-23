@@ -1,7 +1,3 @@
-import {
-	logout
-} from 'actions/auth';
-
 import Link from 'react-toolbox/lib/link';
 import Navigation from 'react-toolbox/lib/navigation';
 
@@ -10,6 +6,12 @@ import menu_data from './menu.data';
 import './styles/NavMenu';
 
 class NavMenu extends React.Component {
+
+	onLogout() {
+		this.props.dispatch({
+			type: 'app.auth.revoke'
+		});
+	};
 
 	render() {
 		return (
@@ -47,7 +49,7 @@ class NavMenu extends React.Component {
             activeClassName='active'
             className='link'
             data-react-toolbox='link'
-            onClick={this.props.logout}>
+            onClick={this.onLogout.bind(this)}>
             <abbr>Logout</abbr>
           </ReactRouter.IndexLink>
         )}
@@ -70,6 +72,4 @@ function mapStateToProps(state) {
 };
 
 exports.NavMenu = NavMenu;
-export default ReactRedux.connect(mapStateToProps, {
-	logout
-})(NavMenu);
+export default ReactRedux.connect(mapStateToProps)(NavMenu);

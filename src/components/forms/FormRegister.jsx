@@ -1,10 +1,6 @@
 import {
 	register
-} from 'actions/auth';
-
-import {
-	RESET_FORM
-} from 'actions/auth/types';
+} from 'sagas/auth';
 
 import Form from './Form';
 import {
@@ -45,18 +41,25 @@ class FormRegister extends React.Component {
 
 	componentWillMount() {
 		this.props.dispatch({
-			type: RESET_FORM
+			type: 'app.auth.reset.form'
 		});
-	}
+	};
 
 	handleClick(formProps) {
-		this.props.register(formProps);
+		this.props.dispatch({
+			type: 'app.auth.register',
+			form: formProps
+		});
 	};
 
 	render() {
 		const {
 			handleSubmit
 		} = this.props;
+
+		if (this.props.busy) {
+			return <Spinner />;
+		}
 
 		return (
 			<Form
@@ -102,8 +105,9 @@ class FormRegister extends React.Component {
 
 function mapStateToProps(state) {
 	return {
+		busy: state.auth.busy,
 		errors: state.auth.errors,
-		message: state.auth.message
+		messages: state.auth.messages
 	};
 };
 

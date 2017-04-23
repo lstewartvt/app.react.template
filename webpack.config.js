@@ -30,7 +30,6 @@ module.exports = {
 	module: {
 		rules: [{
 			test: /\.jsx?$/,
-			exclude: /node_modules/,
 			use: 'babel-loader'
 		}, {
 			test: /\.s?css$/,
@@ -140,7 +139,7 @@ module.exports = {
 		// new webpack.optimize.DedupePlugin(), // dedupe similar code
 		new webpack.DefinePlugin({
 			'_debug': false, // exclude debug code
-			'_secure': false, // has ssl cert
+			'_secure': true, // has ssl cert
 			'process.env': {
 				'NODE_ENV': JSON.stringify('production') // set production environment
 			}
@@ -160,9 +159,7 @@ module.exports = {
 		}), // minifiy CSS
 		new webpack.ProvidePlugin({
 			_: 'lodash',
-			api: 'app.api',
 			app_data: 'app.data',
-			app_local: 'app.local',
 			AppCookies: 'react-cookie',
 			jQuery: 'jquery',
 			MdIcon: 'shared/MdIcon',
@@ -172,7 +169,13 @@ module.exports = {
 			ReactRedux: 'react-redux',
 			ReactRouter: 'react-router',
 			Redux: 'redux',
-			ReduxForm: 'redux-form'
+			ReduxForm: 'redux-form',
+			ReduxSaga: 'redux-saga',
+			Spinner: 'shared/Spinner',
+			util_api: 'util.api',
+			util_convert: 'util.convert',
+			util_lib: 'util.lib',
+			util_local: 'util.local'
 		}), // auto load modules
 		new webpack.optimize.UglifyJsPlugin(), // minify JS
 		new WriteFilePlugin() // write physical files
@@ -186,9 +189,10 @@ module.exports = {
 			'.scss'
 		],
 		modules: [
+			path.resolve(__dirname, './node_modules'),
 			path.resolve(__dirname, './src'),
 			path.resolve(__dirname, './src/components'),
-			path.resolve(__dirname, './node_modules')
+			path.resolve(__dirname, './src/utilities')
 		]
 	},
 	// this is a default value; just be aware of it

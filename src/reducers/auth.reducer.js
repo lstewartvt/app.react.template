@@ -1,39 +1,44 @@
-import {
-	AUTHENTICATE_ERROR,
-	AUTHENTICATED_USER,
-	RESET_FORM,
-	UNAUTHENTICATED_USER
-} from 'actions/auth/types';
-
 const INITIAL_STATE = {
 	authenticated: false,
+	busy: false,
 	errors: undefined,
 	field_errors: undefined,
-	messages: undefined
+	messages: undefined,
+	user: undefined
 };
 
 export default function(state = INITIAL_STATE, action) {
 	switch (action.type) {
 
-		case AUTHENTICATED_USER:
+		case 'app.auth.register':
+		case 'app.auth.request':
 			return {...state,
+				busy: true
+			};
+
+		case 'app.auth.success':
+			return {...state,
+				authenticated: true,
+				busy: false,
 				errors: undefined,
 				messages: undefined,
-				authenticated: true
+				user: action.user
 			};
 
-		case UNAUTHENTICATED_USER:
+		case 'app.auth.revoked':
 			return {...state,
-				authenticated: false
+				authenticated: false,
+				user: undefined
 			};
 
-		case AUTHENTICATE_ERROR:
+		case 'app.auth.error':
 			return {...state,
+				busy: false,
 				errors: action.errors,
 				field_errors: action.field_errors
 			};
 
-		case RESET_FORM:
+		case 'app.auth.reset.form':
 			return {...state,
 				errors: undefined,
 				messages: undefined
