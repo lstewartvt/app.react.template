@@ -5,6 +5,26 @@ const app_data = includes('../src/components/app.data'),
 
 let routes = module.exports = express.Router();
 
+// login form
+routes.get('/login', function(request, response) {
+	response.cookies.set(app_data.auth.cookie_name, undefined, {
+		expires: new Date()
+	});
+	response.cookies.set(app_data.auth.user_cookie, undefined, {
+		expires: new Date()
+	});
+	return response.render('index', {
+		description: 'React app template login form'
+	});
+});
+
+// registration form
+routes.get('/register', function(request, response) {
+	return response.render('index', {
+		description: 'React app template registration form'
+	});
+});
+
 routes.post('/login', (request, response, next) => {
 
 	// Validate fields
@@ -38,8 +58,7 @@ routes.post('/login', helpers.auth.local_login, (request, response) => {
 	});
 });
 
-// route to register new user (PUT /user/register)
-routes.post('/register', (request, response) => {
+routes.post('/register', (request, response, next) => {
 
 	// Validate fields
 	request.checkBody('email', 'Invalid email address.').isEmail();
@@ -60,28 +79,10 @@ routes.post('/register', (request, response) => {
 		});
 	}
 
+	next();
+});
+
+// route to register new user (PUT /user/register)
+routes.post('/register', function(request, response) {
 	return helpers.auth.register.apply(this, arguments);
-});
-
-// login form
-routes.get('/login', function(request, response) {
-	return response.render('index', {
-		description: 'React app template login form'
-	});
-});
-
-
-// logout
-routes.get('/logout', function(request, response) {
-	request.logout();
-	response.json({
-		success: true
-	});
-});
-
-// registration form
-routes.get('/register', function(request, response) {
-	return response.render('index', {
-		description: 'React app template registration form'
-	});
 });

@@ -1,10 +1,11 @@
-const app_data = includes('../src/components/app.data'),
+const _ = require('lodash'),
+	app_data = includes('../src/components/app.data'),
 	ExtractJwt = require('passport-jwt').ExtractJwt,
 	helpers = includes('helpers/'),
 	JwtStrategy = require('passport-jwt').Strategy,
 	LocalStrategy = require('passport-local'),
 	passport = require('passport'),
-	User = includes('data/models/user.schema');
+	User = includes('data/models/User.schema');
 
 let cookieExtractor = function(request) {
 
@@ -26,11 +27,11 @@ const jwtOptions = {
 // Setting up JWT login strategy
 const jwtLogin = new JwtStrategy(jwtOptions, function(payload, done) {
 
-	User.getUserById(payload._id).then(user => {
+	return User.getUserById(payload._id).then(user => {
 		if (user) {
-			done(null, user);
+			return done(null, _.omit(user, ['password']));
 		} else {
-			done(null, false);
+			return done(null, false);
 		}
 	}).catch(error => {
 		return done(error, false);

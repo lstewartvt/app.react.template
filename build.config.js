@@ -12,9 +12,9 @@ module.exports = {
 		JSX: [
 			'src/components/**/*.js'
 		],
-		JSX_ENTRY_POINT: path.resolve(__dirname, 'src/components', 'entry.jsx'),
+		JSX_ENTRY_POINT: path.resolve(__dirname, 'src', 'entry.jsx'),
 		JSX_ENTRY_POINTS: [
-			path.resolve(__dirname, 'src/components', 'entry.jsx')
+			path.resolve(__dirname, 'src', 'entry.jsx')
 		],
 		MINIFIED_CSS: 'app.min.css',
 		MINIFIED_CSS_GULP: 'app.min.gulp.css',

@@ -13,6 +13,8 @@ Stack:
   - React - v15.4.2
   - React Router - v3.0.2
   - React Toolbox - v1.3.4
+  - Redux - v3.6.0
+  - Redux Saga - v0.14.7
   - SASS
   - Webpack - v2.2.1
 

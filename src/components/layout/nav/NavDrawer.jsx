@@ -1,9 +1,7 @@
 import {
-	logout
-} from 'actions/auth';
-import {
+	logout,
 	toggleNav
-} from 'actions/global';
+} from 'sagas';
 
 import Drawer from 'react-toolbox/lib/drawer';
 import TimeGreet from 'helpers/TimeGreet';
@@ -59,7 +57,9 @@ class NavDrawer extends React.Component {
 
 	handleLogout() {
 		this.props.toggleNav();
-		this.props.logout();
+		this.props.dispatch({
+			type: 'app.auth.revoke'
+		});
 	};
 
 	render() {

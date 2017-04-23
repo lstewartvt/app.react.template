@@ -106,9 +106,7 @@ module.exports = function(config) {
 				new webpack.optimize.OccurrenceOrderPlugin(),
 				new webpack.ProvidePlugin({
 					_: 'lodash',
-					api: 'app.api',
 					app_data: 'app.data',
-					app_local: 'app.local',
 					AppCookies: 'react-cookie',
 					jQuery: 'jquery',
 					MdIcon: 'shared/MdIcon',
@@ -119,7 +117,13 @@ module.exports = function(config) {
 					ReactRouter: 'react-router',
 					ReactTests: 'react-addons-test-utils',
 					Redux: 'redux',
-					ReduxForm: 'redux-form'
+					ReduxForm: 'redux-form',
+					ReduxSaga: 'redux-saga',
+					Spinner: 'shared/Spinner',
+					util_api: 'util.api',
+					util_convert: 'util.convert',
+					util_lib: 'util.lib',
+					util_local: 'util.local'
 				}), // auto load modules
 			],
 			resolve: {
@@ -131,9 +135,10 @@ module.exports = function(config) {
 					'.scss'
 				],
 				modules: [
+					path.resolve(__dirname, './node_modules'),
 					path.resolve(__dirname, './src'),
 					path.resolve(__dirname, './src/components'),
-					path.resolve(__dirname, './node_modules')
+					path.resolve(__dirname, './src/utilities')
 				]
 			},
 			watch: true

@@ -3,18 +3,16 @@ const helpers = includes('helpers/');
 
 let routes = module.exports = express.Router();
 
-routes.get('/contacts', (request, response) => {
+routes.get('/auth', helpers.auth.check, (request, response) => {
+	return response.json({
+		success: true
+	});
+});
 
-	var message = {
-		config: {
-			subject: 'Test React Contact Template',
-			to: 'lstewartvt@gmail.com'
-		},
-		handleError: undefined,
-		handleSuccess: undefined,
-		response: response,
-		template: 'contact'
-	};
-
-	helpers.mail.send.call(app, message);
+// logout
+routes.get('/logout', function(request, response) {
+	request.logout();
+	response.json({
+		success: true
+	});
 });

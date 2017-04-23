@@ -1,0 +1,365 @@
+.absolute-center {
+  bottom: 0;
+  display: table;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+$duration: 1.4s;
+
+.spin {
+  animation: rotator $duration linear infinite;
+}
+
+.parallax-block {
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  > .parallax-content {
+    @extend .absolute-center;
+  }
+}
+
+.image-tint {
+  background-color: linear-gradient(rgba(255, 0, 0, 0.45), rgba(255, 0, 0, 0.45));
+}
+
+.pin {
+  left: 50%;
+  z-index: 999;
+}
+
+.pin:before {
+  left: 0;
+  top: -23px;
+  color: #000;
+  font-size: 23px;
+  content: "\f276";
+  font-family: FontAwesome;
+  -o-transform: rotate(13deg);
+  -webkit-transform: rotate(13deg);
+  -moz-transform: rotate(13deg);
+  -ms-transform: rotate(13deg);
+  transform: rotate(13deg);
+}
+
+.btn {
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px 40px;
+  text-transform: uppercase;
+
+  &.btn-wide {
+    width: 100%;
+  }
+
+  &.btn-default,
+  &.btn-default-inverted:hover {
+    background-color: rgba($cta, 0.9);
+    border: 1px solid $cta;
+    color: $siteBg;
+
+    @media (max-width: $screenSmMax) {
+      background: $cta;
+    }
+  }
+
+  &.btn-default-inverted,
+  &.btn-default:hover {
+    background: $cta;
+  }
+
+  + .btn {
+    margin: 3px 0;
+  }
+
+  > .icon {
+    color: $text;
+  }
+}
+
+.hr-text {
+  margin: 13px 0;
+  text-align: center;
+
+  > b {
+    color: $mdGreen;
+    padding-left: 10px;
+    padding-right: 5px;
+    position: relative;
+    top: 2px;
+
+    &.add:before {
+      color: $user;
+      content: "\f0fe";
+      font-family: FontAwesome;
+    }
+
+    &.facebook:before {
+      color: $facebook;
+      content: "\f09a";
+      font-family: FontAwesome;
+    }
+
+    &.google:before {
+      color: $google;
+      content: "\f0d5";
+      font-family: FontAwesome;
+    }
+
+    &.or:before {
+      content: "or";
+    }
+
+    &.user:before {
+      color: $user;
+      content: "\f007";
+      font-family: FontAwesome;
+    }
+
+    &.wrench:before {
+      content: "\f0ad";
+      font-family: FontAwesome;
+    }
+  }
+
+  > b.text,
+  hr {
+    display: inline-block;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 5px;
+  }
+
+  > hr {
+    border: none;
+    border-top: medium double #666;
+    color: #666;
+    padding: 0;
+    text-align: center;
+    width: 35%;
+  }
+}
+
+.row > .vertical-center {
+  display: inline-block !important;
+  float: none;
+  vertical-align: middle;
+}
+
+a,
+button,
+input {
+  &.btn {
+    &.btn-external {
+      outline: none;
+      width: 225px;
+
+      + button.btn-external {
+        margin-top: 5px;
+      }
+
+      &.btn-facebook {
+        background: $facebook;
+        display: block;
+        font-weight: 700;
+
+        &:before {
+          content: "\f09a";
+          font-family: FontAwesome;
+          margin-right: 5px;
+          padding-right: 10px;
+
+          @include borderRight2($socialText);
+        }
+
+        &:hover {
+          color: $siteBg;
+
+          @include border1($siteBg);
+        }
+      }
+
+      &.btn-google-plus {
+        background: $google;
+        display: block;
+        font-weight: 700;
+
+        &:before {
+          content: "\f0d5";
+          font-family: FontAwesome;
+          margin-right: 5px;
+          padding-right: 10px;
+
+          @include borderRight2($socialText);
+        }
+
+        &:hover {
+          color: $siteBg;
+
+          @include border1($socialText);
+        }
+      }
+    }
+  }
+}
+
+.social-square.fa {
+  background-color: $socialText;
+  color: $socialText;
+  font-size: 31px;
+  height: 50px;
+  margin: 5px;
+  padding-top: 7px;
+  width: 50px;
+
+  @include borderRadius(5px);
+
+  &.fa-facebook {
+    color: $facebook;
+
+    @include border3($facebook);
+
+    &:hover {
+      background-color: $facebook;
+      color: $socialText;
+    }
+  }
+
+  &.fa-google-plus {
+    color: $google;
+
+    @include border3($google);
+
+    &:hover {
+      color: $socialText;
+      background-color: $google;
+    }
+  }
+
+  &.fa-twitter {
+    color: $twitter;
+
+    @include border3($twitter);
+
+    &:hover {
+      color: $socialText;
+      background-color: $twitter;
+    }
+  }
+}
+
+.short-border {
+  width: 75%;
+  height: 5px;
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  border: 1px solid #333;
+  border-top: none;
+
+  > .placeholder {
+    bottom: 0;
+    left: 10px;
+    color: #0059bf;
+    font-size: 17px;
+    position: absolute;
+  }
+}
+
+.pop-out {
+  color: $colorPrimary;
+
+  > i {
+    top: 25%;
+    left: 40%;
+    font-size: 313px;
+    position: absolute;
+
+    @media (max-width: $screenSmMin) {
+      font-size: 131px;
+    }
+  }
+
+  @media (max-width: $screenSmMin) {
+    margin-left: -65px;
+  }
+}
+
+// Post-It Note style START
+.post-it {
+  background: $stickyNoteYellow;
+  -moz-box-shadow: 5px 5px 7px rgba($gray, 1);
+  -webkit-box-shadow: 5px 5px 7px rgba($gray, 0.7);
+  box-shadow: 5px 5px 7px rgba($gray, 0.7);
+  -moz-transition: -moz-transform .15s linear;
+  -o-transition: -o-transform .15s linear;
+  -webkit-transition: -webkit-transform .15s linear;
+  transition: -webkit-transform .15s linear;
+}
+
+@mixin pin($pinColor) {
+  .pin {
+    position: absolute;
+    left: 50%;
+    z-index: 999;
+  }
+
+  .pin:before {
+    left: 0;
+    top: -23px;
+    color: $black;
+    font-size: 23px;
+    content: "\f276";
+    position: absolute;
+    font-family: FontAwesome;
+    -o-transform: rotate(13deg);
+    -webkit-transform: rotate(13deg);
+    -moz-transform: rotate(13deg);
+    -ms-transform: rotate(13deg);
+    transform: rotate(13deg);
+  }
+}
+
+// Post-It Note style END
+
+// Ribbons START
+.ribbon-text {
+  background-color: $colorPrimary;
+  position: relative;
+
+  > .ribbon {
+    position: absolute;
+    bottom: calc(-1 * (0px + 30px));
+    height: 0;
+    width: 0;
+    border: calc(0px + 15px) solid transparent;
+
+    &.ribbon-left {
+      border-top-color: rgba($gray, 1);
+      border-right-width: 0;
+      left: 0;
+    }
+
+    &.ribbon-right {
+      border-top-color: rgba($gray, 1);
+      border-left-width: 0;
+      right: 0;
+    }
+  }
+}
+
+// Ribbons END
