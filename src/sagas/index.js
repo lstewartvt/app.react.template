@@ -36,11 +36,3 @@ export function* logout() {
 		}
 	});
 };
-
-export function* toggleNav() {
-	return function(dispatch) {
-		dispatch({
-			type: 'app.toggle.nav'
-		});
-	}
-};

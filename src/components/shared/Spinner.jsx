@@ -1,6 +1,6 @@
 import './styles/Spinner';
 
-module.exports = Spinner = () => {
+const Spinner = () => {
 
 	return (
 		<div className='spin-wrap'>
@@ -18,7 +18,9 @@ module.exports = Spinner = () => {
 						strokeWidth='5'>
 					</circle>
 			</svg>
-			<MdIcon>schedule</MdIcon>
+			<shared.MdIcon>schedule</shared.MdIcon>
 		</div>
 	);
 };
+
+export default Spinner;

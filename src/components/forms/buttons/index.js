@@ -1,3 +1,1 @@
-import ButtonLink from './ButtonLink';
-
-exports.ButtonLink = ButtonLink;
+export ButtonLink from './ButtonLink';

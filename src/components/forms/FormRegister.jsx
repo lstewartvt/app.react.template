@@ -53,13 +53,14 @@ class FormRegister extends React.Component {
 	};
 
 	render() {
+
+		if (this.props.busy) {
+			return <shared.Spinner />;
+		}
+
 		const {
 			handleSubmit
 		} = this.props;
-
-		if (this.props.busy) {
-			return <Spinner />;
-		}
 
 		return (
 			<Form

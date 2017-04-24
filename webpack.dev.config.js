@@ -164,7 +164,6 @@ module.exports = {
 			app_data: 'app.data',
 			AppCookies: 'react-cookie',
 			jQuery: 'jquery',
-			MdIcon: 'shared/MdIcon',
 			React: 'react',
 			ReactDOM: 'react-dom',
 			ReactIntl: 'react-intl',
@@ -173,11 +172,8 @@ module.exports = {
 			Redux: 'redux',
 			ReduxForm: 'redux-form',
 			ReduxSaga: 'redux-saga',
-			Spinner: 'shared/Spinner',
-			util_api: 'util.api',
-			util_convert: 'util.convert',
-			util_lib: 'util.lib',
-			util_local: 'util.local'
+			shared: 'shared',
+			utils: 'utilities'
 		}), // auto load modules
 		new WriteFilePlugin() // write physical files
 	],
@@ -192,8 +188,7 @@ module.exports = {
 		modules: [
 			path.resolve(__dirname, './node_modules'),
 			path.resolve(__dirname, './src'),
-			path.resolve(__dirname, './src/components'),
-			path.resolve(__dirname, './src/utilities')
+			path.resolve(__dirname, './src/components')
 		]
 	},
 	// this is a default value; just be aware of it

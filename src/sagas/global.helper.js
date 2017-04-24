@@ -10,7 +10,7 @@ export function* handleErrors(response) {
 };
 
 export function logout() {
-	return util_api.request({
+	return utils.api.request({
 		endpoint: app_data.nav.account.logout
 	});
 };

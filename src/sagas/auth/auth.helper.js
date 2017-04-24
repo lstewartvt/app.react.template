@@ -6,7 +6,7 @@ import {
 export function checkAuth() {
 	return dispatch => {
 
-		return util_api.request({
+		return utils.api.request({
 				endpoint: app_data.nav.account.auth
 			}).then(response => {
 				return handleErrors(response, dispatch, {
@@ -28,7 +28,7 @@ export function login({
 	password
 }) {
 
-	return util_api.request({
+	return utils.api.request({
 		endpoint: app_data.nav.account.login,
 		method: 'POST',
 		body: {
@@ -44,7 +44,7 @@ export function register({
 	password
 }) {
 
-	return util_api.request({
+	return utils.api.request({
 		endpoint: app_data.nav.account.register,
 		method: 'POST',
 		body: {

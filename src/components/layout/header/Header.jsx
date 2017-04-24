@@ -1,8 +1,4 @@
 import {
-	toggleNav
-} from 'sagas';
-
-import {
 	AppBar
 } from 'react-toolbox/lib/app_bar';
 import HeaderLogo from './HeaderLogo';
@@ -14,8 +10,14 @@ import './styles/Header';
 
 export class Header extends React.Component {
 
-	handleLeftIconClick() {
+	handleHomeClick() {
 		ReactRouter.browserHistory.push(app_data.nav.home);
+	};
+
+	handleMenuClick() {
+		this.props.dispatch({
+			type: 'app.toggle.nav'
+		});
 	};
 
 	render() {
@@ -24,8 +26,8 @@ export class Header extends React.Component {
         className='header'
         fixed
         leftIcon='home'
-        onLeftIconClick={this.handleLeftIconClick.bind(this)}
-        onRightIconClick={this.props.toggleNav}
+        onLeftIconClick={this.handleHomeClick.bind(this)}
+        onRightIconClick={this.handleMenuClick.bind(this)}
         rightIcon='menu'
         title={'React.App'||<HeaderLogo />}>
         <NavMenu />
@@ -40,6 +42,4 @@ function mapStateToProps(state) {
 	};
 };
 
-export default ReactRedux.connect(mapStateToProps, {
-	toggleNav
-})(Header);
+export default ReactRedux.connect(mapStateToProps)(Header);

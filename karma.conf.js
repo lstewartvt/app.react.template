@@ -20,10 +20,7 @@ module.exports = function(config) {
 				rules: [{
 					test: /\.jsx?$/,
 					exclude: /node_modules/,
-					use: [
-						'react-hot-loader',
-						'babel-loader?cacheDirectory=true'
-					]
+					use: 'babel-loader'
 				}, {
 					test: /\.s?css$/,
 					exclude: /src/,
@@ -109,7 +106,6 @@ module.exports = function(config) {
 					app_data: 'app.data',
 					AppCookies: 'react-cookie',
 					jQuery: 'jquery',
-					MdIcon: 'shared/MdIcon',
 					React: 'react',
 					ReactDOM: 'react-dom',
 					ReactIntl: 'react-intl',
@@ -119,11 +115,8 @@ module.exports = function(config) {
 					Redux: 'redux',
 					ReduxForm: 'redux-form',
 					ReduxSaga: 'redux-saga',
-					Spinner: 'shared/Spinner',
-					util_api: 'util.api',
-					util_convert: 'util.convert',
-					util_lib: 'util.lib',
-					util_local: 'util.local'
+					shared: 'shared',
+					utils: 'utilities'
 				}), // auto load modules
 			],
 			resolve: {
@@ -137,8 +130,7 @@ module.exports = function(config) {
 				modules: [
 					path.resolve(__dirname, './node_modules'),
 					path.resolve(__dirname, './src'),
-					path.resolve(__dirname, './src/components'),
-					path.resolve(__dirname, './src/utilities')
+					path.resolve(__dirname, './src/components')
 				]
 			},
 			watch: true

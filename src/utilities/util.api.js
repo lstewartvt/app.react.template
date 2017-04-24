@@ -2,7 +2,7 @@ import promise from 'es6-promise';
 import 'isomorphic-fetch';
 promise.polyfill();
 
-let util_api = module.exports = {
+const util_api = {
 
 	request: (request) => {
 		return fetch(request.endpoint, {
@@ -16,3 +16,5 @@ let util_api = module.exports = {
 		});
 	}
 };
+
+export default util_api;

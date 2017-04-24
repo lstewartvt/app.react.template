@@ -1,7 +1,3 @@
-import {
-	login
-} from 'sagas/auth';
-
 import Form from './Form';
 import {
 	FieldEmail,
@@ -53,7 +49,7 @@ class FormLogin extends React.Component {
 	render() {
 
 		if (this.props.busy) {
-			return <Spinner />;
+			return <shared.Spinner />;
 		}
 
 		const {
@@ -106,6 +102,4 @@ function mapStateToProps(state) {
 	};
 };
 
-export default ReactRedux.connect(mapStateToProps, {
-	login
-})(form(FormLogin));
+export default ReactRedux.connect(mapStateToProps)(form(FormLogin));

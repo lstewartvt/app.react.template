@@ -1,4 +1,4 @@
-let util_local = module.exports = {
+const util_local = {
 
 	get: (key) => {
 		return localStorage.getItem(key);
@@ -17,3 +17,5 @@ let util_local = module.exports = {
 		app_local.set(key, JSON.stringify(value));
 	}
 };
+
+export default util_local;

@@ -1,16 +1,18 @@
-import FontIcon from 'react-toolbox/lib/font_icon';
+ import FontIcon from 'react-toolbox/lib/font_icon';
 
-module.exports = MdIcon = (props) => {
+ const MdIcon = (props) => {
 
-	const classes = ['icon'];
-	if (props.className) {
-		classes.push(props.className);
-	}
+ 	const classes = ['icon'];
+ 	if (props.className) {
+ 		classes.push(props.className);
+ 	}
 
-	return (
-		<FontIcon
+ 	return (
+ 		<FontIcon
 	    {...props}
 	    className={classes.join(' ')}>
 	  </FontIcon>
-	);
-};
+ 	);
+ };
+
+ export default MdIcon;

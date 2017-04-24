@@ -1,12 +1,14 @@
+import routes from './routes';
+
 export default class Router extends React.Component {
 
-  render() {
-    return (
-      <ReactIntl.IntlProvider locale='en'>
+	render() {
+		return (
+			<ReactIntl.IntlProvider locale='en'>
         <ReactRouter.Router history={ReactRouter.browserHistory}>
-          {require('./routes')}
+          {routes}
         </ReactRouter.Router>
       </ReactIntl.IntlProvider>
-    );
-  };
+		);
+	};
 };

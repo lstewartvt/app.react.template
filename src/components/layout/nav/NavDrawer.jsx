@@ -1,8 +1,3 @@
-import {
-	logout,
-	toggleNav
-} from 'sagas';
-
 import Drawer from 'react-toolbox/lib/drawer';
 import TimeGreet from 'helpers/TimeGreet';
 
@@ -56,20 +51,32 @@ class NavDrawer extends React.Component {
 	};
 
 	handleLogout() {
-		this.props.toggleNav();
+		this.toggleNav();
 		this.props.dispatch({
 			type: 'app.auth.revoke'
 		});
 	};
 
+	toggleNav() {
+		this.props.dispatch({
+			type: 'app.toggle.nav'
+		});
+	};
+
 	render() {
-		let context = this.context;
-		let props = this.props;
+
+		const {
+			context,
+			links,
+			props,
+			toggleNav
+		} = this;
+
 		return (
 			<Drawer
-        active={this.props.nav_open}
+        active={props.nav_open}
         className='drawer-nav'
-        onOverlayClick={this.props.toggleNav}>
+        onOverlayClick={toggleNav.bind(this)}>
         <List selectable ripple>
           <ListItem
             className='greeting-item'
@@ -77,7 +84,7 @@ class NavDrawer extends React.Component {
             ripple={false}
             selectable={false} />
           {
-            this.links.map(function(link, index) {
+            links.map(function(link, index) {
               let path = app_data.nav[link.id] || app_data.nav.account[link.id];
               let isActive = path && context.router.isActive(path, true),
               className = isActive ? 'active' : undefined;
@@ -86,7 +93,7 @@ class NavDrawer extends React.Component {
                   key={`nav-link-${index}`}
                   className={className}
                   itemContent={<ItemContent link={link} />}
-                  onClick={link.onClick || props.toggleNav} />
+                  onClick={link.onClick || toggleNav} />
               );
             })
           }
@@ -107,7 +114,4 @@ function mapStateToProps(state) {
 	};
 };
 
-export default ReactRedux.connect(mapStateToProps, {
-	logout,
-	toggleNav
-})(NavDrawer);
+export default ReactRedux.connect(mapStateToProps)(NavDrawer);
