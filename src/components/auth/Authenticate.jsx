@@ -5,25 +5,31 @@ export default function(Layout) {
 		};
 
 		componentWillMount() {
-			if (!this.props.authenticated) {
-				this.context.router.push(app_data.nav.account.login);
-			}
+			this.props.dispatch({
+				type: 'app.auth.check'
+			});
 		};
 
 		componentWillUpdate(nextProps) {
-			if (!nextProps.authenticated) {
-				this.context.router.push(app_data.nav.account.login);
-			}
+			this.props.dispatch({
+				type: 'app.auth.check'
+			});
 		};
 
 		render() {
+
+			if (this.props.busy) {
+				return <shared.Spinner />;
+			}
+
 			return <Layout {...this.props} />;
 		};
 	};
 
 	function mapStateToProps(state) {
 		return {
-			authenticated: state.auth.authenticated
+			authenticated: state.auth.authenticated,
+			busy: state.auth.busy
 		};
 	};
 

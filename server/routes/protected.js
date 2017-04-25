@@ -5,7 +5,8 @@ let routes = module.exports = express.Router();
 
 routes.get('/auth', helpers.auth.check, (request, response) => {
 	return response.json({
-		success: true
+		success: true,
+		user: request.user
 	});
 });
 

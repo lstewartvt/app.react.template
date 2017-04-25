@@ -1,6 +1,6 @@
 const INITIAL_STATE = {
 	authenticated: false,
-	busy: false,
+	busy: true,
 	errors: undefined,
 	field_errors: undefined,
 	messages: undefined,
@@ -28,18 +28,22 @@ export default function(state = INITIAL_STATE, action) {
 		case 'app.auth.revoked':
 			return {...state,
 				authenticated: false,
+				busy: false,
 				user: undefined
 			};
 
 		case 'app.auth.error':
 			return {...state,
+				authenticated: false,
 				busy: false,
 				errors: action.errors,
-				field_errors: action.field_errors
+				field_errors: action.field_errors,
+				user: undefined
 			};
 
 		case 'app.auth.reset.form':
 			return {...state,
+				busy: false,
 				errors: undefined,
 				messages: undefined
 			};

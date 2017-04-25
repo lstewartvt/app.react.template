@@ -10,7 +10,7 @@ import {
 
 import './styles/Layout';
 
-const mongo_live = AppCookies.load('mongo_live');
+const mongo_live = utils.cookies.get('mongo_live');
 
 export default class Layout extends React.Component {
 

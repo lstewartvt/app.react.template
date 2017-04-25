@@ -9,8 +9,8 @@ const _ = require('lodash'),
 
 let cookieExtractor = function(request) {
 
-	let token = undefined;
-	if (request && request.cookies) {
+	let token = request.headers[app_data.auth.header.token_lower];
+	if (!token && (request && request.cookies)) {
 		token = request.cookies.get(app_data.auth.cookie_name);
 	}
 

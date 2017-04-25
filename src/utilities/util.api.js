@@ -2,7 +2,7 @@ import promise from 'es6-promise';
 import 'isomorphic-fetch';
 promise.polyfill();
 
-const util_api = {
+const api = {
 
 	request: (request) => {
 		return fetch(request.endpoint, {
@@ -10,11 +10,13 @@ const util_api = {
 			headers: {
 				...request.headers,
 				'Accept': 'application/json',
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/json',
+				'X-Auth': utils.cookies.get(app_data.auth.cookie_name),
+				'X-User': utils.cookies.get(app_data.auth.user_cookie)
 			},
 			body: JSON.stringify(request.body)
 		});
 	}
 };
 
-export default util_api;
+export default api;

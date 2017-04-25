@@ -4,23 +4,9 @@ import {
 } from 'sagas/global.helper';
 
 export function checkAuth() {
-	return dispatch => {
-
-		return utils.api.request({
-				endpoint: app_data.nav.account.auth
-			}).then(response => {
-				return handleErrors(response, dispatch, {
-					type: 'app.auth.error'
-				});
-			})
-			.then(data => {
-				dispatch({
-					type: PROTECTED_TEST,
-					payload: response.data.content
-				});
-			})
-			.catch(error => console.error(error.message));
-	}
+	return utils.api.request({
+		endpoint: app_data.nav.account.auth
+	});
 };
 
 export function login({

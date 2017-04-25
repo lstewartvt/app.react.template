@@ -1,10 +1,10 @@
-const util_local = {
+const local = {
 
 	get: (key) => {
 		return localStorage.getItem(key);
 	},
 	getObject: (key) => {
-		const value = app_local.get(key);
+		const value = local.get(key);
 		return value && JSON.parse(value);
 	},
 	remove: (key) => {
@@ -14,8 +14,8 @@ const util_local = {
 		localStorage.setItem(key, value);
 	},
 	setObject: (key, value) => {
-		app_local.set(key, JSON.stringify(value));
+		local.set(key, JSON.stringify(value));
 	}
 };
 
-export default util_local;
+export default local;

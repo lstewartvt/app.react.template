@@ -161,7 +161,6 @@ module.exports = {
 		new webpack.ProvidePlugin({
 			_: 'lodash',
 			app_data: 'app.data',
-			AppCookies: 'react-cookie',
 			jQuery: 'jquery',
 			React: 'react',
 			ReactDOM: 'react-dom',
