@@ -1,7 +1,3 @@
-import {
-	register
-} from 'sagas/auth';
-
 import Form from './Form';
 import {
 	FieldEmail,
@@ -45,7 +41,7 @@ class FormRegister extends React.Component {
 		});
 	};
 
-	handleClick(formProps) {
+	handleClick = (formProps) => {
 		this.props.dispatch({
 			type: 'app.auth.register',
 			form: formProps
@@ -66,7 +62,8 @@ class FormRegister extends React.Component {
 			<Form
         id='form-register'
         className='form-register'
-        errors={this.props.errors}>
+        errors={this.props.errors}
+        messages={this.props.messages}>
 
         <FieldEmail
           className='form-field field-email'
@@ -84,7 +81,7 @@ class FormRegister extends React.Component {
           className='form-button button-register'
           icon='person_add'
           label='Sign up'
-          onClick={handleSubmit(this.handleClick.bind(this))}
+          onClick={handleSubmit(this.handleClick)}
           primary
           raised />
 
@@ -112,6 +109,4 @@ function mapStateToProps(state) {
 	};
 };
 
-export default ReactRedux.connect(mapStateToProps, {
-	register
-})(form(FormRegister));
+export default ReactRedux.connect(mapStateToProps)(form(FormRegister));

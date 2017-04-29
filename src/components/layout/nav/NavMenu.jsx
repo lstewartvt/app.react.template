@@ -7,7 +7,7 @@ import './styles/NavMenu';
 
 export class NavMenu extends React.Component {
 
-	handleLogout() {
+	handleLogout = () => {
 		this.props.dispatch({
 			type: 'app.auth.revoke'
 		});
@@ -20,46 +20,34 @@ export class NavMenu extends React.Component {
         type='horizontal'>
         {
           menu_data.nav.map((link, index) => (
-            <ReactRouter.IndexLink
+            <shared.Anchor
               key={`nav-link-${index}`}
-              activeClassName='active'
-              className='link'
-              data-react-toolbox='link'
-              to={app_data.nav[link.id]}>
+              href={app_data.nav[link.id]}>
               <abbr>{link.title}</abbr>
-            </ReactRouter.IndexLink>
+            </shared.Anchor>
           ))
         }
         <div className='link-group'>
           {
             !this.props.authenticated && menu_data.account.map((link, index) => (
-              <ReactRouter.IndexLink
+              <shared.Anchor
                 key={`account-link-${index}`}
-                activeClassName='active'
-                className='link'
-                data-react-toolbox='link'
-                to={app_data.nav.account[link.id]}>
+                href={app_data.nav.account[link.id]}>
                 <abbr>{link.title}</abbr>
-              </ReactRouter.IndexLink>
+              </shared.Anchor>
             ))
           }
         </div>
         {this.props.authenticated && (
-          <ReactRouter.IndexLink
-            activeClassName='active'
-            className='link'
-            data-react-toolbox='link'
-            onClick={this.handleLogout.bind(this)}>
+          <shared.Anchor
+            onClick={this.handleLogout}>
             <abbr>Logout</abbr>
-          </ReactRouter.IndexLink>
+          </shared.Anchor>
         )}
-        <ReactRouter.IndexLink
-          activeClassName='active'
-          className='link'
-          data-react-toolbox='link'
-          to='404'>
+        <shared.Anchor
+          href='404'>
           <abbr>Error 404</abbr>
-        </ReactRouter.IndexLink>
+        </shared.Anchor>
       </Navigation>
 		);
 	}
@@ -67,7 +55,8 @@ export class NavMenu extends React.Component {
 
 function mapStateToProps(state) {
 	return {
-		authenticated: state.auth.authenticated
+		authenticated: state.auth.authenticated,
+		user: state.auth.user
 	};
 };
 

@@ -4,12 +4,11 @@ export default class HeaderLogo extends React.Component {
 
 	render() {
 		return (
-			<ReactRouter.IndexLink
+			<shared.Anchor
         id='header-logo-link'
-        activeClassName='active'
-        to='/'>
+        href='/'>
         React.App
-      </ReactRouter.IndexLink>
+      </shared.Anchor>
 		);
 	}
 };

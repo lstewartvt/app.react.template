@@ -5,6 +5,7 @@ const build = require('./build.config.js'),
 	NpmInstallPlugin = require('npm-install-webpack-plugin'),
 	path = require('path'),
 	webpack = require('webpack'),
+	WebpackNotifierPlugin = require('webpack-notifier'),
 	WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = {
@@ -27,8 +28,8 @@ module.exports = {
 		filename: path.join(build.path.DEST_JS, build.path.MINIFIED_JS),
 
 		// Everything related to Webpack should go through a build path,
-		// localhost:27773/dist. That makes proxying easier to handle
-		publicPath: '/dist'
+		// localhost:27773/. That makes proxying easier to handle
+		publicPath: '/'
 	},
 	devServer: {
 		contentBase: './dist',
@@ -146,6 +147,7 @@ module.exports = {
 		]),
 		new webpack.DefinePlugin({
 			'_debug': true, // include debug code
+			'_prod': false, // product environment
 			'_secure': false // has ssl cert
 		}),
 		// new NpmInstallPlugin({
@@ -158,6 +160,10 @@ module.exports = {
 		//   },
 		// }),
 		new webpack.HotModuleReplacementPlugin(),
+		new WebpackNotifierPlugin({
+			alwaysNotify: true
+
+		}),
 		new webpack.optimize.OccurrenceOrderPlugin(),
 		new webpack.ProvidePlugin({
 			_: 'lodash',
@@ -173,6 +179,7 @@ module.exports = {
 			ReduxSaga: 'redux-saga',
 			shared: 'shared',
 			utils: 'utilities'
+
 		}), // auto load modules
 		new WriteFilePlugin() // write physical files
 	],
@@ -182,12 +189,14 @@ module.exports = {
 			'.js',
 			'.json',
 			'.jsx',
-			'.scss'
+			'.scss',
+			'.util.js'
 		],
 		modules: [
 			path.resolve(__dirname, './node_modules'),
 			path.resolve(__dirname, './src'),
-			path.resolve(__dirname, './src/components')
+			path.resolve(__dirname, './src/components'),
+			path.resolve(__dirname, './src/utilities')
 		]
 	},
 	// this is a default value; just be aware of it

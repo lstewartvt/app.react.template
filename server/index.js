@@ -6,20 +6,20 @@ console.log(`Starting server in ${app.settings.env} mode...`);
 // We only want to run webpack in development environment
 if (app.settings.env === 'development') {
 
-	console.log('Setting DEV environment variables...');
-	const vars = require('dotenv').config();
+  console.log('Setting DEV environment variables...');
+  const vars = require('dotenv').config();
 
-	console.log('Turning on WebPack Middleware...');
-	const webpack = require('./webpack');
-	webpack.use.call(app);
+  console.log('Turning on WebPack Middleware...');
+  const webpack = require('./webpack');
+  webpack.use.call(app);
 }
 
 // set routes
 require('./routes/')(app);
 
 var server = app.listen(PORT, () => {
-	var host = server.address().address;
-	var port = server.address().port;
+  var host = server.address().address;
+  var port = server.address().port;
 
-	console.log(`Magic is being served up at http://${host === '::' ? 'localhost' : host}:${port}`);
+  console.log(`Magic is being served up at http://${host === '::' ? 'localhost' : host}:${port}`);
 });

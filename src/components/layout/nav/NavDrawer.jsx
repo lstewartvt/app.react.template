@@ -20,11 +20,10 @@ const Greeting = (props) => (
 );
 
 const ItemContent = (props) => (
-	<ReactRouter.IndexLink
-    activeClassName='active'
-    to={app_data.nav[props.link.id] || app_data.nav.account[props.link.id]}>
+	<shared.Anchor
+    href={app_data.nav[props.link.id] || app_data.nav.account[props.link.id]}>
     {props.link.title}
-  </ReactRouter.IndexLink>
+  </shared.Anchor>
 );
 
 class NavDrawer extends React.Component {
@@ -42,7 +41,7 @@ class NavDrawer extends React.Component {
 		this.links = menu_data.nav.slice();
 		if (this.props.authenticated) {
 			this.links.push({
-				onClick: this.handleLogout.bind(this),
+				onClick: this.handleLogout,
 				title: 'Logout'
 			})
 		} else {
@@ -57,7 +56,7 @@ class NavDrawer extends React.Component {
 		});
 	};
 
-	toggleNav() {
+	toggleNav = () => {
 		this.props.dispatch({
 			type: 'app.toggle.nav'
 		});
@@ -76,7 +75,7 @@ class NavDrawer extends React.Component {
 			<Drawer
         active={props.nav_open}
         className='drawer-nav'
-        onOverlayClick={toggleNav.bind(this)}>
+        onOverlayClick={toggleNav}>
         <List selectable ripple>
           <ListItem
             className='greeting-item'

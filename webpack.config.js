@@ -24,8 +24,8 @@ module.exports = {
 		filename: path.join(build.path.DEST_JS, build.path.MINIFIED_JS),
 
 		// Everything related to Webpack should go through a build path,
-		// localhost:27773/dist. That makes proxying easier to handle
-		publicPath: '/dist'
+		// localhost:27773/. That makes proxying easier to handle
+		publicPath: '/'
 	},
 	module: {
 		rules: [{
@@ -139,7 +139,8 @@ module.exports = {
 		]),
 		// new webpack.optimize.DedupePlugin(), // dedupe similar code
 		new webpack.DefinePlugin({
-			'_debug': false, // exclude debug code
+			'_debug': false, // include debug code
+			'_prod': true, // product environment
 			'_secure': false, // has ssl cert
 			'process.env': {
 				'NODE_ENV': JSON.stringify('production') // set production environment
@@ -182,12 +183,14 @@ module.exports = {
 			'.js',
 			'.json',
 			'.jsx',
-			'.scss'
+			'.scss',
+			'.util.js'
 		],
 		modules: [
 			path.resolve(__dirname, './node_modules'),
 			path.resolve(__dirname, './src'),
-			path.resolve(__dirname, './src/components')
+			path.resolve(__dirname, './src/components'),
+			path.resolve(__dirname, './src/utilities')
 		]
 	},
 	// this is a default value; just be aware of it

@@ -16,17 +16,16 @@ import {
 	NotFound,
 	Projects,
 	Register,
-	Team
+	Restricted,
+	Team,
+	Verify
 } from './pages';
 
 const routes = (
 	<section id='routes'>
-        <Route component={Layout}>
-            <Route path='login' component={Login} />
-            <Route path='register' component={Register} />
-        </Route>
-        <Route component={Authenticate(LayoutFull)} >
-            <Route path='/' component={Home} />
+    <Route component={Authenticate(LayoutFull)} >
+        <Route path='/'>
+            <IndexRoute component={Home} />
             <Route path='about' component={About} />
             <Route path='contact' component={Contact} />
             <Route path='donate' component={Donate} />
@@ -35,9 +34,16 @@ const routes = (
                 <IndexRoute component={Team} />
                 <Route path='profile' component={About} />
             </Route>
-            <Route path='*' component={NotFound} />
         </Route>
-    </section>
+    </Route>
+    <Route component={Layout}>
+        <Route path='login' component={Login} />
+        <Route path='register' component={Register} />
+        <Route path='restricted' component={Restricted} />
+        <Route path='verify/:token' component={Verify} />
+        <Route path='*' component={NotFound} />
+    </Route>
+  </section>
 );
 
 export default routes;

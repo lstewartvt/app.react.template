@@ -14,6 +14,8 @@ const Spinner = () => {
 						cy='33'
 						fill='none'
 						r='30'
+						strokeDasharray='187'
+						strokeDashoffset='0'
 						strokeLinecap='square'
 						strokeWidth='5'>
 					</circle>

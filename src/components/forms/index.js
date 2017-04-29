@@ -1,9 +1,4 @@
-import Form from './Form';
-import FormErrors from './FormErrors';
-import FormLogin from './FormLogin';
-import FormRegister from './FormRegister';
-
-exports.Form = Form;
-exports.FormErrors = FormErrors;
-exports.FormLogin = FormLogin;
-exports.FormRegister = FormRegister;
+export Form from './Form';
+export FormAlerts from './FormAlerts';
+export FormLogin from './FormLogin';
+export FormRegister from './FormRegister';

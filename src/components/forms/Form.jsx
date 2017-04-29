@@ -1,4 +1,4 @@
-import FormErrors from './FormErrors';
+import FormAlerts from './FormAlerts';
 
 import './styles/Form';
 
@@ -13,10 +13,12 @@ export default class Form extends React.Component {
 		}
 	};
 
-	renderErrors() {
-		if (this.props.errors) {
+	renderAlerts() {
+		if (this.props.errors || this.props.messages) {
 			return (
-				<FormErrors errors={this.props.errors} />
+				<FormAlerts
+					errors={this.props.errors}
+        	messages={this.props.messages} />
 			);
 		}
 	};
@@ -27,7 +29,7 @@ export default class Form extends React.Component {
         id={this.props.id}
         className={this.classes.join(' ')}>
 
-        {this.renderErrors()}
+        {this.renderAlerts()}
         {this.props.children}
         
       </form>

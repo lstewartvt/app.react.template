@@ -1,6 +1,3 @@
-import {
-	ContentTitle
-} from 'shared';
 import FormRegister from 'forms/FormRegister';
 
 import './styles/Register';
@@ -11,7 +8,7 @@ export default class Register extends React.Component {
 			<section
         id='register'
         className='content'>
-        <ContentTitle>Join Today!</ContentTitle>
+        <shared.ContentTitle>Join Today!</shared.ContentTitle>
         <FormRegister />
       </section>
 		);

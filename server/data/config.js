@@ -1,5 +1,9 @@
 module.exports = {
   auth: {
-    expire: 1440 // in minutes
+    expires: 1440 // in minutes
+  },
+  verify: {
+    expires: '31m',
+    expireText: '31 minutes'
   }
 };

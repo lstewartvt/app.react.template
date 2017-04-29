@@ -2,15 +2,16 @@
 
  const MdIcon = (props) => {
 
- 	const classes = ['icon'];
+ 	let className = ['icon'];
  	if (props.className) {
- 		classes.push(props.className);
+ 		className.push(props.className);
  	}
+ 	className = className.join(' ');
 
  	return (
  		<FontIcon
 	    {...props}
-	    className={classes.join(' ')}>
+	    className={className}>
 	  </FontIcon>
  	);
  };

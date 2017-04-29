@@ -20,7 +20,10 @@ module.exports = function(config) {
 				rules: [{
 					test: /\.jsx?$/,
 					exclude: /node_modules/,
-					use: 'babel-loader'
+					use: [
+						'react-hot-loader',
+						'babel-loader?cacheDirectory=true'
+					]
 				}, {
 					test: /\.s?css$/,
 					exclude: /src/,
@@ -97,8 +100,12 @@ module.exports = function(config) {
 			},
 			plugins: [
 				new webpack.DefinePlugin({
-					'_debug': true, // include debug code
-					'_secure': false // has ssl cert
+					'_debug': false, // include debug code
+					'_prod': true, // product environment
+					'_secure': false, // has ssl cert
+					'process.env': {
+						'NODE_ENV': JSON.stringify('production') // set production environment
+					}
 				}),
 				new webpack.optimize.OccurrenceOrderPlugin(),
 				new webpack.ProvidePlugin({
@@ -124,12 +131,14 @@ module.exports = function(config) {
 					'.js',
 					'.json',
 					'.jsx',
-					'.scss'
+					'.scss',
+					'.util.js'
 				],
 				modules: [
 					path.resolve(__dirname, './node_modules'),
 					path.resolve(__dirname, './src'),
-					path.resolve(__dirname, './src/components')
+					path.resolve(__dirname, './src/components'),
+					path.resolve(__dirname, './src/utilities')
 				]
 			},
 			watch: true

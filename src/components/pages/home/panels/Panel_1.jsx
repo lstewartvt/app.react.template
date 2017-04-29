@@ -1,10 +1,3 @@
-const app_data = require('app.data');
-
-import {
-	ContentTitleCaps,
-	ContentSubTitle
-} from 'shared';
-
 import '../styles/Panel_1';
 
 export default class Panel_1 extends React.Component {
@@ -17,8 +10,8 @@ export default class Panel_1 extends React.Component {
 		return (
 			<div id='panel-1' className='parallax-block'>
         <section className='parallax-content'>
-          <ContentTitleCaps>{this.props.title || 'Panel 1'} Under Construction</ContentTitleCaps>
-          <ContentSubTitle>{this.props.title || 'Panel 1'} Subtitle</ContentSubTitle>
+          <shared.ContentTitleCaps>{this.props.title || 'Panel 1'} Under Construction</shared.ContentTitleCaps>
+          <shared.ContentSubTitle>{this.props.title || 'Panel 1'} Subtitle</shared.ContentSubTitle>
           <article className='content'>
             <ReactRouter.Link
               className='mui-btn mui-btn--primary mui-btn--raised'

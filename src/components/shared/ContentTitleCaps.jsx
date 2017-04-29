@@ -1,16 +1,14 @@
-import ContentTitle from './ContentTitle';
-
 export default class ContentTitleCaps extends React.Component {
 
-  constructor(props) {
-    super(props);
-  };
+	constructor(props) {
+		super(props);
+	};
 
-  render() {
-    return (
-      <ContentTitle className='caps'>
+	render() {
+		return (
+			<shared.ContentTitle className='caps'>
         {this.props.children}
-      </ContentTitle>
-    );
-  };
+      </shared.ContentTitle>
+		);
+	};
 };

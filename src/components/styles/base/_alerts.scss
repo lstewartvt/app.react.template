@@ -1,7 +1,14 @@
-.error-block {
-  background-color: $errorBg;
-  border: 1px solid $errorBorder;
+.alert {
   border-radius: 3px;
-  color: $errorText;
   padding: 5px;
+  &.alert-error {
+    background-color: $errorBg;
+    border: 1px solid $errorBorder;
+    color: $errorText;
+  }
+  &.alert-info {
+    background-color: $infoBg;
+    border: 1px solid $infoBorder;
+    color: $infoText;
+  }
 }

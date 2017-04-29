@@ -1,6 +1,3 @@
-import {
-	ContentTitle
-} from 'shared';
 import FormLogin from 'forms/FormLogin';
 
 import './styles/Login';
@@ -11,7 +8,7 @@ export default class Login extends React.Component {
 			<section
         id='login'
         className='content'>
-        <ContentTitle>Welcome</ContentTitle>
+        <shared.ContentTitle>Welcome</shared.ContentTitle>
         <FormLogin />
       </section>
 		);

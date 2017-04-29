@@ -22,13 +22,6 @@ sagas(sagaMiddleware);
 const injectTapEventPlugin = require('react-tap-event-plugin');
 injectTapEventPlugin();
 
-// used for dangerouslySetInnerHtml
-window.createMarkup = function(markup) {
-	return {
-		__html: markup
-	};
-}
-
 window.onload = () => {
 
 	ReactDOM.render(

@@ -1,45 +1,38 @@
 const mailer = require('express-mailer');
 const props = includes('properties');
 
-var handleSendError = (error, response) => {
-	console.log(error);
-	response.send('There was an error sending the email');
-};
-
-var handleSendSuccess = (response) => {
-	console.log('Email sent successfully');
-	response.send('Email sent successfully');
+var handleSendError = (error) => {
+  throw new Error(error);
 };
 
 // Set up smtp
-module.exports = {
-	init: function() {
+let mail_helper = module.exports = {
+  app: undefined,
+  init: function() {
 
-		var app = this;
+    mail_helper.app = this;
+    mailer.extend(mail_helper.app, {
+      from: process.env.admin_email,
+      host: 'smtp.gmail.com', // hostname
+      secureConnection: true, // use SSL
+      port: 465, // port for secure SMTP
+      transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts
+      auth: {
+        user: process.env.google_user,
+        pass: process.env.google_password
+      }
+    });
+  },
+  send: function(message, callback) {
 
-		mailer.extend(app, {
-			from: process.env.admin_email,
-			host: 'smtp.gmail.com', // hostname
-			secureConnection: true, // use SSL
-			port: 465, // port for secure SMTP
-			transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts
-			auth: {
-				user: process.env.google_user,
-				pass: process.env.google_password
-			}
-		});
-	},
-	send: function(message) {
+    mail_helper.app.mailer.send(message.template, message.config, function(error) {
+      if (error) {
+        handleSendError(error);
+      }
 
-		var app = this;
-
-		app.mailer.send(message.template, message.config, function(error) {
-			if (error) {
-				(message.handleError || handleSendError)(error, message.response);
-				return;
-			}
-
-			(message.handleSuccess || handleSendSuccess)(message.response);
-		});
-	}
+      if (callback && typeof callback === 'function') {
+        callback();
+      }
+    });
+  }
 };

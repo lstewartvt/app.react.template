@@ -2,13 +2,10 @@
   @media (max-width: $screenXsMax) {
     display: none;
   }
-
   > .link-group {
     display: inline-block;
-
     > .link {
       display: inherit;
-
       + .link {
         &:before {
           content: '/';
@@ -18,13 +15,14 @@
       }
     }
   }
-
   > .link[data-react-toolbox=link] {
     color: $siteBg;
     cursor: pointer;
     margin: 0 15px;
+    &.active {
+      color: $cta;
+    }
   }
-
   + .rightIcon {
     &.toggle {
       > .icon {

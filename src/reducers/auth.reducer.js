@@ -1,54 +1,72 @@
 const INITIAL_STATE = {
-	authenticated: false,
-	busy: true,
-	errors: undefined,
-	field_errors: undefined,
-	messages: undefined,
-	user: undefined
+  authenticated: false,
+  busy: true,
+  errors: undefined,
+  field_errors: undefined,
+  messages: undefined,
+  user: undefined
 };
 
 export default function(state = INITIAL_STATE, action) {
-	switch (action.type) {
+  switch (action.type) {
 
-		case 'app.auth.register':
-		case 'app.auth.request':
-			return {...state,
-				busy: true
-			};
+    case 'app.auth.register':
+    case 'app.auth.request':
+      return {...state,
+        busy: true
+      };
 
-		case 'app.auth.success':
-			return {...state,
-				authenticated: true,
-				busy: false,
-				errors: undefined,
-				messages: undefined,
-				user: action.user
-			};
+    case 'app.auth.success':
+      return {...state,
+        authenticated: true,
+        busy: false,
+        errors: undefined,
+        messages: undefined,
+        user: action.user
+      };
 
-		case 'app.auth.revoked':
-			return {...state,
-				authenticated: false,
-				busy: false,
-				user: undefined
-			};
+    case 'app.auth.registered':
+      return {...state,
+        authenticated: false,
+        busy: false,
+        errors: action.errors,
+        messages: action.messages,
+        user: action.user
+      };
 
-		case 'app.auth.error':
-			return {...state,
-				authenticated: false,
-				busy: false,
-				errors: action.errors,
-				field_errors: action.field_errors,
-				user: undefined
-			};
+    case 'app.auth.revoked':
+      return {...state,
+        authenticated: false,
+        busy: false,
+        user: undefined
+      };
 
-		case 'app.auth.reset.form':
-			return {...state,
-				busy: false,
-				errors: undefined,
-				messages: undefined
-			};
+    case 'app.auth.error':
+      return {...state,
+        authenticated: false,
+        busy: false,
+        errors: action.errors,
+        field_errors: action.field_errors,
+        messages: action.messages,
+        user: undefined
+      };
 
-		default:
-			return state;
-	};
+    case 'app.auth.reset.form':
+      return {...state,
+        busy: false,
+        errors: undefined
+      };
+
+    case 'app.auth.verified':
+      return {...state,
+        authenticated: true,
+        busy: false,
+        errors: undefined,
+        messages: undefined,
+        user: action.user
+      };
+
+    default:
+      return state;
+  };
 };

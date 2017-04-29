@@ -10,24 +10,36 @@ import './styles/Header';
 
 export class Header extends React.Component {
 
-	handleHomeClick() {
+	handleHomeClick = () => {
 		ReactRouter.browserHistory.push(app_data.nav.home);
 	};
 
-	handleMenuClick() {
+	toggleNav = () => {
 		this.props.dispatch({
 			type: 'app.toggle.nav'
 		});
 	};
 
 	render() {
+
+		if (_prod) {
+			return (
+				<AppBar
+          className='header'
+          fixed
+          title={<HeaderLogo />}>
+          <NavMenu />
+        </AppBar>
+			);
+		}
+
 		return (
 			<AppBar
         className='header'
         fixed
         leftIcon='home'
-        onLeftIconClick={this.handleHomeClick.bind(this)}
-        onRightIconClick={this.handleMenuClick.bind(this)}
+        onLeftIconClick={this.handleHomeClick}
+        onRightIconClick={this.toggleNav}
         rightIcon='menu'
         title={'React.App'||<HeaderLogo />}>
         <NavMenu />

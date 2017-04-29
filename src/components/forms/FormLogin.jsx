@@ -39,7 +39,7 @@ class FormLogin extends React.Component {
 		});
 	}
 
-	handleClick(formProps) {
+	handleClick = (formProps) => {
 		this.props.dispatch({
 			type: 'app.auth.request',
 			form: formProps
@@ -60,7 +60,8 @@ class FormLogin extends React.Component {
 			<Form
         id='form-login'
         className='form-login'
-        errors={this.props.errors}>
+        errors={this.props.errors}
+        messages={this.props.messages}>
         
         <FieldEmail
           className='form-field field-email'
@@ -74,7 +75,7 @@ class FormLogin extends React.Component {
           className='form-button button-login'
           icon='person'
           label='Log in'
-          onClick={handleSubmit(this.handleClick.bind(this))}
+          onClick={handleSubmit(this.handleClick)}
           primary
           raised />
 

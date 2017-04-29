@@ -8,4 +8,6 @@ export Login from './login/Login';
 export NotFound from './notFound/NotFound';
 export Projects from './projects/Projects';
 export Register from './register/Register';
+export Restricted from './restricted/Restricted';
 export Team from './team/Team';
+export Verify from './verify/Verify';
