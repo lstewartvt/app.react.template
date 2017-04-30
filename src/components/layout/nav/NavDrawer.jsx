@@ -49,7 +49,15 @@ class NavDrawer extends React.Component {
 		}
 	};
 
-	handleLogout() {
+	getSubject = () => {
+		if (!this.props.user) {
+			return app_data.auth.anon;
+		}
+
+		return this.props.user.name;
+	};
+
+	handleLogout = () => {
 		this.toggleNav();
 		this.props.dispatch({
 			type: 'app.auth.revoke'
@@ -79,7 +87,7 @@ class NavDrawer extends React.Component {
         <List selectable ripple>
           <ListItem
             className='greeting-item'
-            itemContent={<Greeting subject='K0NRT15' />}
+            itemContent={<Greeting subject={this.getSubject()} />}
             ripple={false}
             selectable={false} />
           {
@@ -109,7 +117,8 @@ NavDrawer.contextTypes = {
 function mapStateToProps(state) {
 	return {
 		authenticated: state.auth.authenticated,
-		nav_open: state.global.nav_open
+		nav_open: state.global.nav_open,
+		user: state.auth.user
 	};
 };
 
