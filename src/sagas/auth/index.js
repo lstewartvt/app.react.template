@@ -1,4 +1,3 @@
-import * as auth_helper from './auth.helper';
 import {
 	handleErrors
 } from 'sagas/global.helper';
@@ -31,6 +30,8 @@ export function* checkAuth() {
 
 			// redirect to login 
 			ReactRouter.browserHistory.push(app_data.nav.account.login);
+
+			utils.log.debug(response);
 		}
 	});
 };
@@ -40,7 +41,11 @@ export function* login() {
 
 		try {
 
-			const result = yield call(auth_helper.login, action.form);
+			const result = yield call((() => utils.api.request({
+				endpoint: app_data.nav.account.login,
+				method: 'POST',
+				body: action.body
+			})));
 			const response = yield call(handleErrors, result);
 
 			// store auth cookies
@@ -66,9 +71,7 @@ export function* login() {
 				messages: response.messages
 			});
 
-			if (_debug) {
-				throw new Error(response);
-			}
+			utils.log.debug(response);
 		}
 	});
 };
@@ -79,7 +82,11 @@ export function* register() {
 
 		try {
 
-			const result = yield call(auth_helper.register, action.form);
+			const result = yield call(() => utils.api.request({
+				endpoint: app_data.nav.account.register,
+				method: 'POST',
+				body: action.body
+			}));
 			const response = yield call(handleErrors, result);
 
 			// show success message
@@ -100,9 +107,7 @@ export function* register() {
 				messages: response.messages
 			});
 
-			if (_debug) {
-				throw new Error(response);
-			}
+			utils.log.debug(response);
 		}
 	});
 };
@@ -113,7 +118,10 @@ export function* verify() {
 
 		try {
 
-			const result = yield call(auth_helper.verify, action.endpoint);
+			const result = yield call(() => utils.api.request({
+				endpoint: endpoint,
+				method: 'POST'
+			}), action.endpoint);
 			const response = yield call(handleErrors, result);
 
 			// store auth cookies
@@ -135,6 +143,10 @@ export function* verify() {
 
 			// redirect to login 
 			ReactRouter.browserHistory.push(app_data.nav.account.login);
+
+			if (_debug) {
+				console.log(response);
+			}
 		}
 	});
 };
