@@ -4,10 +4,9 @@ module.exports = {
 		cookie_name: '.auth',
 		expire: 1440, // in minutes
 		header: {
-			token: 'X-Auth',
-			token_lower: 'x-auth'
-		},
-		user_cookie: '.user'
+			token: 'Authorization',
+			token_lower: 'authorization'
+		}
 	},
 	date: new Date(),
 	messages: {

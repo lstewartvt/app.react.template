@@ -11,8 +11,7 @@ const api = {
 				...request.headers,
 				'Accept': 'application/json',
 				'Content-Type': 'application/json',
-				'X-Auth': utils.cookies.get(app_data.auth.cookie_name),
-				'X-User': utils.cookies.get(app_data.auth.user_cookie)
+				'Authorization': utils.cookies.get(app_data.auth.cookie_name)
 			},
 			body: JSON.stringify(request.body)
 		});
