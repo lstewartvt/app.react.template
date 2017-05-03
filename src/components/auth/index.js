@@ -1,1 +1,1 @@
-export Authenticate from './Authenticate';
+export Protect from './Protect';

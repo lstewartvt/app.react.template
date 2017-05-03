@@ -42,7 +42,7 @@ class FormLogin extends React.Component {
 	handleClick = (formProps) => {
 		this.props.dispatch({
 			type: 'app.auth.request',
-			form: formProps
+			data: formProps
 		});
 	};
 

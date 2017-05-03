@@ -1,4 +1,4 @@
-export api from './api';
+export ajax from './ajax';
 export cookies from './cookies';
 export convert from './convert';
 export dom from './dom';

@@ -3,7 +3,7 @@ const {
 	Route
 } = ReactRouter;
 
-import Authenticate from './auth/Authenticate';
+import Protect from './auth/Protect';
 
 import {
 	About,
@@ -23,7 +23,7 @@ import {
 
 const routes = (
 	<section id='routes'>
-    <Route component={Authenticate(LayoutFull)} >
+    <Route component={Protect(LayoutFull)} >
         <Route path='/'>
             <IndexRoute component={Home} />
             <Route path='about' component={About} />

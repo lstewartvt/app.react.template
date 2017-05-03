@@ -1,5 +1,9 @@
 const path = require('path'),
-  webpack = require('webpack');
+  webpack = require('webpack'),
+  webpackConfigAssign = require('webpack-config-assign');
+
+const base = require('./webpack.base.js').base,
+  plugins = require('./webpack.base.js').plugins_base;
 
 module.exports = function(config) {
   config.set({
@@ -14,16 +18,13 @@ module.exports = function(config) {
     },
     reporters: ['dots'], // report results in this format
     singleRun: true, // just run once by default
-    webpack: { // kind of a copy of your webpack config
+    webpack: webpackConfigAssign(base, { // kind of a copy of your webpack config
       devtool: 'inline-source-map', //just do inline source maps instead of the default
       module: {
         rules: [{
           test: /\.jsx?$/,
           exclude: /node_modules/,
-          use: [
-            'react-hot-loader',
-            'babel-loader?cacheDirectory=true'
-          ]
+          use: 'babel-loader'
         }, {
           test: /\.s?css$/,
           exclude: /src/,
@@ -98,7 +99,7 @@ module.exports = function(config) {
           }]
         }]
       },
-      plugins: [
+      plugins: plugins.concat([
         new webpack.DefinePlugin({
           '_debug': false, // include debug code
           '_prod': true, // product environment
@@ -107,25 +108,8 @@ module.exports = function(config) {
             'API_URL': JSON.stringify(process.env.API_URL),
             'NODE_ENV': JSON.stringify('production') // set production environment
           }
-        }),
-        new webpack.optimize.OccurrenceOrderPlugin(),
-        new webpack.ProvidePlugin({
-          _: 'lodash',
-          app_data: 'app.data',
-          jQuery: 'jquery',
-          React: 'react',
-          ReactDOM: 'react-dom',
-          ReactIntl: 'react-intl',
-          ReactRedux: 'react-redux',
-          ReactRouter: 'react-router',
-          ReactTests: 'react-addons-test-utils',
-          Redux: 'redux',
-          ReduxForm: 'redux-form',
-          ReduxSaga: 'redux-saga',
-          shared: 'shared',
-          utils: 'utilities'
-        }), // auto load modules
-      ],
+        })
+      ]),
       resolve: {
         extensions: [
           '.css',
@@ -139,16 +123,13 @@ module.exports = function(config) {
         modules: [
           path.resolve(__dirname, './node_modules'),
           path.resolve(__dirname, './src'),
-          path.resolve(__dirname, './src/components'),
-          path.resolve(__dirname, './src/utilities')
+          path.resolve(__dirname, './src/components')
         ]
       },
       watch: true
-    },
+    }),
     webpackServer: {
       noInfo: true // keep console clean when running in karma
-    },
-    // this is a default value; just be aware of it 
-    target: 'web'
+    }
   });
 };

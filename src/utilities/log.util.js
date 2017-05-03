@@ -1,10 +1,7 @@
 const log = {
 
 	debug: () => {
-
-		if (_debug) {
-			console.log.apply(this, arguments);
-		}
+		return _debug && console.log.apply(this, arguments);
 	}
 };
 

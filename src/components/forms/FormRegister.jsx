@@ -44,7 +44,7 @@ class FormRegister extends React.Component {
 	handleClick = (formProps) => {
 		this.props.dispatch({
 			type: 'app.auth.register',
-			form: formProps
+			data: formProps
 		});
 	};
 

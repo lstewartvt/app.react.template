@@ -1,16 +1,18 @@
 export const API_URL = process.env.API_URL || '';
 
-export function* handleErrors(response) {
+export function* handleErrors(error) {
 
-	if (!response.ok || response.status >= 400) {
-		throw yield response.json();
-	}
+  if (!error.response) {
+    throw new Error(error);
+  }
 
-	return yield response.json();
-};
+  const response = error.response;
+  utils.log.debug(response);
 
-export function logout() {
-	return utils.api.request({
-		endpoint: app_data.nav.account.logout
-	});
+  if (response.status === 401 || response.status === 403) {
+    ReactRouter.browserHistory.push(app_data.nav.restricted);
+    throw new Error(reponse.data);
+  }
+
+  return response.data;
 };

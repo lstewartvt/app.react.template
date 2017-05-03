@@ -1,152 +1,145 @@
-import {
-	handleErrors
-} from 'sagas/global.helper';
+import * as glob from 'sagas/global.helper';
 
 import {
-	call,
-	put,
-	takeEvery
+  call,
+  put,
+  takeEvery
 } from 'redux-saga/effects';
 
 export function* checkAuth() {
 
-	yield takeEvery('app.auth.check', function*() {
+  yield takeEvery('app.auth.check', function*() {
 
-		try {
+    try {
 
-			const result = yield call(auth_helper.checkAuth);
-			const response = yield call(handleErrors, result);
+      const response = yield call(utils.ajax.get, {
+        endpoint: app_data.nav.account.auth
+      });
+      const data = response.data;
 
-			// update user 
-			yield put({
-				type: 'app.auth.success',
-				user: response.user
-			});
-		} catch (response) {
+      // update user
+      yield put({
+        type: 'app.auth.success',
+        user: data.user
+      });
+    } catch (error) {
 
-			yield put({
-				type: 'app.auth.error'
-			});
+      yield call(glob.handleErrors, error)
+      yield put({
+        type: 'app.auth.error'
+      });
 
-			// redirect to login 
-			ReactRouter.browserHistory.push(app_data.nav.account.login);
-
-			utils.log.debug(response);
-		}
-	});
+      // redirect to login
+      ReactRouter.browserHistory.push(app_data.nav.account.login);
+    }
+  });
 };
 
 export function* login() {
-	yield takeEvery('app.auth.request', function*(action) {
 
-		try {
+  yield takeEvery('app.auth.request', function*(action) {
 
-			const result = yield call((() => utils.api.request({
-				endpoint: app_data.nav.account.login,
-				method: 'POST',
-				body: action.body
-			})));
-			const response = yield call(handleErrors, result);
+    try {
 
-			// store auth cookies
-			utils.cookies.set(app_data.auth.cookie_name, response.token, {
-				path: '/',
-				secure: _secure
-			});
+      let response = yield call(utils.ajax.post, {
+        endpoint: app_data.nav.account.login,
+        body: action.data
+      });
+      const data = response.data;
 
-			// update user
-			yield put({
-				type: 'app.auth.success',
-				user: response.user
-			});
+      // store auth cookies
+      utils.cookies.set(app_data.auth.cookie_name, data.token, {
+        path: '/',
+        secure: _secure
+      });
 
-			// redirect to home
-			ReactRouter.browserHistory.push(app_data.nav.home);
-		} catch (response) {
+      // update user
+      yield put({
+        type: 'app.auth.success',
+        user: data.user
+      });
 
-			yield put({
-				type: 'app.auth.error',
-				field_errors: response.field_errors,
-				errors: response.errors,
-				messages: response.messages
-			});
+      // redirect to home
+      ReactRouter.browserHistory.push(app_data.nav.home);
+    } catch (error) {
 
-			utils.log.debug(response);
-		}
-	});
+      const data = yield call(glob.handleErrors, error)
+      yield put({
+        type: 'app.auth.error',
+        field_errors: data.field_errors,
+        errors: data.errors,
+        messages: data.messages
+      });
+    }
+  });
 };
 
 export function* register() {
 
-	yield takeEvery('app.auth.register', function*(action) {
+  yield takeEvery('app.auth.register', function*(action) {
 
-		try {
+    try {
 
-			const result = yield call(() => utils.api.request({
-				endpoint: app_data.nav.account.register,
-				method: 'POST',
-				body: action.body
-			}));
-			const response = yield call(handleErrors, result);
+      const response = yield call(utils.ajax.post, {
+        endpoint: app_data.nav.account.register,
+        body: action.data
+      });
+      const data = response.data;
 
-			// show success message
-			yield put({
-				type: 'app.auth.registered',
-				messages: [app_data.messages.register.success.replace('{user}', response.user.handle)],
-				user: response.user
-			});
+      // show success message
+      yield put({
+        type: 'app.auth.registered',
+        messages: [app_data.messages.register.success.replace('{user}', data.user.handle)],
+        user: data.user
+      });
 
-			// redirect to home
-			ReactRouter.browserHistory.push(app_data.nav.account.login);
-		} catch (response) {
+      // redirect to home
+      ReactRouter.browserHistory.push(app_data.nav.account.login);
+    } catch (error) {
 
-			yield put({
-				type: 'app.auth.error',
-				field_errors: response.field_errors,
-				errors: response.errors,
-				messages: response.messages
-			});
-
-			utils.log.debug(response);
-		}
-	});
+      const data = yield call(glob.handleErrors, error)
+      yield put({
+        type: 'app.auth.error',
+        field_errors: data.field_errors,
+        errors: data.errors,
+        messages: data.messages
+      });
+    }
+  });
 };
 
 export function* verify() {
 
-	yield takeEvery('app.auth.verify', function*(action) {
+  yield takeEvery('app.auth.verify', function*(action) {
 
-		try {
+    try {
 
-			const result = yield call(() => utils.api.request({
-				endpoint: endpoint,
-				method: 'POST'
-			}), action.endpoint);
-			const response = yield call(handleErrors, result);
+      const response = yield call(utils.ajax.post, {
+        endpoint: endpoint,
+        method: 'POST'
+      });
+      const data = response.data;
 
-			// store auth cookies
-			utils.cookies.set(app_data.auth.cookie_name, response.token, {
-				path: '/',
-				secure: _secure
-			});
+      // store auth cookies
+      utils.cookies.set(app_data.auth.cookie_name, data.token, {
+        path: '/',
+        secure: _secure
+      });
 
-			// update user 
-			yield put({
-				type: 'app.auth.verified',
-				user: response.user
-			});
-		} catch (response) {
+      // update user 
+      yield put({
+        type: 'app.auth.verified',
+        user: data.user
+      });
+    } catch (error) {
 
-			yield put({
-				type: 'app.auth.error'
-			});
+      yield call(glob.handleErrors, error)
+      yield put({
+        type: 'app.auth.error'
+      });
 
-			// redirect to login 
-			ReactRouter.browserHistory.push(app_data.nav.account.login);
-
-			if (_debug) {
-				console.log(response);
-			}
-		}
-	});
+      // redirect to login 
+      ReactRouter.browserHistory.push(app_data.nav.account.login);
+    }
+  });
 };

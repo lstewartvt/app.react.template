@@ -1,9 +1,4 @@
-import * as global_helper from './global.helper';
-import {
-	handleErrors
-}
-from 'sagas/global.helper';
-
+import * as glob from './global.helper';
 import {
 	call,
 	put,
@@ -12,29 +7,29 @@ import {
 
 export function* logout() {
 
-	yield takeEvery('app.auth.revoke', function* logoutFlow(action) {
+	yield takeEvery('app.auth.revoke', function*(action) {
 
 		try {
 
-			const result = yield call(global_helper.logout);
-			const response = yield call(handleErrors, result);
+			yield call(utils.ajax.get, {
+				endpoint: app_data.nav.account.logout
+			});
 
 			utils.cookies.remove(app_data.auth.cookie_name);
+
 			yield put({
 				type: 'app.auth.revoked'
 			});
 
 			// redirect to login
 			ReactRouter.browserHistory.push(app_data.nav.account.login);
-		} catch (response) {
+		} catch (error) {
 
+			const data = yield call(glob.handleErrors, error)
 			yield put({
 				type: 'app.auth.error',
-				field_errors: response.field_errors,
-				errors: response.errors
+				errors: data.errors
 			});
-
-			utils.log.debug(response);
 		}
 	});
 };

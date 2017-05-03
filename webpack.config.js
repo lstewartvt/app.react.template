@@ -1,32 +1,21 @@
 const build = require('./build.config.js'),
-  CleanWebpackPlugin = require('clean-webpack-plugin'),
   CompressionPlugin = require('compression-webpack-plugin'),
-  CopyWebpackPlugin = require('copy-webpack-plugin'),
   cssnext = require('postcss-cssnext'),
   ExtractTextPlugin = require('extract-text-webpack-plugin'),
   OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
   path = require('path'),
   webpack = require('webpack'),
+  webpackConfigAssign = require('webpack-config-assign'),
   WriteFilePlugin = require('write-file-webpack-plugin');
 
-module.exports = {
-  cache: false,
-  context: __dirname,
+const base = require('./webpack.base.js').base,
+  webpack_build = require('./webpack.base.js').build,
+  plugins = require('./webpack.base.js').plugins_base
+  .concat(require('./webpack.base.js').plugins_build);
+
+module.exports = webpackConfigAssign(base, webpack_build, {
   devtool: 'cheap-module-source-map',
   entry: build.path.JSX_ENTRY_POINT,
-  output: {
-    // We need to give Webpack a path. It does not actually need it,
-    // because files are kept in memory in webpack-dev-server, but an
-    // error will occur if nothing is specified. We use the buildPath
-    // as that points to where the files will eventually be bundled
-    // in production
-    path: build.path.DEST,
-    filename: path.join(build.path.DEST_JS, build.path.MINIFIED_JS),
-
-    // Everything related to Webpack should go through a build path,
-    // localhost:27773/. That makes proxying easier to handle
-    publicPath: '/'
-  },
   module: {
     rules: [{
       test: /\.jsx?$/,
@@ -106,13 +95,8 @@ module.exports = {
       })
     }]
   },
-  plugins: [
+  plugins: plugins.concat([
     new webpack.optimize.AggressiveMergingPlugin(), // merge chunks
-    new CleanWebpackPlugin(['dist'], { // remove old build directory
-      root: __dirname,
-      verbose: true,
-      dry: false
-    }),
     new CompressionPlugin({
       asset: '[path].gz[query]',
       algorithm: 'gzip',
@@ -120,23 +104,6 @@ module.exports = {
       threshold: 10240,
       minRatio: 0.8
     }), // gzip files
-    new CopyWebpackPlugin([ // copy files
-      // {output}/favicon.ico
-      {
-        from: 'src/favicon.ico'
-      },
-
-      // {output}/file.txt
-      {
-        from: 'src/index.pug'
-      },
-
-      // Copy directory contents to {output}/images/
-      {
-        from: 'src/images',
-        to: 'images'
-      }
-    ]),
     // new webpack.optimize.DedupePlugin(), // dedupe similar code
     new webpack.DefinePlugin({
       '_debug': false, // include debug code
@@ -149,7 +116,6 @@ module.exports = {
     }),
     new ExtractTextPlugin(path.join(build.path.DEST_CSS, build.path.MINIFIED_CSS)), // get physical CSS files
     new webpack.NoEmitOnErrorsPlugin(), // skip emitting phase
-    new webpack.optimize.OccurrenceOrderPlugin(),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.min\.css$/g,
       cssProcessor: require('cssnano'),
@@ -160,41 +126,6 @@ module.exports = {
       },
       canPrint: true
     }), // minifiy CSS
-    new webpack.ProvidePlugin({
-      _: 'lodash',
-      app_data: 'app.data',
-      jQuery: 'jquery',
-      React: 'react',
-      ReactDOM: 'react-dom',
-      ReactIntl: 'react-intl',
-      ReactRedux: 'react-redux',
-      ReactRouter: 'react-router',
-      Redux: 'redux',
-      ReduxForm: 'redux-form',
-      ReduxSaga: 'redux-saga',
-      shared: 'shared',
-      utils: 'utilities'
-    }), // auto load modules
-    new webpack.optimize.UglifyJsPlugin(), // minify JS
-    new WriteFilePlugin() // write physical files
-  ],
-  resolve: {
-    extensions: [
-      '.css',
-      '.js',
-      '.json',
-      '.jsx',
-      '.lib.js',
-      '.scss',
-      '.util.js'
-    ],
-    modules: [
-      path.resolve(__dirname, './node_modules'),
-      path.resolve(__dirname, './src'),
-      path.resolve(__dirname, './src/components'),
-      path.resolve(__dirname, './src/utilities')
-    ]
-  },
-  // this is a default value; just be aware of it 
-  target: 'web'
-};
+    new webpack.optimize.UglifyJsPlugin() // minify JS
+  ])
+});

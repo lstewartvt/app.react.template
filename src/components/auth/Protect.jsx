@@ -1,16 +1,10 @@
 export default function(Layout) {
-	class Authentication extends React.Component {
+	class Protect extends React.Component {
 		static contextTypes = {
 			router: React.PropTypes.object
 		};
 
 		componentWillMount() {
-			this.props.dispatch({
-				type: 'app.auth.check'
-			});
-		};
-
-		componentWillUpdate(nextProps) {
 			this.props.dispatch({
 				type: 'app.auth.check'
 			});
@@ -33,5 +27,5 @@ export default function(Layout) {
 		};
 	};
 
-	return ReactRedux.connect(mapStateToProps)(Authentication);
+	return ReactRedux.connect(mapStateToProps)(Protect);
 };
