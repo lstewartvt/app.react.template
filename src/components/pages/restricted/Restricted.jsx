@@ -4,7 +4,7 @@ export default class Restricted extends React.Component {
 
 	constructor() {
 		super();
-		this.initialTime = Math.floor(app_data.nav.redirect.timeout / 1000);
+		this.initialTime = Math.floor(config.app.nav.redirect.timeout / 1000);
 		this.state = {
 			time: this.initialTime
 		};
@@ -17,7 +17,7 @@ export default class Restricted extends React.Component {
 
 			if (!Verify.state.time) {
 				clearInterval(Verify.elapsed);
-				ReactRouter.browserHistory.push(app_data.nav.redirect.verify);
+				ReactRouter.browserHistory.push(config.app.nav.redirect.verify);
 				return;
 			}
 
@@ -38,7 +38,7 @@ export default class Restricted extends React.Component {
 			<div id='restricted'>
         <shared.ContentTitle>403 Unauthorized access</shared.ContentTitle>
         <p>
-        	You will be automatically redirected to the <shared.Anchor href={app_data.nav.redirect.restricted}>login page</shared.Anchor> in {this.state.time} seconds.
+        	You will be automatically redirected to the <shared.Anchor href={config.app.nav.redirect.restricted}>login page</shared.Anchor> in {this.state.time} seconds.
       	</p>
       </div>
 		);

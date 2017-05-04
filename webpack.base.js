@@ -6,32 +6,15 @@ const build = require('./build.config.js'),
   WriteFilePlugin = require('write-file-webpack-plugin');
 
 exports.base = {
-  plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.ProvidePlugin({
-      _: 'lodash',
-      app_data: 'app.data',
-      jQuery: 'jquery',
-      React: 'react',
-      ReactDOM: 'react-dom',
-      ReactIntl: 'react-intl',
-      ReactRedux: 'react-redux',
-      ReactRouter: 'react-router',
-      ReactTests: 'react-addons-test-utils',
-      Redux: 'redux',
-      ReduxForm: 'redux-form',
-      ReduxSaga: 'redux-saga',
-      shared: 'shared',
-      utils: 'utilities'
-    }), // auto load modules
-  ],
   resolve: {
     extensions: [
       '.css',
+      '.data.js',
       '.js',
       '.json',
       '.jsx',
       '.lib.js',
+      '.reducer.js',
       '.scss',
       '.util.js'
     ],
@@ -72,7 +55,7 @@ exports.plugins_base = [
   new webpack.optimize.OccurrenceOrderPlugin(),
   new webpack.ProvidePlugin({
     _: 'lodash',
-    app_data: 'app.data',
+    config: 'config',
     jQuery: 'jquery',
     React: 'react',
     ReactDOM: 'react-dom',

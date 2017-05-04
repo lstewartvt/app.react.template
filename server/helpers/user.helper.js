@@ -1,5 +1,5 @@
 const _ = require('lodash'),
-  config = includes('data/config'), // get our config file
+  config = includes('config'), // get our config file
   eJwt = require('express-jwt'),
   jwt = require('jsonwebtoken'), // used to create, sign, and verify tokens
   props = includes('properties'), // get server properties
@@ -12,7 +12,7 @@ var userHelper = module.exports = {
     return token = jwt.sign(_.pick(user, [
       '_id'
     ]), process.env.auth_secret, {
-      expiresIn: 60 * config.auth.expires
+      expiresIn: 60 * config.server.auth.expires
     });
   },
   list: function(request, response) {

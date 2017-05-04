@@ -1,0 +1,32 @@
+@mixin switchShadow($color) {
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+.switch {
+  color: $cta;
+  display: inline-block;
+  font-weight: 500;
+  margin: 0;
+  max-width: 100px;
+  &.on {
+    > span {
+      &:first-of-type {
+        background: rgba($includedGreen, 0.31);
+      }
+      > span[role=thumb] {
+        background: $includedGreen;
+      }
+    }
+  }
+  > span {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    &:first-of-type {
+      background: rgba($excludedRed, 0.31);
+    }
+    > span[role=thumb] {
+      background: $excludedRed;
+    }
+  }
+}

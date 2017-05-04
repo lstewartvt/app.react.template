@@ -9,7 +9,7 @@ export default class Footer extends React.Component {
 			<footer id='footer' className='mui--appbar-height'>
         <p className='mui-container-fluid'>
           &copy;&nbsp;
-          {app_data.date.getFullYear()} &ndash; React.App
+          {config.app.date.getFullYear()} &ndash; React.App
           <span className='tm'>&trade;</span>
         </p>
       </footer>

@@ -15,7 +15,7 @@ export default class Panel_1 extends React.Component {
           <article className='content'>
             <ReactRouter.Link
               className='mui-btn mui-btn--primary mui-btn--raised'
-              to={app_data.nav.about}>
+              to={config.app.nav.about}>
               Check Us Out
             </ReactRouter.Link>
           </article>

@@ -110,22 +110,6 @@ module.exports = function(config) {
           }
         })
       ]),
-      resolve: {
-        extensions: [
-          '.css',
-          '.js',
-          '.json',
-          '.jsx',
-          '.lib.js',
-          '.scss',
-          '.util.js'
-        ],
-        modules: [
-          path.resolve(__dirname, './node_modules'),
-          path.resolve(__dirname, './src'),
-          path.resolve(__dirname, './src/components')
-        ]
-      },
       watch: true
     }),
     webpackServer: {

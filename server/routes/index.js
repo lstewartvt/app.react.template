@@ -1,4 +1,4 @@
-const app_data = includes('../src/components/app.data'),
+const config = includes('config'),
   helpers = includes('helpers/'),
   path = require('path');
 

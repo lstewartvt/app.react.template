@@ -1,4 +1,4 @@
-module.exports = {
+exports.server = {
   auth: {
     expires: 1440 // in minutes
   },
@@ -7,3 +7,5 @@ module.exports = {
     expireText: '31 minutes'
   }
 };
+
+exports.app = require('../src/config/app.data');

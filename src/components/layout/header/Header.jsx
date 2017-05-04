@@ -11,7 +11,7 @@ import './styles/Header';
 export class Header extends React.Component {
 
 	handleHomeClick = () => {
-		ReactRouter.browserHistory.push(app_data.nav.home);
+		ReactRouter.browserHistory.push(config.app.nav.home);
 	};
 
 	toggleNav = () => {
@@ -50,7 +50,7 @@ export class Header extends React.Component {
 
 function mapStateToProps(state) {
 	return {
-		nav_open: state.global.nav_open
+		nav_open: state.glob.nav_open
 	};
 };
 

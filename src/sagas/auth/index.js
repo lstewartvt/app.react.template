@@ -6,14 +6,14 @@ import {
   takeEvery
 } from 'redux-saga/effects';
 
-export function* checkAuth() {
+export function* check_auth() {
 
   yield takeEvery('app.auth.check', function*() {
 
     try {
 
       const response = yield call(utils.ajax.get, {
-        endpoint: app_data.nav.account.auth
+        endpoint: config.app.nav.account.auth
       });
       const data = response.data;
 
@@ -30,7 +30,7 @@ export function* checkAuth() {
       });
 
       // redirect to login
-      ReactRouter.browserHistory.push(app_data.nav.account.login);
+      ReactRouter.browserHistory.push(config.app.nav.account.login);
     }
   });
 };
@@ -42,13 +42,13 @@ export function* login() {
     try {
 
       let response = yield call(utils.ajax.post, {
-        endpoint: app_data.nav.account.login,
+        endpoint: config.app.nav.account.login,
         body: action.data
       });
       const data = response.data;
 
       // store auth cookies
-      utils.cookies.set(app_data.auth.cookie_name, data.token, {
+      utils.cookies.set(config.app.auth.cookie_name, data.token, {
         path: '/',
         secure: _secure
       });
@@ -60,7 +60,7 @@ export function* login() {
       });
 
       // redirect to home
-      ReactRouter.browserHistory.push(app_data.nav.home);
+      ReactRouter.browserHistory.push(config.app.nav.home);
     } catch (error) {
 
       const data = yield call(glob.handleErrors, error)
@@ -81,7 +81,7 @@ export function* register() {
     try {
 
       const response = yield call(utils.ajax.post, {
-        endpoint: app_data.nav.account.register,
+        endpoint: config.app.nav.account.register,
         body: action.data
       });
       const data = response.data;
@@ -89,12 +89,12 @@ export function* register() {
       // show success message
       yield put({
         type: 'app.auth.registered',
-        messages: [app_data.messages.register.success.replace('{user}', data.user.handle)],
+        messages: [config.app.messages.register.success.replace('{user}', data.user.handle)],
         user: data.user
       });
 
       // redirect to home
-      ReactRouter.browserHistory.push(app_data.nav.account.login);
+      ReactRouter.browserHistory.push(config.app.nav.account.login);
     } catch (error) {
 
       const data = yield call(glob.handleErrors, error)
@@ -121,7 +121,7 @@ export function* verify() {
       const data = response.data;
 
       // store auth cookies
-      utils.cookies.set(app_data.auth.cookie_name, data.token, {
+      utils.cookies.set(config.app.auth.cookie_name, data.token, {
         path: '/',
         secure: _secure
       });
@@ -139,7 +139,7 @@ export function* verify() {
       });
 
       // redirect to login 
-      ReactRouter.browserHistory.push(app_data.nav.account.login);
+      ReactRouter.browserHistory.push(config.app.nav.account.login);
     }
   });
 };

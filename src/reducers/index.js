@@ -1,17 +1,17 @@
 import {
-	combineReducers
+  combineReducers
 } from 'redux';
 
-import auth_reducer from './auth.reducer';
-import global_reducer from './global.reducer';
+import auth from './auth';
+import glob from './global';
 import {
-	reducer as form_reducer
+  reducer as form
 } from 'redux-form';
 
 const reducers = combineReducers({
-	auth: auth_reducer,
-	global: global_reducer,
-	form: form_reducer
+  auth,
+  glob,
+  form
 });
 
 export default reducers;

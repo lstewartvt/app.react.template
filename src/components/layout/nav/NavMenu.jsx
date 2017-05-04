@@ -22,7 +22,7 @@ export class NavMenu extends React.Component {
           menu_data.nav.map((link, index) => (
             <shared.Anchor
               key={`nav-link-${index}`}
-              href={app_data.nav[link.id]}>
+              href={config.app.nav[link.id]}>
               <abbr>{link.title}</abbr>
             </shared.Anchor>
           ))
@@ -32,7 +32,7 @@ export class NavMenu extends React.Component {
             !this.props.authenticated && menu_data.account.map((link, index) => (
               <shared.Anchor
                 key={`account-link-${index}`}
-                href={app_data.nav.account[link.id]}>
+                href={config.app.nav.account[link.id]}>
                 <abbr>{link.title}</abbr>
               </shared.Anchor>
             ))

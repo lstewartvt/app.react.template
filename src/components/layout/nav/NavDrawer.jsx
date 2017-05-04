@@ -21,7 +21,7 @@ const Greeting = (props) => (
 
 const ItemContent = (props) => (
 	<shared.Anchor
-    href={app_data.nav[props.link.id] || app_data.nav.account[props.link.id]}>
+    href={config.app.nav[props.link.id] || config.app.nav.account[props.link.id]}>
     {props.link.title}
   </shared.Anchor>
 );
@@ -51,7 +51,7 @@ class NavDrawer extends React.Component {
 
 	getSubject = () => {
 		if (!this.props.user) {
-			return app_data.auth.anon;
+			return config.app.auth.anon;
 		}
 
 		return this.props.user.name;
@@ -92,7 +92,7 @@ class NavDrawer extends React.Component {
             selectable={false} />
           {
             links.map(function(link, index) {
-              let path = app_data.nav[link.id] || app_data.nav.account[link.id];
+              let path = config.app.nav[link.id] || config.app.nav.account[link.id];
               let isActive = path && context.router.isActive(path, true),
               className = isActive ? 'active' : undefined;
               return (
@@ -117,7 +117,7 @@ NavDrawer.contextTypes = {
 function mapStateToProps(state) {
 	return {
 		authenticated: state.auth.authenticated,
-		nav_open: state.global.nav_open,
+		nav_open: state.glob.nav_open,
 		user: state.auth.user
 	};
 };

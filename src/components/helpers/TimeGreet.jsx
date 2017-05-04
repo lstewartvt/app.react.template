@@ -1,4 +1,4 @@
-const hours = app_data.date.getHours();
+const hours = config.app.date.getHours();
 
 var greeting;
 if (hours < 12) {
