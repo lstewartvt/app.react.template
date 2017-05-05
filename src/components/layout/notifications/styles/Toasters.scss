@@ -1,0 +1,42 @@
+.toasters {
+  cursor: pointer;
+  max-width: 313px;
+  padding: 0;
+  * {
+    display: table;
+    width: 100%;
+  }
+  .messages {
+    cursor: pointer;
+    > p {
+      border-bottom: 1px solid $darkGray;
+      color: inherit;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 5px;
+      text-align: center;
+      &:last-child {
+        border-bottom: none;
+      }
+      &.error {
+        background: $errorBg;
+        color: $errorText;
+      }
+      &.info {
+        background: $infoBg;
+        color: $infoText;
+      }
+      &.success {
+        background: $successBg;
+        color: $successText;
+      }
+      > .icon {
+        color: inherit;
+        display: initial;
+        font-weight: inherit;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+    }
+  }
+}

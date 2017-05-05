@@ -6,14 +6,22 @@ export default class ContentTitle extends React.Component {
 		super(props);
 
 		this.classes = ['content-title'];
-		if (props.className) {
-			this.classes = this.classes.concat(props.className.split(' '));
+		if (props.center !== undefined) {
+			this.classes.push('mui--text-center');
 		}
+
+		if (props.className) {
+			this.classes.push(props.className);
+		}
+
+		this.state = {
+			className: this.classes.join(' ')
+		};
 	};
 
 	render() {
 		return (
-			<h1 className={this.classes.join(' ')}>
+			<h1 className={this.state.className}>
         {this.props.children}
       </h1>
 		);

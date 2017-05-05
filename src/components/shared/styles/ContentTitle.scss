@@ -1,32 +1,25 @@
 .content-title {
-  text-align: center;
   text-transform: uppercase;
-
   @media (max-width: $screenSmMax) {
     font-size: 35px;
   }
-
   &.caps {
     text-transform: uppercase;
   }
-
   &.big {
     font-size: 50px;
     line-height: 60px;
-
     @media (max-width: $screenSmMax) {
       font-size: 31px;
       line-height: 40px;
     }
   }
-
   + hr {
     border-color: $separator;
     border-width: 2px;
     margin: 35px auto;
     text-align: center;
     width: 50px;
-
     + .content {
       margin-top: 0;
     }

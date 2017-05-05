@@ -1,5 +1,3 @@
-const app_data = require('app.data');
-
 import './styles/Footer';
 
 export default class Footer extends React.Component {

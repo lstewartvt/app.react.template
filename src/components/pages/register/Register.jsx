@@ -8,7 +8,7 @@ export default class Register extends React.Component {
 			<section
         id='register'
         className='content'>
-        <shared.ContentTitle>Join Today!</shared.ContentTitle>
+        <shared.ContentTitle center>Join Today!</shared.ContentTitle>
         <FormRegister />
       </section>
 		);

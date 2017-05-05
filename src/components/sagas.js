@@ -27,5 +27,5 @@ export default (sagaMiddleware) => {
   };
 
   // track running sagas
-  utils.log.debug(`${saga_count} sagas running...`, saga_hash);
+  utils.log.debug(`${saga_count} running sagas...`, saga_hash);
 };

@@ -1,12 +1,9 @@
 import {
-  Header
-} from './header';
-import {
-  Footer
-} from './footer';
-import {
-  NavDrawer
-} from './nav';
+  Header,
+  Footer,
+  NavDrawer,
+  Toasters
+} from './';
 
 import './styles/Layout';
 
@@ -20,6 +17,7 @@ export default class Layout extends React.Component {
         <Header />
         <NavDrawer />
         {this.props.children}
+        <Toasters />
         <Footer />
         {_debug && mongo_live && (
           <p className='info mongo connected'>Mongo Connected...</p>

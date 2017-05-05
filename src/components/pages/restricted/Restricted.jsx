@@ -36,7 +36,7 @@ export default class Restricted extends React.Component {
 	render() {
 		return (
 			<div id='restricted'>
-        <shared.ContentTitle>403 Unauthorized access</shared.ContentTitle>
+        <shared.ContentTitle center>403 Unauthorized access</shared.ContentTitle>
         <p>
         	You will be automatically redirected to the <shared.Anchor href={config.app.nav.redirect.restricted}>login page</shared.Anchor> in {this.state.time} seconds.
       	</p>

@@ -8,7 +8,7 @@ export default class Login extends React.Component {
 			<section
         id='login'
         className='content'>
-        <shared.ContentTitle>Welcome</shared.ContentTitle>
+        <shared.ContentTitle center>Welcome</shared.ContentTitle>
         <FormLogin />
       </section>
 		);

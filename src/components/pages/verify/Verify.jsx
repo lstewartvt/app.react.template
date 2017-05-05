@@ -52,7 +52,7 @@ class Verify extends React.Component {
 
 		return (
 			<div id='verify'>
-        <shared.ContentTitle>Account successfully verified!</shared.ContentTitle>
+        <shared.ContentTitle center>Account successfully verified!</shared.ContentTitle>
         <p>
         	You will be automatically redirected to the <shared.Anchor href={config.app.nav.redirect.verify}>home page</shared.Anchor> in {this.state.time} seconds.
       	</p>
