@@ -13,6 +13,8 @@ const bodyParser = require('body-parser'),
   props = includes('properties');
 
 var app = express();
+app.set('dev', app.settings.env === 'development');
+app.set('prod', app.settings.prod);
 
 // try connect to mongodb
 console.log(process.env.mongo_db_connection);
@@ -84,7 +86,7 @@ app.use(expressValidator({
 }));
 
 // We only want to optimize assets in production environment
-if (app.settings.env === 'production') {
+if (app.settings.prod) {
 
   // load gzipped assets
   app.get(/\.(js)$/, function(request, response, next) {
